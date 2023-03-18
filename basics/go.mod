@@ -1,4 +1,4 @@
-module golang-in-a-week
+module basics
 
 go 1.19
 
