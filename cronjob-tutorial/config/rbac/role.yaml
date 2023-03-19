@@ -31,3 +31,21 @@ rules:
   - get
   - patch
   - update
+- apiGroups:
+  - batch.tutorial.kubebuilder.io
+  resources:
+  - jobs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - batch.tutorial.kubebuilder.io
+  resources:
+  - jobs/status
+  verbs:
+  - get
