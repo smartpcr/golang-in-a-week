@@ -1,4 +1,4 @@
-module tutorial.smartpcr.io/project
+module tutorials.smartpcr.io/kbop
 
 go 1.19
 

@@ -1,5 +1,7 @@
-mkdir -p ~/work/github/go/golang-in-a-week/kbop && cd ~/work/github/go/golang-in-a-week/kbop
-go mod init tutorial.smartpcr.io/project
-kubebuilder init --domain tutorial.smartpcr.io --repo tutorial.smartpcr.io/project
+mkdir kbop && cd kbop
 
-kubebuilder create api --group batch --version v1 --kind Pod
+go mod init tutorials.smartpcr.io/kbop
+
+kubebuilder init --domain tutorials.smartpcr.io --repo tutorials.smartpcr.io/kbop
+
+kubebuilder create api --group core --version v1 --kind Pod

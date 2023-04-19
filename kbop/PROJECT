@@ -2,15 +2,15 @@
 # This file is used to track the info used to scaffold your project
 # and allow the plugins properly work.
 # More info: https://book.kubebuilder.io/reference/project-config.html
-domain: tutorial.smartpcr.io
+domain: tutorials.smartpcr.io
 layout:
 - go.kubebuilder.io/v3
 projectName: kbop
-repo: tutorial.smartpcr.io/project
+repo: tutorials.smartpcr.io/kbop
 resources:
 - controller: true
-  group: batch
+  group: core
   kind: Pod
-  path: k8s.io/api/batch/v1
+  path: k8s.io/api/core/v1
   version: v1
 version: "3"
