@@ -7,4 +7,10 @@ layout:
 - go.kubebuilder.io/v3
 projectName: kbop
 repo: tutorial.smartpcr.io/project
+resources:
+- controller: true
+  group: batch
+  kind: Pod
+  path: k8s.io/api/batch/v1
+  version: v1
 version: "3"
