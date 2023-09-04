@@ -35,43 +35,50 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             "KAFSBXZhbHVlEjgKCXRpbWVzdGFtcBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
             "Zi5UaW1lc3RhbXBSCXRpbWVzdGFtcCJtCgdTdW1tYXJ5EhIKBG5hbWUYASAB",
             "KAlSBG5hbWUSFAoFdmFsdWUYAiABKAFSBXZhbHVlEjgKCXRpbWVzdGFtcBgD",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXRpbWVzdGFtcCLm",
-            "AgoGTWV0cmljEj4KBHR5cGUYASABKA4yKi5zbWFydHBjci5tb25pdG9yaW5n",
-            "Lm1ldHJpY3MudjEuTWV0cmljVHlwZVIEdHlwZRJDCgdjb3VudGVyGAIgASgL",
-            "Micuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkNvdW50ZXJIAFIH",
-            "Y291bnRlchI9CgVnYXVnZRgDIAEoCzIlLnNtYXJ0cGNyLm1vbml0b3Jpbmcu",
-            "bWV0cmljcy52MS5HYXVnZUgAUgVnYXVnZRJJCgloaXN0b2dyYW0YBCABKAsy",
-            "KS5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJpY3MudjEuSGlzdG9ncmFtSABS",
-            "CWhpc3RvZ3JhbRJDCgdzdW1tYXJ5GAUgASgLMicuc21hcnRwY3IubW9uaXRv",
-            "cmluZy5tZXRyaWNzLnYxLlN1bW1hcnlIAFIHc3VtbWFyeUIICgZtZXRyaWMi",
-            "SwoHTWV0cmljcxJACgdtZXRyaWNzGAEgAygLMiYuc21hcnRwY3IubW9uaXRv",
-            "cmluZy5tZXRyaWNzLnYxLk1ldHJpY1IHbWV0cmljcyJjCg1NZXRyaWNSZXF1",
-            "ZXN0EhIKBG5hbWUYASABKAlSBG5hbWUSEgoEdHlwZRgCIAEoCVIEdHlwZRIS",
-            "CgRoZWxwGAMgASgJUgRoZWxwEhYKBmxhYmVscxgEIAMoCVIGbGFiZWxzImQK",
-            "Dk1ldHJpY1Jlc3BvbnNlEhIKBG5hbWUYASABKAlSBG5hbWUSEgoEdHlwZRgC",
-            "IAEoCVIEdHlwZRISCgRoZWxwGAMgASgJUgRoZWxwEhYKBmxhYmVscxgEIAMo",
-            "CVIGbGFiZWxzIlkKDk1ldHJpY3NSZXF1ZXN0EkcKB21ldHJpY3MYASADKAsy",
-            "LS5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJpY3MudjEuTWV0cmljUmVxdWVz",
-            "dFIHbWV0cmljcyJbCg9NZXRyaWNzUmVzcG9uc2USSAoHbWV0cmljcxgBIAMo",
-            "CzIuLnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5NZXRyaWNSZXNw",
-            "b25zZVIHbWV0cmljcypACgpNZXRyaWNUeXBlEgsKB0NPVU5URVIQABIJCgVH",
-            "QVVHRRABEg0KCUhJU1RPR1JBTRACEgsKB1NVTU1BUlkQAzK4AwoOTWV0cmlj",
-            "c1NlcnZpY2USagoJR2V0TWV0cmljEi0uc21hcnRwY3IubW9uaXRvcmluZy5t",
-            "ZXRyaWNzLnYxLk1ldHJpY1JlcXVlc3QaLi5zbWFydHBjci5tb25pdG9yaW5n",
-            "Lm1ldHJpY3MudjEuTWV0cmljUmVzcG9uc2USYwoJU2V0TWV0cmljEiYuc21h",
-            "cnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLk1ldHJpYxouLnNtYXJ0cGNy",
-            "Lm1vbml0b3JpbmcubWV0cmljcy52MS5NZXRyaWNSZXNwb25zZRJtCgpHZXRN",
-            "ZXRyaWNzEi4uc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLk1ldHJp",
-            "Y3NSZXF1ZXN0Gi8uc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLk1l",
-            "dHJpY3NSZXNwb25zZRJmCgpTZXRNZXRyaWNzEicuc21hcnRwY3IubW9uaXRv",
-            "cmluZy5tZXRyaWNzLnYxLk1ldHJpY3MaLy5zbWFydHBjci5tb25pdG9yaW5n",
-            "Lm1ldHJpY3MudjEuTWV0cmljc1Jlc3BvbnNlQoQCCiJjb20uc21hcnRwY3Iu",
-            "bW9uaXRvcmluZy5tZXRyaWNzLnYxQgxNZXRyaWNzUHJvdG9IAlABWjNnaXRo",
-            "dWIuY29tL3NtYXJ0cGNyL21vbml0b3JpbmcvbWV0cmljcy9wcm90b3MvdjE7",
-            "djGiAgNTTU2qAh5TbWFydHBjci5Nb25pdG9yaW5nLk1ldHJpY3MuVjHKAh5T",
-            "bWFydHBjclxNb25pdG9yaW5nXE1ldHJpY3NcVjHiAipTbWFydHBjclxNb25p",
-            "dG9yaW5nXE1ldHJpY3NcVjFcR1BCTWV0YWRhdGHqAiFTbWFydHBjcjo6TW9u",
-            "aXRvcmluZzo6TWV0cmljczo6VjFiBnByb3RvMw=="));
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXRpbWVzdGFtcCLz",
+            "AgoTQ3JlYXRlTWV0cmljUmVxdWVzdBI+CgR0eXBlGAEgASgOMiouc21hcnRw",
+            "Y3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLk1ldHJpY1R5cGVSBHR5cGUSQwoH",
+            "Y291bnRlchgCIAEoCzInLnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52",
+            "MS5Db3VudGVySABSB2NvdW50ZXISPQoFZ2F1Z2UYAyABKAsyJS5zbWFydHBj",
+            "ci5tb25pdG9yaW5nLm1ldHJpY3MudjEuR2F1Z2VIAFIFZ2F1Z2USSQoJaGlz",
+            "dG9ncmFtGAQgASgLMikuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYx",
+            "Lkhpc3RvZ3JhbUgAUgloaXN0b2dyYW0SQwoHc3VtbWFyeRgFIAEoCzInLnNt",
+            "YXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5TdW1tYXJ5SABSB3N1bW1h",
+            "cnlCCAoGbWV0cmljImMKDU1ldHJpY1JlcXVlc3QSEgoEbmFtZRgBIAEoCVIE",
+            "bmFtZRISCgR0eXBlGAIgASgJUgR0eXBlEhIKBGhlbHAYAyABKAlSBGhlbHAS",
+            "FgoGbGFiZWxzGAQgAygJUgZsYWJlbHMi9AIKFENyZWF0ZU1ldHJpY1Jlc3Bv",
+            "bnNlEj4KBHR5cGUYASABKA4yKi5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJp",
+            "Y3MudjEuTWV0cmljVHlwZVIEdHlwZRJDCgdjb3VudGVyGAIgASgLMicuc21h",
+            "cnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkNvdW50ZXJIAFIHY291bnRl",
+            "chI9CgVnYXVnZRgDIAEoCzIlLnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmlj",
+            "cy52MS5HYXVnZUgAUgVnYXVnZRJJCgloaXN0b2dyYW0YBCABKAsyKS5zbWFy",
+            "dHBjci5tb25pdG9yaW5nLm1ldHJpY3MudjEuSGlzdG9ncmFtSABSCWhpc3Rv",
+            "Z3JhbRJDCgdzdW1tYXJ5GAUgASgLMicuc21hcnRwY3IubW9uaXRvcmluZy5t",
+            "ZXRyaWNzLnYxLlN1bW1hcnlIAFIHc3VtbWFyeUIICgZtZXRyaWMiUwoRR2V0",
+            "TWV0cmljc1JlcXVlc3QSPgoEdHlwZRgBIAMoDjIqLnNtYXJ0cGNyLm1vbml0",
+            "b3JpbmcubWV0cmljcy52MS5NZXRyaWNUeXBlUgR0eXBlIqYCCgZNZXRyaWMS",
+            "QwoHY291bnRlchgCIAEoCzInLnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmlj",
+            "cy52MS5Db3VudGVySABSB2NvdW50ZXISPQoFZ2F1Z2UYAyABKAsyJS5zbWFy",
+            "dHBjci5tb25pdG9yaW5nLm1ldHJpY3MudjEuR2F1Z2VIAFIFZ2F1Z2USSQoJ",
+            "aGlzdG9ncmFtGAQgASgLMikuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNz",
+            "LnYxLkhpc3RvZ3JhbUgAUgloaXN0b2dyYW0SQwoHc3VtbWFyeRgFIAEoCzIn",
+            "LnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5TdW1tYXJ5SABSB3N1",
+            "bW1hcnlCCAoGbWV0cmljIlYKEkdldE1ldHJpY3NSZXNwb25zZRJACgdtZXRy",
+            "aWNzGAEgAygLMiYuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLk1l",
+            "dHJpY1IHbWV0cmljcypACgpNZXRyaWNUeXBlEgsKB0NPVU5URVIQABIJCgVH",
+            "QVVHRRABEg0KCUhJU1RPR1JBTRACEgsKB1NVTU1BUlkQAzL/AQoOTWV0cmlj",
+            "c1NlcnZpY2USeQoMQ3JlYXRlTWV0cmljEjMuc21hcnRwY3IubW9uaXRvcmlu",
+            "Zy5tZXRyaWNzLnYxLkNyZWF0ZU1ldHJpY1JlcXVlc3QaNC5zbWFydHBjci5t",
+            "b25pdG9yaW5nLm1ldHJpY3MudjEuQ3JlYXRlTWV0cmljUmVzcG9uc2UScgoJ",
+            "R2V0TWV0cmljEjEuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkdl",
+            "dE1ldHJpY3NSZXF1ZXN0GjIuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNz",
+            "LnYxLkdldE1ldHJpY3NSZXNwb25zZUKEAgoiY29tLnNtYXJ0cGNyLm1vbml0",
+            "b3JpbmcubWV0cmljcy52MUIMTWV0cmljc1Byb3RvSAJQAVozZ2l0aHViLmNv",
+            "bS9zbWFydHBjci9tb25pdG9yaW5nL21ldHJpY3MvcHJvdG9zL3YxO3YxogID",
+            "U01NqgIeU21hcnRwY3IuTW9uaXRvcmluZy5NZXRyaWNzLlYxygIeU21hcnRw",
+            "Y3JcTW9uaXRvcmluZ1xNZXRyaWNzXFYx4gIqU21hcnRwY3JcTW9uaXRvcmlu",
+            "Z1xNZXRyaWNzXFYxXEdQQk1ldGFkYXRh6gIhU21hcnRwY3I6Ok1vbml0b3Jp",
+            "bmc6Ok1ldHJpY3M6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Smartpcr.Monitoring.Metrics.V1.MetricType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -79,12 +86,12 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Gauge), global::Smartpcr.Monitoring.Metrics.V1.Gauge.Parser, new[]{ "Name", "Value", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Histogram), global::Smartpcr.Monitoring.Metrics.V1.Histogram.Parser, new[]{ "Name", "Value", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Summary), global::Smartpcr.Monitoring.Metrics.V1.Summary.Parser, new[]{ "Name", "Value", "Timestamp" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Metric), global::Smartpcr.Monitoring.Metrics.V1.Metric.Parser, new[]{ "Type", "Counter", "Gauge", "Histogram", "Summary" }, new[]{ "Metric" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Metrics), global::Smartpcr.Monitoring.Metrics.V1.Metrics.Parser, new[]{ "Metrics_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.CreateMetricRequest), global::Smartpcr.Monitoring.Metrics.V1.CreateMetricRequest.Parser, new[]{ "Type", "Counter", "Gauge", "Histogram", "Summary" }, new[]{ "Metric" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.MetricRequest), global::Smartpcr.Monitoring.Metrics.V1.MetricRequest.Parser, new[]{ "Name", "Type", "Help", "Labels" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.MetricResponse), global::Smartpcr.Monitoring.Metrics.V1.MetricResponse.Parser, new[]{ "Name", "Type", "Help", "Labels" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.MetricsRequest), global::Smartpcr.Monitoring.Metrics.V1.MetricsRequest.Parser, new[]{ "Metrics" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.MetricsResponse), global::Smartpcr.Monitoring.Metrics.V1.MetricsResponse.Parser, new[]{ "Metrics" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.CreateMetricResponse), global::Smartpcr.Monitoring.Metrics.V1.CreateMetricResponse.Parser, new[]{ "Type", "Counter", "Gauge", "Histogram", "Summary" }, new[]{ "Metric" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.GetMetricsRequest), global::Smartpcr.Monitoring.Metrics.V1.GetMetricsRequest.Parser, new[]{ "Type" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Metric), global::Smartpcr.Monitoring.Metrics.V1.Metric.Parser, new[]{ "Counter", "Gauge", "Histogram", "Summary" }, new[]{ "Metric" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.GetMetricsResponse), global::Smartpcr.Monitoring.Metrics.V1.GetMetricsResponse.Parser, new[]{ "Metrics" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1189,16 +1196,16 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
   }
 
-  public sealed partial class Metric : pb::IMessage<Metric>
+  public sealed partial class CreateMetricRequest : pb::IMessage<CreateMetricRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Metric> _parser = new pb::MessageParser<Metric>(() => new Metric());
+    private static readonly pb::MessageParser<CreateMetricRequest> _parser = new pb::MessageParser<CreateMetricRequest>(() => new CreateMetricRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Metric> Parser { get { return _parser; } }
+    public static pb::MessageParser<CreateMetricRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1214,7 +1221,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Metric() {
+    public CreateMetricRequest() {
       OnConstruction();
     }
 
@@ -1222,7 +1229,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Metric(Metric other) : this() {
+    public CreateMetricRequest(CreateMetricRequest other) : this() {
       type_ = other.type_;
       switch (other.MetricCase) {
         case MetricOneofCase.Counter:
@@ -1244,8 +1251,8 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Metric Clone() {
-      return new Metric(this);
+    public CreateMetricRequest Clone() {
+      return new CreateMetricRequest(this);
     }
 
     /// <summary>Field number for the "type" field.</summary>
@@ -1334,12 +1341,12 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as Metric);
+      return Equals(other as CreateMetricRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Metric other) {
+    public bool Equals(CreateMetricRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1466,7 +1473,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Metric other) {
+    public void MergeFrom(CreateMetricRequest other) {
       if (other == null) {
         return;
       }
@@ -1617,184 +1624,6 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
   }
 
-  public sealed partial class Metrics : pb::IMessage<Metrics>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<Metrics> _parser = new pb::MessageParser<Metrics>(() => new Metrics());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Metrics> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Smartpcr.Monitoring.Metrics.V1.MetricsReflection.Descriptor.MessageTypes[5]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Metrics() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Metrics(Metrics other) : this() {
-      metrics_ = other.metrics_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Metrics Clone() {
-      return new Metrics(this);
-    }
-
-    /// <summary>Field number for the "metrics" field.</summary>
-    public const int Metrics_FieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Smartpcr.Monitoring.Metrics.V1.Metric> _repeated_metrics_codec
-        = pb::FieldCodec.ForMessage(10, global::Smartpcr.Monitoring.Metrics.V1.Metric.Parser);
-    private readonly pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.Metric> metrics_ = new pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.Metric>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.Metric> Metrics_ {
-      get { return metrics_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as Metrics);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Metrics other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!metrics_.Equals(other.metrics_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= metrics_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      metrics_.WriteTo(output, _repeated_metrics_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      metrics_.WriteTo(ref output, _repeated_metrics_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += metrics_.CalculateSize(_repeated_metrics_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Metrics other) {
-      if (other == null) {
-        return;
-      }
-      metrics_.Add(other.metrics_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            metrics_.AddEntriesFrom(ref input, _repeated_metrics_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class MetricRequest : pb::IMessage<MetricRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1809,7 +1638,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Smartpcr.Monitoring.Metrics.V1.MetricsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Smartpcr.Monitoring.Metrics.V1.MetricsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2084,16 +1913,444 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
   }
 
-  public sealed partial class MetricResponse : pb::IMessage<MetricResponse>
+  public sealed partial class CreateMetricResponse : pb::IMessage<CreateMetricResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<MetricResponse> _parser = new pb::MessageParser<MetricResponse>(() => new MetricResponse());
+    private static readonly pb::MessageParser<CreateMetricResponse> _parser = new pb::MessageParser<CreateMetricResponse>(() => new CreateMetricResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<MetricResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<CreateMetricResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Smartpcr.Monitoring.Metrics.V1.MetricsReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateMetricResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateMetricResponse(CreateMetricResponse other) : this() {
+      type_ = other.type_;
+      switch (other.MetricCase) {
+        case MetricOneofCase.Counter:
+          Counter = other.Counter.Clone();
+          break;
+        case MetricOneofCase.Gauge:
+          Gauge = other.Gauge.Clone();
+          break;
+        case MetricOneofCase.Histogram:
+          Histogram = other.Histogram.Clone();
+          break;
+        case MetricOneofCase.Summary:
+          Summary = other.Summary.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateMetricResponse Clone() {
+      return new CreateMetricResponse(this);
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 1;
+    private global::Smartpcr.Monitoring.Metrics.V1.MetricType type_ = global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Smartpcr.Monitoring.Metrics.V1.MetricType Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "counter" field.</summary>
+    public const int CounterFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Smartpcr.Monitoring.Metrics.V1.Counter Counter {
+      get { return metricCase_ == MetricOneofCase.Counter ? (global::Smartpcr.Monitoring.Metrics.V1.Counter) metric_ : null; }
+      set {
+        metric_ = value;
+        metricCase_ = value == null ? MetricOneofCase.None : MetricOneofCase.Counter;
+      }
+    }
+
+    /// <summary>Field number for the "gauge" field.</summary>
+    public const int GaugeFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Smartpcr.Monitoring.Metrics.V1.Gauge Gauge {
+      get { return metricCase_ == MetricOneofCase.Gauge ? (global::Smartpcr.Monitoring.Metrics.V1.Gauge) metric_ : null; }
+      set {
+        metric_ = value;
+        metricCase_ = value == null ? MetricOneofCase.None : MetricOneofCase.Gauge;
+      }
+    }
+
+    /// <summary>Field number for the "histogram" field.</summary>
+    public const int HistogramFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Smartpcr.Monitoring.Metrics.V1.Histogram Histogram {
+      get { return metricCase_ == MetricOneofCase.Histogram ? (global::Smartpcr.Monitoring.Metrics.V1.Histogram) metric_ : null; }
+      set {
+        metric_ = value;
+        metricCase_ = value == null ? MetricOneofCase.None : MetricOneofCase.Histogram;
+      }
+    }
+
+    /// <summary>Field number for the "summary" field.</summary>
+    public const int SummaryFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Smartpcr.Monitoring.Metrics.V1.Summary Summary {
+      get { return metricCase_ == MetricOneofCase.Summary ? (global::Smartpcr.Monitoring.Metrics.V1.Summary) metric_ : null; }
+      set {
+        metric_ = value;
+        metricCase_ = value == null ? MetricOneofCase.None : MetricOneofCase.Summary;
+      }
+    }
+
+    private object metric_;
+    /// <summary>Enum of possible cases for the "metric" oneof.</summary>
+    public enum MetricOneofCase {
+      None = 0,
+      Counter = 2,
+      Gauge = 3,
+      Histogram = 4,
+      Summary = 5,
+    }
+    private MetricOneofCase metricCase_ = MetricOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MetricOneofCase MetricCase {
+      get { return metricCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMetric() {
+      metricCase_ = MetricOneofCase.None;
+      metric_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateMetricResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateMetricResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Type != other.Type) return false;
+      if (!object.Equals(Counter, other.Counter)) return false;
+      if (!object.Equals(Gauge, other.Gauge)) return false;
+      if (!object.Equals(Histogram, other.Histogram)) return false;
+      if (!object.Equals(Summary, other.Summary)) return false;
+      if (MetricCase != other.MetricCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Type != global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter) hash ^= Type.GetHashCode();
+      if (metricCase_ == MetricOneofCase.Counter) hash ^= Counter.GetHashCode();
+      if (metricCase_ == MetricOneofCase.Gauge) hash ^= Gauge.GetHashCode();
+      if (metricCase_ == MetricOneofCase.Histogram) hash ^= Histogram.GetHashCode();
+      if (metricCase_ == MetricOneofCase.Summary) hash ^= Summary.GetHashCode();
+      hash ^= (int) metricCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Type != global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (metricCase_ == MetricOneofCase.Counter) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Counter);
+      }
+      if (metricCase_ == MetricOneofCase.Gauge) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Gauge);
+      }
+      if (metricCase_ == MetricOneofCase.Histogram) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Histogram);
+      }
+      if (metricCase_ == MetricOneofCase.Summary) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Summary);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (metricCase_ == MetricOneofCase.Counter) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Counter);
+      }
+      if (metricCase_ == MetricOneofCase.Gauge) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Gauge);
+      }
+      if (metricCase_ == MetricOneofCase.Histogram) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Histogram);
+      }
+      if (metricCase_ == MetricOneofCase.Summary) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Summary);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Type != global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (metricCase_ == MetricOneofCase.Counter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Counter);
+      }
+      if (metricCase_ == MetricOneofCase.Gauge) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gauge);
+      }
+      if (metricCase_ == MetricOneofCase.Histogram) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Histogram);
+      }
+      if (metricCase_ == MetricOneofCase.Summary) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Summary);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateMetricResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Type != global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter) {
+        Type = other.Type;
+      }
+      switch (other.MetricCase) {
+        case MetricOneofCase.Counter:
+          if (Counter == null) {
+            Counter = new global::Smartpcr.Monitoring.Metrics.V1.Counter();
+          }
+          Counter.MergeFrom(other.Counter);
+          break;
+        case MetricOneofCase.Gauge:
+          if (Gauge == null) {
+            Gauge = new global::Smartpcr.Monitoring.Metrics.V1.Gauge();
+          }
+          Gauge.MergeFrom(other.Gauge);
+          break;
+        case MetricOneofCase.Histogram:
+          if (Histogram == null) {
+            Histogram = new global::Smartpcr.Monitoring.Metrics.V1.Histogram();
+          }
+          Histogram.MergeFrom(other.Histogram);
+          break;
+        case MetricOneofCase.Summary:
+          if (Summary == null) {
+            Summary = new global::Smartpcr.Monitoring.Metrics.V1.Summary();
+          }
+          Summary.MergeFrom(other.Summary);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Type = (global::Smartpcr.Monitoring.Metrics.V1.MetricType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Smartpcr.Monitoring.Metrics.V1.Counter subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Counter();
+            if (metricCase_ == MetricOneofCase.Counter) {
+              subBuilder.MergeFrom(Counter);
+            }
+            input.ReadMessage(subBuilder);
+            Counter = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Smartpcr.Monitoring.Metrics.V1.Gauge subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Gauge();
+            if (metricCase_ == MetricOneofCase.Gauge) {
+              subBuilder.MergeFrom(Gauge);
+            }
+            input.ReadMessage(subBuilder);
+            Gauge = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Smartpcr.Monitoring.Metrics.V1.Histogram subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Histogram();
+            if (metricCase_ == MetricOneofCase.Histogram) {
+              subBuilder.MergeFrom(Histogram);
+            }
+            input.ReadMessage(subBuilder);
+            Histogram = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Smartpcr.Monitoring.Metrics.V1.Summary subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Summary();
+            if (metricCase_ == MetricOneofCase.Summary) {
+              subBuilder.MergeFrom(Summary);
+            }
+            input.ReadMessage(subBuilder);
+            Summary = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Smartpcr.Monitoring.Metrics.V1.MetricType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Smartpcr.Monitoring.Metrics.V1.Counter subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Counter();
+            if (metricCase_ == MetricOneofCase.Counter) {
+              subBuilder.MergeFrom(Counter);
+            }
+            input.ReadMessage(subBuilder);
+            Counter = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Smartpcr.Monitoring.Metrics.V1.Gauge subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Gauge();
+            if (metricCase_ == MetricOneofCase.Gauge) {
+              subBuilder.MergeFrom(Gauge);
+            }
+            input.ReadMessage(subBuilder);
+            Gauge = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Smartpcr.Monitoring.Metrics.V1.Histogram subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Histogram();
+            if (metricCase_ == MetricOneofCase.Histogram) {
+              subBuilder.MergeFrom(Histogram);
+            }
+            input.ReadMessage(subBuilder);
+            Histogram = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Smartpcr.Monitoring.Metrics.V1.Summary subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Summary();
+            if (metricCase_ == MetricOneofCase.Summary) {
+              subBuilder.MergeFrom(Summary);
+            }
+            input.ReadMessage(subBuilder);
+            Summary = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GetMetricsRequest : pb::IMessage<GetMetricsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetMetricsRequest> _parser = new pb::MessageParser<GetMetricsRequest>(() => new GetMetricsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetMetricsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2109,7 +2366,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricResponse() {
+    public GetMetricsRequest() {
       OnConstruction();
     }
 
@@ -2117,86 +2374,44 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricResponse(MetricResponse other) : this() {
-      name_ = other.name_;
-      type_ = other.type_;
-      help_ = other.help_;
-      labels_ = other.labels_.Clone();
+    public GetMetricsRequest(GetMetricsRequest other) : this() {
+      type_ = other.type_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricResponse Clone() {
-      return new MetricResponse(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
+    public GetMetricsRequest Clone() {
+      return new GetMetricsRequest(this);
     }
 
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 2;
-    private string type_ = "";
+    public const int TypeFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Smartpcr.Monitoring.Metrics.V1.MetricType> _repeated_type_codec
+        = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Smartpcr.Monitoring.Metrics.V1.MetricType) x);
+    private readonly pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricType> type_ = new pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricType>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Type {
+    public pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricType> Type {
       get { return type_; }
-      set {
-        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "help" field.</summary>
-    public const int HelpFieldNumber = 3;
-    private string help_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Help {
-      get { return help_; }
-      set {
-        help_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "labels" field.</summary>
-    public const int LabelsFieldNumber = 4;
-    private static readonly pb::FieldCodec<string> _repeated_labels_codec
-        = pb::FieldCodec.ForString(34);
-    private readonly pbc::RepeatedField<string> labels_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> Labels {
-      get { return labels_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as MetricResponse);
+      return Equals(other as GetMetricsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(MetricResponse other) {
+    public bool Equals(GetMetricsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Name != other.Name) return false;
-      if (Type != other.Type) return false;
-      if (Help != other.Help) return false;
-      if(!labels_.Equals(other.labels_)) return false;
+      if(!type_.Equals(other.type_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2204,10 +2419,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Type.Length != 0) hash ^= Type.GetHashCode();
-      if (Help.Length != 0) hash ^= Help.GetHashCode();
-      hash ^= labels_.GetHashCode();
+      hash ^= type_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2226,19 +2438,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (Type.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Type);
-      }
-      if (Help.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Help);
-      }
-      labels_.WriteTo(output, _repeated_labels_codec);
+      type_.WriteTo(output, _repeated_type_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2249,19 +2449,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (Type.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Type);
-      }
-      if (Help.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Help);
-      }
-      labels_.WriteTo(ref output, _repeated_labels_codec);
+      type_.WriteTo(ref output, _repeated_type_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2272,16 +2460,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (Type.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
-      }
-      if (Help.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Help);
-      }
-      size += labels_.CalculateSize(_repeated_labels_codec);
+      size += type_.CalculateSize(_repeated_type_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2290,20 +2469,11 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(MetricResponse other) {
+    public void MergeFrom(GetMetricsRequest other) {
       if (other == null) {
         return;
       }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.Type.Length != 0) {
-        Type = other.Type;
-      }
-      if (other.Help.Length != 0) {
-        Help = other.Help;
-      }
-      labels_.Add(other.labels_);
+      type_.Add(other.type_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2319,20 +2489,9 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            Type = input.ReadString();
-            break;
-          }
-          case 26: {
-            Help = input.ReadString();
-            break;
-          }
-          case 34: {
-            labels_.AddEntriesFrom(input, _repeated_labels_codec);
+          case 10:
+          case 8: {
+            type_.AddEntriesFrom(input, _repeated_type_codec);
             break;
           }
         }
@@ -2350,20 +2509,9 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            Type = input.ReadString();
-            break;
-          }
-          case 26: {
-            Help = input.ReadString();
-            break;
-          }
-          case 34: {
-            labels_.AddEntriesFrom(ref input, _repeated_labels_codec);
+          case 10:
+          case 8: {
+            type_.AddEntriesFrom(ref input, _repeated_type_codec);
             break;
           }
         }
@@ -2373,16 +2521,16 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
   }
 
-  public sealed partial class MetricsRequest : pb::IMessage<MetricsRequest>
+  public sealed partial class Metric : pb::IMessage<Metric>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<MetricsRequest> _parser = new pb::MessageParser<MetricsRequest>(() => new MetricsRequest());
+    private static readonly pb::MessageParser<Metric> _parser = new pb::MessageParser<Metric>(() => new Metric());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<MetricsRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<Metric> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2398,7 +2546,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricsRequest() {
+    public Metric() {
       OnConstruction();
     }
 
@@ -2406,44 +2554,122 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricsRequest(MetricsRequest other) : this() {
-      metrics_ = other.metrics_.Clone();
+    public Metric(Metric other) : this() {
+      switch (other.MetricCase) {
+        case MetricOneofCase.Counter:
+          Counter = other.Counter.Clone();
+          break;
+        case MetricOneofCase.Gauge:
+          Gauge = other.Gauge.Clone();
+          break;
+        case MetricOneofCase.Histogram:
+          Histogram = other.Histogram.Clone();
+          break;
+        case MetricOneofCase.Summary:
+          Summary = other.Summary.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricsRequest Clone() {
-      return new MetricsRequest(this);
+    public Metric Clone() {
+      return new Metric(this);
     }
 
-    /// <summary>Field number for the "metrics" field.</summary>
-    public const int MetricsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Smartpcr.Monitoring.Metrics.V1.MetricRequest> _repeated_metrics_codec
-        = pb::FieldCodec.ForMessage(10, global::Smartpcr.Monitoring.Metrics.V1.MetricRequest.Parser);
-    private readonly pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricRequest> metrics_ = new pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricRequest>();
+    /// <summary>Field number for the "counter" field.</summary>
+    public const int CounterFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricRequest> Metrics {
-      get { return metrics_; }
+    public global::Smartpcr.Monitoring.Metrics.V1.Counter Counter {
+      get { return metricCase_ == MetricOneofCase.Counter ? (global::Smartpcr.Monitoring.Metrics.V1.Counter) metric_ : null; }
+      set {
+        metric_ = value;
+        metricCase_ = value == null ? MetricOneofCase.None : MetricOneofCase.Counter;
+      }
+    }
+
+    /// <summary>Field number for the "gauge" field.</summary>
+    public const int GaugeFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Smartpcr.Monitoring.Metrics.V1.Gauge Gauge {
+      get { return metricCase_ == MetricOneofCase.Gauge ? (global::Smartpcr.Monitoring.Metrics.V1.Gauge) metric_ : null; }
+      set {
+        metric_ = value;
+        metricCase_ = value == null ? MetricOneofCase.None : MetricOneofCase.Gauge;
+      }
+    }
+
+    /// <summary>Field number for the "histogram" field.</summary>
+    public const int HistogramFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Smartpcr.Monitoring.Metrics.V1.Histogram Histogram {
+      get { return metricCase_ == MetricOneofCase.Histogram ? (global::Smartpcr.Monitoring.Metrics.V1.Histogram) metric_ : null; }
+      set {
+        metric_ = value;
+        metricCase_ = value == null ? MetricOneofCase.None : MetricOneofCase.Histogram;
+      }
+    }
+
+    /// <summary>Field number for the "summary" field.</summary>
+    public const int SummaryFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Smartpcr.Monitoring.Metrics.V1.Summary Summary {
+      get { return metricCase_ == MetricOneofCase.Summary ? (global::Smartpcr.Monitoring.Metrics.V1.Summary) metric_ : null; }
+      set {
+        metric_ = value;
+        metricCase_ = value == null ? MetricOneofCase.None : MetricOneofCase.Summary;
+      }
+    }
+
+    private object metric_;
+    /// <summary>Enum of possible cases for the "metric" oneof.</summary>
+    public enum MetricOneofCase {
+      None = 0,
+      Counter = 2,
+      Gauge = 3,
+      Histogram = 4,
+      Summary = 5,
+    }
+    private MetricOneofCase metricCase_ = MetricOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MetricOneofCase MetricCase {
+      get { return metricCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMetric() {
+      metricCase_ = MetricOneofCase.None;
+      metric_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as MetricsRequest);
+      return Equals(other as Metric);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(MetricsRequest other) {
+    public bool Equals(Metric other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!metrics_.Equals(other.metrics_)) return false;
+      if (!object.Equals(Counter, other.Counter)) return false;
+      if (!object.Equals(Gauge, other.Gauge)) return false;
+      if (!object.Equals(Histogram, other.Histogram)) return false;
+      if (!object.Equals(Summary, other.Summary)) return false;
+      if (MetricCase != other.MetricCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2451,7 +2677,11 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= metrics_.GetHashCode();
+      if (metricCase_ == MetricOneofCase.Counter) hash ^= Counter.GetHashCode();
+      if (metricCase_ == MetricOneofCase.Gauge) hash ^= Gauge.GetHashCode();
+      if (metricCase_ == MetricOneofCase.Histogram) hash ^= Histogram.GetHashCode();
+      if (metricCase_ == MetricOneofCase.Summary) hash ^= Summary.GetHashCode();
+      hash ^= (int) metricCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2470,7 +2700,22 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      metrics_.WriteTo(output, _repeated_metrics_codec);
+      if (metricCase_ == MetricOneofCase.Counter) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Counter);
+      }
+      if (metricCase_ == MetricOneofCase.Gauge) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Gauge);
+      }
+      if (metricCase_ == MetricOneofCase.Histogram) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Histogram);
+      }
+      if (metricCase_ == MetricOneofCase.Summary) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Summary);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2481,7 +2726,22 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      metrics_.WriteTo(ref output, _repeated_metrics_codec);
+      if (metricCase_ == MetricOneofCase.Counter) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Counter);
+      }
+      if (metricCase_ == MetricOneofCase.Gauge) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Gauge);
+      }
+      if (metricCase_ == MetricOneofCase.Histogram) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Histogram);
+      }
+      if (metricCase_ == MetricOneofCase.Summary) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Summary);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2492,7 +2752,18 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += metrics_.CalculateSize(_repeated_metrics_codec);
+      if (metricCase_ == MetricOneofCase.Counter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Counter);
+      }
+      if (metricCase_ == MetricOneofCase.Gauge) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gauge);
+      }
+      if (metricCase_ == MetricOneofCase.Histogram) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Histogram);
+      }
+      if (metricCase_ == MetricOneofCase.Summary) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Summary);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2501,11 +2772,37 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(MetricsRequest other) {
+    public void MergeFrom(Metric other) {
       if (other == null) {
         return;
       }
-      metrics_.Add(other.metrics_);
+      switch (other.MetricCase) {
+        case MetricOneofCase.Counter:
+          if (Counter == null) {
+            Counter = new global::Smartpcr.Monitoring.Metrics.V1.Counter();
+          }
+          Counter.MergeFrom(other.Counter);
+          break;
+        case MetricOneofCase.Gauge:
+          if (Gauge == null) {
+            Gauge = new global::Smartpcr.Monitoring.Metrics.V1.Gauge();
+          }
+          Gauge.MergeFrom(other.Gauge);
+          break;
+        case MetricOneofCase.Histogram:
+          if (Histogram == null) {
+            Histogram = new global::Smartpcr.Monitoring.Metrics.V1.Histogram();
+          }
+          Histogram.MergeFrom(other.Histogram);
+          break;
+        case MetricOneofCase.Summary:
+          if (Summary == null) {
+            Summary = new global::Smartpcr.Monitoring.Metrics.V1.Summary();
+          }
+          Summary.MergeFrom(other.Summary);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2521,8 +2818,40 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
+          case 18: {
+            global::Smartpcr.Monitoring.Metrics.V1.Counter subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Counter();
+            if (metricCase_ == MetricOneofCase.Counter) {
+              subBuilder.MergeFrom(Counter);
+            }
+            input.ReadMessage(subBuilder);
+            Counter = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Smartpcr.Monitoring.Metrics.V1.Gauge subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Gauge();
+            if (metricCase_ == MetricOneofCase.Gauge) {
+              subBuilder.MergeFrom(Gauge);
+            }
+            input.ReadMessage(subBuilder);
+            Gauge = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Smartpcr.Monitoring.Metrics.V1.Histogram subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Histogram();
+            if (metricCase_ == MetricOneofCase.Histogram) {
+              subBuilder.MergeFrom(Histogram);
+            }
+            input.ReadMessage(subBuilder);
+            Histogram = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Smartpcr.Monitoring.Metrics.V1.Summary subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Summary();
+            if (metricCase_ == MetricOneofCase.Summary) {
+              subBuilder.MergeFrom(Summary);
+            }
+            input.ReadMessage(subBuilder);
+            Summary = subBuilder;
             break;
           }
         }
@@ -2540,8 +2869,40 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            metrics_.AddEntriesFrom(ref input, _repeated_metrics_codec);
+          case 18: {
+            global::Smartpcr.Monitoring.Metrics.V1.Counter subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Counter();
+            if (metricCase_ == MetricOneofCase.Counter) {
+              subBuilder.MergeFrom(Counter);
+            }
+            input.ReadMessage(subBuilder);
+            Counter = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Smartpcr.Monitoring.Metrics.V1.Gauge subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Gauge();
+            if (metricCase_ == MetricOneofCase.Gauge) {
+              subBuilder.MergeFrom(Gauge);
+            }
+            input.ReadMessage(subBuilder);
+            Gauge = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Smartpcr.Monitoring.Metrics.V1.Histogram subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Histogram();
+            if (metricCase_ == MetricOneofCase.Histogram) {
+              subBuilder.MergeFrom(Histogram);
+            }
+            input.ReadMessage(subBuilder);
+            Histogram = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Smartpcr.Monitoring.Metrics.V1.Summary subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Summary();
+            if (metricCase_ == MetricOneofCase.Summary) {
+              subBuilder.MergeFrom(Summary);
+            }
+            input.ReadMessage(subBuilder);
+            Summary = subBuilder;
             break;
           }
         }
@@ -2551,16 +2912,16 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
   }
 
-  public sealed partial class MetricsResponse : pb::IMessage<MetricsResponse>
+  public sealed partial class GetMetricsResponse : pb::IMessage<GetMetricsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<MetricsResponse> _parser = new pb::MessageParser<MetricsResponse>(() => new MetricsResponse());
+    private static readonly pb::MessageParser<GetMetricsResponse> _parser = new pb::MessageParser<GetMetricsResponse>(() => new GetMetricsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<MetricsResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetMetricsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2576,7 +2937,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricsResponse() {
+    public GetMetricsResponse() {
       OnConstruction();
     }
 
@@ -2584,37 +2945,37 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricsResponse(MetricsResponse other) : this() {
+    public GetMetricsResponse(GetMetricsResponse other) : this() {
       metrics_ = other.metrics_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MetricsResponse Clone() {
-      return new MetricsResponse(this);
+    public GetMetricsResponse Clone() {
+      return new GetMetricsResponse(this);
     }
 
     /// <summary>Field number for the "metrics" field.</summary>
     public const int MetricsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Smartpcr.Monitoring.Metrics.V1.MetricResponse> _repeated_metrics_codec
-        = pb::FieldCodec.ForMessage(10, global::Smartpcr.Monitoring.Metrics.V1.MetricResponse.Parser);
-    private readonly pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricResponse> metrics_ = new pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricResponse>();
+    private static readonly pb::FieldCodec<global::Smartpcr.Monitoring.Metrics.V1.Metric> _repeated_metrics_codec
+        = pb::FieldCodec.ForMessage(10, global::Smartpcr.Monitoring.Metrics.V1.Metric.Parser);
+    private readonly pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.Metric> metrics_ = new pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.Metric>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricResponse> Metrics {
+    public pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.Metric> Metrics {
       get { return metrics_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as MetricsResponse);
+      return Equals(other as GetMetricsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(MetricsResponse other) {
+    public bool Equals(GetMetricsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2679,7 +3040,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(MetricsResponse other) {
+    public void MergeFrom(GetMetricsResponse other) {
       if (other == null) {
         return;
       }
