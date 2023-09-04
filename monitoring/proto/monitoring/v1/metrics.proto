@@ -37,7 +37,7 @@ enum MetricType {
     SUMMARY = 3;
 }
 
-message Metric {
+message CreateMetricRequest {
     MetricType type = 1;
     oneof metric {
         Counter counter = 2;
@@ -47,10 +47,6 @@ message Metric {
     }
 }
 
-message Metrics {
-    repeated Metric metrics = 1;
-}
-
 message MetricRequest {
     string name = 1;
     string type = 2;
@@ -58,24 +54,34 @@ message MetricRequest {
     repeated string labels = 4;
 }
 
-message MetricResponse {
-    string name = 1;
-    string type = 2;
-    string help = 3;
-    repeated string labels = 4;
+message CreateMetricResponse {
+    MetricType type = 1;
+    oneof metric {
+      Counter counter = 2;
+      Gauge gauge = 3;
+      Histogram histogram = 4;
+      Summary summary = 5;
+  }
 }
 
-message MetricsRequest {
-    repeated MetricRequest metrics = 1;
+message GetMetricsRequest {
+  repeated MetricType type = 1;
 }
 
-message MetricsResponse {
-    repeated MetricResponse metrics = 1;
+message Metric {
+  oneof metric {
+    Counter counter = 2;
+    Gauge gauge = 3;
+    Histogram histogram = 4;
+    Summary summary = 5;
+  }
+}
+
+message GetMetricsResponse {
+    repeated Metric metrics = 1;
 }
 
 service MetricsService {
-    rpc GetMetric(MetricRequest) returns (MetricResponse);
-    rpc SetMetric(Metric) returns (MetricResponse);
-    rpc GetMetrics(MetricsRequest) returns (MetricsResponse);
-    rpc SetMetrics(Metrics) returns (MetricsResponse);
+    rpc CreateMetric(CreateMetricRequest) returns (CreateMetricResponse);
+    rpc GetMetric(GetMetricsRequest) returns (GetMetricsResponse);
 }
