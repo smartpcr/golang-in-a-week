@@ -1,0 +1,81 @@
+syntax = "proto3";
+
+package smartpcr.monitoring.metrics.v1;
+
+option go_package = "github.com/smartpcr/monitoring/metrics/protos/v1;v1";
+
+import "google/protobuf/timestamp.proto";
+
+message Counter {
+    string name = 1;
+    int64 value = 2;
+    google.protobuf.Timestamp timestamp = 3;
+}
+
+message Gauge {
+    string name = 1;
+    double value = 2;
+    google.protobuf.Timestamp timestamp = 3;
+}
+
+message Histogram {
+    string name = 1;
+    double value = 2;
+    google.protobuf.Timestamp timestamp = 3;
+}
+
+message Summary {
+    string name = 1;
+    double value = 2;
+    google.protobuf.Timestamp timestamp = 3;
+}
+
+enum MetricType {
+    COUNTER = 0;
+    GAUGE = 1;
+    HISTOGRAM = 2;
+    SUMMARY = 3;
+}
+
+message Metric {
+    MetricType type = 1;
+    oneof metric {
+        Counter counter = 2;
+        Gauge gauge = 3;
+        Histogram histogram = 4;
+        Summary summary = 5;
+    }
+}
+
+message Metrics {
+    repeated Metric metrics = 1;
+}
+
+message MetricRequest {
+    string name = 1;
+    string type = 2;
+    string help = 3;
+    repeated string labels = 4;
+}
+
+message MetricResponse {
+    string name = 1;
+    string type = 2;
+    string help = 3;
+    repeated string labels = 4;
+}
+
+message MetricsRequest {
+    repeated MetricRequest metrics = 1;
+}
+
+message MetricsResponse {
+    repeated MetricResponse metrics = 1;
+}
+
+service MetricsService {
+    rpc GetMetric(MetricRequest) returns (MetricResponse);
+    rpc SetMetric(Metric) returns (MetricResponse);
+    rpc GetMetrics(MetricsRequest) returns (MetricsResponse);
+    rpc SetMetrics(Metrics) returns (MetricsResponse);
+}

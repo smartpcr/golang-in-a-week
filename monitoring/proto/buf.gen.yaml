@@ -1,0 +1,17 @@
+version: v1
+managed:
+  enabled: true
+  optimize_for: CODE_SIZE
+plugins:
+  - plugin: buf.build/grpc/go:v1.3.0
+    out: gen/go-grpc
+    opt: 
+      - paths=source_relative
+  - plugin: buf.build/protocolbuffers/go
+    out: gen/go
+    opt:
+      - paths=source_relative
+  - plugin: buf.build/grpc/csharp:v1.57.0
+    out: gen/csharp-grpc
+  - plugin: buf.build/protocolbuffers/csharp
+    out: gen/csharp

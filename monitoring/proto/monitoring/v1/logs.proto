@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package smartpcr.monitoring.logs.v1;
+
+option go_package = "github.com/smartpcr/monitoring/logs/protos/v1;v1";
+
+import "google/protobuf/timestamp.proto";
+
+message LogMessage {
+  string message = 1;
+  int32 line_number = 2;
+  string file_name = 3;
+  google.protobuf.Timestamp timestamp = 4;
+}
+
+message LogMessages {
+  repeated LogMessage messages = 1;
+}
+
+message LogMessageRequest {
+  string message = 1;
+  int32 line_number = 2;
+  string file_name = 3;
+}
+
+message LogMessageResponse {
+  string message = 1;
+  int32 line_number = 2;
+  string file_name = 3;
+  google.protobuf.Timestamp timestamp = 4;
+}
+
+service LogService {
+  rpc Log(LogMessageRequest) returns (LogMessageResponse);
+}
+
