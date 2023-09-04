@@ -26,63 +26,64 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
           string.Concat(
             "Chttb25pdG9yaW5nL3YxL21ldHJpY3MucHJvdG8SHnNtYXJ0cGNyLm1vbml0",
             "b3JpbmcubWV0cmljcy52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
-            "cm90byJtCgdDb3VudGVyEhIKBG5hbWUYASABKAlSBG5hbWUSFAoFdmFsdWUY",
-            "AiABKANSBXZhbHVlEjgKCXRpbWVzdGFtcBgDIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBSCXRpbWVzdGFtcCJrCgVHYXVnZRISCgRuYW1lGAEg",
-            "ASgJUgRuYW1lEhQKBXZhbHVlGAIgASgBUgV2YWx1ZRI4Cgl0aW1lc3RhbXAY",
-            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgl0aW1lc3RhbXAi",
-            "bwoJSGlzdG9ncmFtEhIKBG5hbWUYASABKAlSBG5hbWUSFAoFdmFsdWUYAiAB",
-            "KAFSBXZhbHVlEjgKCXRpbWVzdGFtcBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBSCXRpbWVzdGFtcCJtCgdTdW1tYXJ5EhIKBG5hbWUYASAB",
-            "KAlSBG5hbWUSFAoFdmFsdWUYAiABKAFSBXZhbHVlEjgKCXRpbWVzdGFtcBgD",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXRpbWVzdGFtcCLz",
-            "AgoTQ3JlYXRlTWV0cmljUmVxdWVzdBI+CgR0eXBlGAEgASgOMiouc21hcnRw",
-            "Y3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLk1ldHJpY1R5cGVSBHR5cGUSQwoH",
-            "Y291bnRlchgCIAEoCzInLnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52",
-            "MS5Db3VudGVySABSB2NvdW50ZXISPQoFZ2F1Z2UYAyABKAsyJS5zbWFydHBj",
-            "ci5tb25pdG9yaW5nLm1ldHJpY3MudjEuR2F1Z2VIAFIFZ2F1Z2USSQoJaGlz",
-            "dG9ncmFtGAQgASgLMikuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYx",
-            "Lkhpc3RvZ3JhbUgAUgloaXN0b2dyYW0SQwoHc3VtbWFyeRgFIAEoCzInLnNt",
-            "YXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5TdW1tYXJ5SABSB3N1bW1h",
-            "cnlCCAoGbWV0cmljImMKDU1ldHJpY1JlcXVlc3QSEgoEbmFtZRgBIAEoCVIE",
-            "bmFtZRISCgR0eXBlGAIgASgJUgR0eXBlEhIKBGhlbHAYAyABKAlSBGhlbHAS",
-            "FgoGbGFiZWxzGAQgAygJUgZsYWJlbHMi9AIKFENyZWF0ZU1ldHJpY1Jlc3Bv",
-            "bnNlEj4KBHR5cGUYASABKA4yKi5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJp",
-            "Y3MudjEuTWV0cmljVHlwZVIEdHlwZRJDCgdjb3VudGVyGAIgASgLMicuc21h",
-            "cnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkNvdW50ZXJIAFIHY291bnRl",
-            "chI9CgVnYXVnZRgDIAEoCzIlLnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmlj",
-            "cy52MS5HYXVnZUgAUgVnYXVnZRJJCgloaXN0b2dyYW0YBCABKAsyKS5zbWFy",
-            "dHBjci5tb25pdG9yaW5nLm1ldHJpY3MudjEuSGlzdG9ncmFtSABSCWhpc3Rv",
-            "Z3JhbRJDCgdzdW1tYXJ5GAUgASgLMicuc21hcnRwY3IubW9uaXRvcmluZy5t",
-            "ZXRyaWNzLnYxLlN1bW1hcnlIAFIHc3VtbWFyeUIICgZtZXRyaWMiUwoRR2V0",
-            "TWV0cmljc1JlcXVlc3QSPgoEdHlwZRgBIAMoDjIqLnNtYXJ0cGNyLm1vbml0",
-            "b3JpbmcubWV0cmljcy52MS5NZXRyaWNUeXBlUgR0eXBlIqYCCgZNZXRyaWMS",
-            "QwoHY291bnRlchgCIAEoCzInLnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmlj",
-            "cy52MS5Db3VudGVySABSB2NvdW50ZXISPQoFZ2F1Z2UYAyABKAsyJS5zbWFy",
-            "dHBjci5tb25pdG9yaW5nLm1ldHJpY3MudjEuR2F1Z2VIAFIFZ2F1Z2USSQoJ",
-            "aGlzdG9ncmFtGAQgASgLMikuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNz",
-            "LnYxLkhpc3RvZ3JhbUgAUgloaXN0b2dyYW0SQwoHc3VtbWFyeRgFIAEoCzIn",
-            "LnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5TdW1tYXJ5SABSB3N1",
-            "bW1hcnlCCAoGbWV0cmljIlYKEkdldE1ldHJpY3NSZXNwb25zZRJACgdtZXRy",
-            "aWNzGAEgAygLMiYuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLk1l",
-            "dHJpY1IHbWV0cmljcypACgpNZXRyaWNUeXBlEgsKB0NPVU5URVIQABIJCgVH",
-            "QVVHRRABEg0KCUhJU1RPR1JBTRACEgsKB1NVTU1BUlkQAzL/AQoOTWV0cmlj",
-            "c1NlcnZpY2USeQoMQ3JlYXRlTWV0cmljEjMuc21hcnRwY3IubW9uaXRvcmlu",
-            "Zy5tZXRyaWNzLnYxLkNyZWF0ZU1ldHJpY1JlcXVlc3QaNC5zbWFydHBjci5t",
-            "b25pdG9yaW5nLm1ldHJpY3MudjEuQ3JlYXRlTWV0cmljUmVzcG9uc2UScgoJ",
-            "R2V0TWV0cmljEjEuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkdl",
-            "dE1ldHJpY3NSZXF1ZXN0GjIuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNz",
-            "LnYxLkdldE1ldHJpY3NSZXNwb25zZUKEAgoiY29tLnNtYXJ0cGNyLm1vbml0",
-            "b3JpbmcubWV0cmljcy52MUIMTWV0cmljc1Byb3RvSAJQAVozZ2l0aHViLmNv",
-            "bS9zbWFydHBjci9tb25pdG9yaW5nL21ldHJpY3MvcHJvdG9zL3YxO3YxogID",
-            "U01NqgIeU21hcnRwY3IuTW9uaXRvcmluZy5NZXRyaWNzLlYxygIeU21hcnRw",
-            "Y3JcTW9uaXRvcmluZ1xNZXRyaWNzXFYx4gIqU21hcnRwY3JcTW9uaXRvcmlu",
-            "Z1xNZXRyaWNzXFYxXEdQQk1ldGFkYXRh6gIhU21hcnRwY3I6Ok1vbml0b3Jp",
-            "bmc6Ok1ldHJpY3M6OlYxYgZwcm90bzM="));
+            "cm90byKHAQoHQ291bnRlchISCgRuYW1lGAEgASgJUgRuYW1lEhgKB2F2ZXJh",
+            "Z2UYAiABKANSB2F2ZXJhZ2USFAoFY291bnQYAyABKANSBWNvdW50EjgKCXRp",
+            "bWVzdGFtcBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXRp",
+            "bWVzdGFtcCJrCgVHYXVnZRISCgRuYW1lGAEgASgJUgRuYW1lEhQKBXZhbHVl",
+            "GAIgASgBUgV2YWx1ZRI4Cgl0aW1lc3RhbXAYAyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wUgl0aW1lc3RhbXAibwoJSGlzdG9ncmFtEhIKBG5h",
+            "bWUYASABKAlSBG5hbWUSFAoFdmFsdWUYAiABKAFSBXZhbHVlEjgKCXRpbWVz",
+            "dGFtcBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXRpbWVz",
+            "dGFtcCJtCgdTdW1tYXJ5EhIKBG5hbWUYASABKAlSBG5hbWUSFAoFdmFsdWUY",
+            "AiABKAFSBXZhbHVlEjgKCXRpbWVzdGFtcBgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBSCXRpbWVzdGFtcCLzAgoTQ3JlYXRlTWV0cmljUmVx",
+            "dWVzdBI+CgR0eXBlGAEgASgOMiouc21hcnRwY3IubW9uaXRvcmluZy5tZXRy",
+            "aWNzLnYxLk1ldHJpY1R5cGVSBHR5cGUSQwoHY291bnRlchgCIAEoCzInLnNt",
+            "YXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5Db3VudGVySABSB2NvdW50",
+            "ZXISPQoFZ2F1Z2UYAyABKAsyJS5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJp",
+            "Y3MudjEuR2F1Z2VIAFIFZ2F1Z2USSQoJaGlzdG9ncmFtGAQgASgLMikuc21h",
+            "cnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkhpc3RvZ3JhbUgAUgloaXN0",
+            "b2dyYW0SQwoHc3VtbWFyeRgFIAEoCzInLnNtYXJ0cGNyLm1vbml0b3Jpbmcu",
+            "bWV0cmljcy52MS5TdW1tYXJ5SABSB3N1bW1hcnlCCAoGbWV0cmljImMKDU1l",
+            "dHJpY1JlcXVlc3QSEgoEbmFtZRgBIAEoCVIEbmFtZRISCgR0eXBlGAIgASgJ",
+            "UgR0eXBlEhIKBGhlbHAYAyABKAlSBGhlbHASFgoGbGFiZWxzGAQgAygJUgZs",
+            "YWJlbHMi9AIKFENyZWF0ZU1ldHJpY1Jlc3BvbnNlEj4KBHR5cGUYASABKA4y",
+            "Ki5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJpY3MudjEuTWV0cmljVHlwZVIE",
+            "dHlwZRJDCgdjb3VudGVyGAIgASgLMicuc21hcnRwY3IubW9uaXRvcmluZy5t",
+            "ZXRyaWNzLnYxLkNvdW50ZXJIAFIHY291bnRlchI9CgVnYXVnZRgDIAEoCzIl",
+            "LnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5HYXVnZUgAUgVnYXVn",
+            "ZRJJCgloaXN0b2dyYW0YBCABKAsyKS5zbWFydHBjci5tb25pdG9yaW5nLm1l",
+            "dHJpY3MudjEuSGlzdG9ncmFtSABSCWhpc3RvZ3JhbRJDCgdzdW1tYXJ5GAUg",
+            "ASgLMicuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLlN1bW1hcnlI",
+            "AFIHc3VtbWFyeUIICgZtZXRyaWMiUwoRR2V0TWV0cmljc1JlcXVlc3QSPgoE",
+            "dHlwZRgBIAEoDjIqLnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5N",
+            "ZXRyaWNUeXBlUgR0eXBlIqYCCgZNZXRyaWMSQwoHY291bnRlchgCIAEoCzIn",
+            "LnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5Db3VudGVySABSB2Nv",
+            "dW50ZXISPQoFZ2F1Z2UYAyABKAsyJS5zbWFydHBjci5tb25pdG9yaW5nLm1l",
+            "dHJpY3MudjEuR2F1Z2VIAFIFZ2F1Z2USSQoJaGlzdG9ncmFtGAQgASgLMiku",
+            "c21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkhpc3RvZ3JhbUgAUglo",
+            "aXN0b2dyYW0SQwoHc3VtbWFyeRgFIAEoCzInLnNtYXJ0cGNyLm1vbml0b3Jp",
+            "bmcubWV0cmljcy52MS5TdW1tYXJ5SABSB3N1bW1hcnlCCAoGbWV0cmljIlYK",
+            "EkdldE1ldHJpY3NSZXNwb25zZRJACgdtZXRyaWNzGAEgAygLMiYuc21hcnRw",
+            "Y3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLk1ldHJpY1IHbWV0cmljcypACgpN",
+            "ZXRyaWNUeXBlEgsKB0NPVU5URVIQABIJCgVHQVVHRRABEg0KCUhJU1RPR1JB",
+            "TRACEgsKB1NVTU1BUlkQAzL/AQoOTWV0cmljc1NlcnZpY2USeQoMQ3JlYXRl",
+            "TWV0cmljEjMuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkNyZWF0",
+            "ZU1ldHJpY1JlcXVlc3QaNC5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJpY3Mu",
+            "djEuQ3JlYXRlTWV0cmljUmVzcG9uc2UScgoJR2V0TWV0cmljEjEuc21hcnRw",
+            "Y3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkdldE1ldHJpY3NSZXF1ZXN0GjIu",
+            "c21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkdldE1ldHJpY3NSZXNw",
+            "b25zZUKEAgoiY29tLnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MUIM",
+            "TWV0cmljc1Byb3RvSAJQAVozZ2l0aHViLmNvbS9zbWFydHBjci9tb25pdG9y",
+            "aW5nL21ldHJpY3MvcHJvdG9zL3YxO3YxogIDU01NqgIeU21hcnRwY3IuTW9u",
+            "aXRvcmluZy5NZXRyaWNzLlYxygIeU21hcnRwY3JcTW9uaXRvcmluZ1xNZXRy",
+            "aWNzXFYx4gIqU21hcnRwY3JcTW9uaXRvcmluZ1xNZXRyaWNzXFYxXEdQQk1l",
+            "dGFkYXRh6gIhU21hcnRwY3I6Ok1vbml0b3Jpbmc6Ok1ldHJpY3M6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Smartpcr.Monitoring.Metrics.V1.MetricType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Counter), global::Smartpcr.Monitoring.Metrics.V1.Counter.Parser, new[]{ "Name", "Value", "Timestamp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Counter), global::Smartpcr.Monitoring.Metrics.V1.Counter.Parser, new[]{ "Name", "Average", "Count", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Gauge), global::Smartpcr.Monitoring.Metrics.V1.Gauge.Parser, new[]{ "Name", "Value", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Histogram), global::Smartpcr.Monitoring.Metrics.V1.Histogram.Parser, new[]{ "Name", "Value", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Summary), global::Smartpcr.Monitoring.Metrics.V1.Summary.Parser, new[]{ "Name", "Value", "Timestamp" }, null, null, null, null),
@@ -143,7 +144,8 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Counter(Counter other) : this() {
       name_ = other.name_;
-      value_ = other.value_;
+      average_ = other.average_;
+      count_ = other.count_;
       timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -166,20 +168,32 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
       }
     }
 
-    /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 2;
-    private long value_;
+    /// <summary>Field number for the "average" field.</summary>
+    public const int AverageFieldNumber = 2;
+    private long average_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Value {
-      get { return value_; }
+    public long Average {
+      get { return average_; }
       set {
-        value_ = value;
+        average_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "count" field.</summary>
+    public const int CountFieldNumber = 3;
+    private long count_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Count {
+      get { return count_; }
+      set {
+        count_ = value;
       }
     }
 
     /// <summary>Field number for the "timestamp" field.</summary>
-    public const int TimestampFieldNumber = 3;
+    public const int TimestampFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -206,7 +220,8 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
         return true;
       }
       if (Name != other.Name) return false;
-      if (Value != other.Value) return false;
+      if (Average != other.Average) return false;
+      if (Count != other.Count) return false;
       if (!object.Equals(Timestamp, other.Timestamp)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -216,7 +231,8 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Value != 0L) hash ^= Value.GetHashCode();
+      if (Average != 0L) hash ^= Average.GetHashCode();
+      if (Count != 0L) hash ^= Count.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -240,12 +256,16 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Value != 0L) {
+      if (Average != 0L) {
         output.WriteRawTag(16);
-        output.WriteInt64(Value);
+        output.WriteInt64(Average);
+      }
+      if (Count != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Count);
       }
       if (timestamp_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteMessage(Timestamp);
       }
       if (_unknownFields != null) {
@@ -262,12 +282,16 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Value != 0L) {
+      if (Average != 0L) {
         output.WriteRawTag(16);
-        output.WriteInt64(Value);
+        output.WriteInt64(Average);
+      }
+      if (Count != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Count);
       }
       if (timestamp_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteMessage(Timestamp);
       }
       if (_unknownFields != null) {
@@ -283,8 +307,11 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Value != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Value);
+      if (Average != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Average);
+      }
+      if (Count != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Count);
       }
       if (timestamp_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
@@ -304,8 +331,11 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.Value != 0L) {
-        Value = other.Value;
+      if (other.Average != 0L) {
+        Average = other.Average;
+      }
+      if (other.Count != 0L) {
+        Count = other.Count;
       }
       if (other.timestamp_ != null) {
         if (timestamp_ == null) {
@@ -333,10 +363,14 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             break;
           }
           case 16: {
-            Value = input.ReadInt64();
+            Average = input.ReadInt64();
             break;
           }
-          case 26: {
+          case 24: {
+            Count = input.ReadInt64();
+            break;
+          }
+          case 34: {
             if (timestamp_ == null) {
               Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
@@ -363,10 +397,14 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             break;
           }
           case 16: {
-            Value = input.ReadInt64();
+            Average = input.ReadInt64();
             break;
           }
-          case 26: {
+          case 24: {
+            Count = input.ReadInt64();
+            break;
+          }
+          case 34: {
             if (timestamp_ == null) {
               Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
@@ -2375,7 +2413,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMetricsRequest(GetMetricsRequest other) : this() {
-      type_ = other.type_.Clone();
+      type_ = other.type_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2387,13 +2425,14 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Smartpcr.Monitoring.Metrics.V1.MetricType> _repeated_type_codec
-        = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Smartpcr.Monitoring.Metrics.V1.MetricType) x);
-    private readonly pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricType> type_ = new pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricType>();
+    private global::Smartpcr.Monitoring.Metrics.V1.MetricType type_ = global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Smartpcr.Monitoring.Metrics.V1.MetricType> Type {
+    public global::Smartpcr.Monitoring.Metrics.V1.MetricType Type {
       get { return type_; }
+      set {
+        type_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2411,7 +2450,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!type_.Equals(other.type_)) return false;
+      if (Type != other.Type) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2419,7 +2458,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= type_.GetHashCode();
+      if (Type != global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2438,7 +2477,10 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      type_.WriteTo(output, _repeated_type_codec);
+      if (Type != global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2449,7 +2491,10 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      type_.WriteTo(ref output, _repeated_type_codec);
+      if (Type != global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2460,7 +2505,9 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += type_.CalculateSize(_repeated_type_codec);
+      if (Type != global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2473,7 +2520,9 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
       if (other == null) {
         return;
       }
-      type_.Add(other.type_);
+      if (other.Type != global::Smartpcr.Monitoring.Metrics.V1.MetricType.Counter) {
+        Type = other.Type;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2489,9 +2538,8 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
           case 8: {
-            type_.AddEntriesFrom(input, _repeated_type_codec);
+            Type = (global::Smartpcr.Monitoring.Metrics.V1.MetricType) input.ReadEnum();
             break;
           }
         }
@@ -2509,9 +2557,8 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
           case 8: {
-            type_.AddEntriesFrom(ref input, _repeated_type_codec);
+            Type = (global::Smartpcr.Monitoring.Metrics.V1.MetricType) input.ReadEnum();
             break;
           }
         }

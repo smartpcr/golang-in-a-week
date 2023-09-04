@@ -7,65 +7,66 @@ option go_package = "github.com/smartpcr/monitoring/metrics/protos/v1;v1";
 import "google/protobuf/timestamp.proto";
 
 message Counter {
-    string name = 1;
-    int64 value = 2;
-    google.protobuf.Timestamp timestamp = 3;
+  string name = 1;
+  int64 average = 2;
+  int64 count = 3;
+  google.protobuf.Timestamp timestamp = 4;
 }
 
 message Gauge {
-    string name = 1;
-    double value = 2;
-    google.protobuf.Timestamp timestamp = 3;
+  string name = 1;
+  double value = 2;
+  google.protobuf.Timestamp timestamp = 3;
 }
 
 message Histogram {
-    string name = 1;
-    double value = 2;
-    google.protobuf.Timestamp timestamp = 3;
+  string name = 1;
+  double value = 2;
+  google.protobuf.Timestamp timestamp = 3;
 }
 
 message Summary {
-    string name = 1;
-    double value = 2;
-    google.protobuf.Timestamp timestamp = 3;
+  string name = 1;
+  double value = 2;
+  google.protobuf.Timestamp timestamp = 3;
 }
 
 enum MetricType {
-    COUNTER = 0;
-    GAUGE = 1;
-    HISTOGRAM = 2;
-    SUMMARY = 3;
+  COUNTER = 0;
+  GAUGE = 1;
+  HISTOGRAM = 2;
+  SUMMARY = 3;
 }
 
 message CreateMetricRequest {
-    MetricType type = 1;
-    oneof metric {
-        Counter counter = 2;
-        Gauge gauge = 3;
-        Histogram histogram = 4;
-        Summary summary = 5;
-    }
+  MetricType type = 1;
+  oneof metric {
+    Counter counter = 2;
+    Gauge gauge = 3;
+    Histogram histogram = 4;
+    Summary summary = 5;
+  }
 }
 
 message MetricRequest {
-    string name = 1;
-    string type = 2;
-    string help = 3;
-    repeated string labels = 4;
+  string name = 1;
+  string type = 2;
+  string help = 3;
+  repeated string labels = 4;
 }
 
 message CreateMetricResponse {
-    MetricType type = 1;
-    oneof metric {
-      Counter counter = 2;
-      Gauge gauge = 3;
-      Histogram histogram = 4;
-      Summary summary = 5;
+  MetricType type = 1;
+  oneof metric {
+    Counter counter = 2;
+    Gauge gauge = 3;
+    Histogram histogram = 4;
+    Summary summary = 5;
   }
 }
 
 message GetMetricsRequest {
-  repeated MetricType type = 1;
+  MetricType type = 1;
 }
 
 message Metric {
@@ -78,10 +79,10 @@ message Metric {
 }
 
 message GetMetricsResponse {
-    repeated Metric metrics = 1;
+  repeated Metric metrics = 1;
 }
 
 service MetricsService {
-    rpc CreateMetric(CreateMetricRequest) returns (CreateMetricResponse);
-    rpc GetMetric(GetMetricsRequest) returns (GetMetricsResponse);
+  rpc CreateMetric(CreateMetricRequest) returns (CreateMetricResponse);
+  rpc GetMetric(GetMetricsRequest) returns (GetMetricsResponse);
 }
