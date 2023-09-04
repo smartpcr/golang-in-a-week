@@ -6,10 +6,12 @@ BUF_TAG ?= $(shell date ++%Y%m%d%H%M)
 setup:
 	@./init.sh
 
-publish-schema: setup
+generate-stub: setup
 	include ./proto/.env.make
 	cd ./proto
 	buf mod init ${BUF_REGISTRY}/${BUF_REGISTRY_USERNAME}/${SERVICE_NAME}
-	echo $BUF_BUILD_TOKEN | buf registry login ${BUF_REGISTRY} --username ${BUF_REGISTRY_USERNAME} --token-stdin
+	rm -rf ./gen
 	buf build
+	buf generate
+	echo $BUF_BUILD_TOKEN | buf registry login ${BUF_REGISTRY} --username ${BUF_REGISTRY_USERNAME} --token-stdin
 	buf push --tag ${BUF_TAG}

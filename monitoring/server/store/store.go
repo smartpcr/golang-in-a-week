@@ -32,3 +32,19 @@ func (cm *ConcurrentMap[K, V]) Delete(key K) {
 	defer cm.lock.Unlock()
 	delete(cm.m, key)
 }
+
+func (cm *ConcurrentMap[K, V]) Length() int {
+	cm.lock.Lock()
+	defer cm.lock.Unlock()
+	return len(cm.m)
+}
+
+func (cm *ConcurrentMap[K, V]) Values() []V {
+	cm.lock.Lock()
+	defer cm.lock.Unlock()
+	values := make([]V, 0, len(cm.m))
+	for _, v := range cm.m {
+		values = append(values, v)
+	}
+	return values
+}

@@ -26,64 +26,64 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
           string.Concat(
             "Chttb25pdG9yaW5nL3YxL21ldHJpY3MucHJvdG8SHnNtYXJ0cGNyLm1vbml0",
             "b3JpbmcubWV0cmljcy52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
-            "cm90byKHAQoHQ291bnRlchISCgRuYW1lGAEgASgJUgRuYW1lEhgKB2F2ZXJh",
-            "Z2UYAiABKANSB2F2ZXJhZ2USFAoFY291bnQYAyABKANSBWNvdW50EjgKCXRp",
-            "bWVzdGFtcBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXRp",
-            "bWVzdGFtcCJrCgVHYXVnZRISCgRuYW1lGAEgASgJUgRuYW1lEhQKBXZhbHVl",
-            "GAIgASgBUgV2YWx1ZRI4Cgl0aW1lc3RhbXAYAyABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wUgl0aW1lc3RhbXAibwoJSGlzdG9ncmFtEhIKBG5h",
+            "cm90byKeAQoHQ291bnRlchISCgRuYW1lGAEgASgJUgRuYW1lEh0KCmxhc3Rf",
+            "dmFsdWUYAiABKANSCWxhc3RWYWx1ZRIQCgNzdW0YAyABKANSA3N1bRIUCgVj",
+            "b3VudBgEIAEoA1IFY291bnQSOAoJdGltZXN0YW1wGAUgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcFIJdGltZXN0YW1wImsKBUdhdWdlEhIKBG5h",
             "bWUYASABKAlSBG5hbWUSFAoFdmFsdWUYAiABKAFSBXZhbHVlEjgKCXRpbWVz",
             "dGFtcBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXRpbWVz",
-            "dGFtcCJtCgdTdW1tYXJ5EhIKBG5hbWUYASABKAlSBG5hbWUSFAoFdmFsdWUY",
-            "AiABKAFSBXZhbHVlEjgKCXRpbWVzdGFtcBgDIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBSCXRpbWVzdGFtcCLzAgoTQ3JlYXRlTWV0cmljUmVx",
-            "dWVzdBI+CgR0eXBlGAEgASgOMiouc21hcnRwY3IubW9uaXRvcmluZy5tZXRy",
-            "aWNzLnYxLk1ldHJpY1R5cGVSBHR5cGUSQwoHY291bnRlchgCIAEoCzInLnNt",
-            "YXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5Db3VudGVySABSB2NvdW50",
-            "ZXISPQoFZ2F1Z2UYAyABKAsyJS5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJp",
-            "Y3MudjEuR2F1Z2VIAFIFZ2F1Z2USSQoJaGlzdG9ncmFtGAQgASgLMikuc21h",
-            "cnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkhpc3RvZ3JhbUgAUgloaXN0",
-            "b2dyYW0SQwoHc3VtbWFyeRgFIAEoCzInLnNtYXJ0cGNyLm1vbml0b3Jpbmcu",
-            "bWV0cmljcy52MS5TdW1tYXJ5SABSB3N1bW1hcnlCCAoGbWV0cmljImMKDU1l",
-            "dHJpY1JlcXVlc3QSEgoEbmFtZRgBIAEoCVIEbmFtZRISCgR0eXBlGAIgASgJ",
-            "UgR0eXBlEhIKBGhlbHAYAyABKAlSBGhlbHASFgoGbGFiZWxzGAQgAygJUgZs",
-            "YWJlbHMi9AIKFENyZWF0ZU1ldHJpY1Jlc3BvbnNlEj4KBHR5cGUYASABKA4y",
-            "Ki5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJpY3MudjEuTWV0cmljVHlwZVIE",
-            "dHlwZRJDCgdjb3VudGVyGAIgASgLMicuc21hcnRwY3IubW9uaXRvcmluZy5t",
+            "dGFtcCJvCglIaXN0b2dyYW0SEgoEbmFtZRgBIAEoCVIEbmFtZRIUCgV2YWx1",
+            "ZRgCIAEoAVIFdmFsdWUSOAoJdGltZXN0YW1wGAMgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcFIJdGltZXN0YW1wIm0KB1N1bW1hcnkSEgoEbmFt",
+            "ZRgBIAEoCVIEbmFtZRIUCgV2YWx1ZRgCIAEoAVIFdmFsdWUSOAoJdGltZXN0",
+            "YW1wGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJdGltZXN0",
+            "YW1wIvMCChNDcmVhdGVNZXRyaWNSZXF1ZXN0Ej4KBHR5cGUYASABKA4yKi5z",
+            "bWFydHBjci5tb25pdG9yaW5nLm1ldHJpY3MudjEuTWV0cmljVHlwZVIEdHlw",
+            "ZRJDCgdjb3VudGVyGAIgASgLMicuc21hcnRwY3IubW9uaXRvcmluZy5tZXRy",
+            "aWNzLnYxLkNvdW50ZXJIAFIHY291bnRlchI9CgVnYXVnZRgDIAEoCzIlLnNt",
+            "YXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5HYXVnZUgAUgVnYXVnZRJJ",
+            "CgloaXN0b2dyYW0YBCABKAsyKS5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJp",
+            "Y3MudjEuSGlzdG9ncmFtSABSCWhpc3RvZ3JhbRJDCgdzdW1tYXJ5GAUgASgL",
+            "Micuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLlN1bW1hcnlIAFIH",
+            "c3VtbWFyeUIICgZtZXRyaWMiYwoNTWV0cmljUmVxdWVzdBISCgRuYW1lGAEg",
+            "ASgJUgRuYW1lEhIKBHR5cGUYAiABKAlSBHR5cGUSEgoEaGVscBgDIAEoCVIE",
+            "aGVscBIWCgZsYWJlbHMYBCADKAlSBmxhYmVscyL0AgoUQ3JlYXRlTWV0cmlj",
+            "UmVzcG9uc2USPgoEdHlwZRgBIAEoDjIqLnNtYXJ0cGNyLm1vbml0b3Jpbmcu",
+            "bWV0cmljcy52MS5NZXRyaWNUeXBlUgR0eXBlEkMKB2NvdW50ZXIYAiABKAsy",
+            "Jy5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJpY3MudjEuQ291bnRlckgAUgdj",
+            "b3VudGVyEj0KBWdhdWdlGAMgASgLMiUuc21hcnRwY3IubW9uaXRvcmluZy5t",
+            "ZXRyaWNzLnYxLkdhdWdlSABSBWdhdWdlEkkKCWhpc3RvZ3JhbRgEIAEoCzIp",
+            "LnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5IaXN0b2dyYW1IAFIJ",
+            "aGlzdG9ncmFtEkMKB3N1bW1hcnkYBSABKAsyJy5zbWFydHBjci5tb25pdG9y",
+            "aW5nLm1ldHJpY3MudjEuU3VtbWFyeUgAUgdzdW1tYXJ5QggKBm1ldHJpYyJT",
+            "ChFHZXRNZXRyaWNzUmVxdWVzdBI+CgR0eXBlGAEgASgOMiouc21hcnRwY3Iu",
+            "bW9uaXRvcmluZy5tZXRyaWNzLnYxLk1ldHJpY1R5cGVSBHR5cGUipgIKBk1l",
+            "dHJpYxJDCgdjb3VudGVyGAIgASgLMicuc21hcnRwY3IubW9uaXRvcmluZy5t",
             "ZXRyaWNzLnYxLkNvdW50ZXJIAFIHY291bnRlchI9CgVnYXVnZRgDIAEoCzIl",
             "LnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5HYXVnZUgAUgVnYXVn",
             "ZRJJCgloaXN0b2dyYW0YBCABKAsyKS5zbWFydHBjci5tb25pdG9yaW5nLm1l",
             "dHJpY3MudjEuSGlzdG9ncmFtSABSCWhpc3RvZ3JhbRJDCgdzdW1tYXJ5GAUg",
             "ASgLMicuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLlN1bW1hcnlI",
-            "AFIHc3VtbWFyeUIICgZtZXRyaWMiUwoRR2V0TWV0cmljc1JlcXVlc3QSPgoE",
-            "dHlwZRgBIAEoDjIqLnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5N",
-            "ZXRyaWNUeXBlUgR0eXBlIqYCCgZNZXRyaWMSQwoHY291bnRlchgCIAEoCzIn",
-            "LnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5Db3VudGVySABSB2Nv",
-            "dW50ZXISPQoFZ2F1Z2UYAyABKAsyJS5zbWFydHBjci5tb25pdG9yaW5nLm1l",
-            "dHJpY3MudjEuR2F1Z2VIAFIFZ2F1Z2USSQoJaGlzdG9ncmFtGAQgASgLMiku",
-            "c21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkhpc3RvZ3JhbUgAUglo",
-            "aXN0b2dyYW0SQwoHc3VtbWFyeRgFIAEoCzInLnNtYXJ0cGNyLm1vbml0b3Jp",
-            "bmcubWV0cmljcy52MS5TdW1tYXJ5SABSB3N1bW1hcnlCCAoGbWV0cmljIlYK",
-            "EkdldE1ldHJpY3NSZXNwb25zZRJACgdtZXRyaWNzGAEgAygLMiYuc21hcnRw",
-            "Y3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLk1ldHJpY1IHbWV0cmljcypACgpN",
-            "ZXRyaWNUeXBlEgsKB0NPVU5URVIQABIJCgVHQVVHRRABEg0KCUhJU1RPR1JB",
-            "TRACEgsKB1NVTU1BUlkQAzL/AQoOTWV0cmljc1NlcnZpY2USeQoMQ3JlYXRl",
-            "TWV0cmljEjMuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkNyZWF0",
-            "ZU1ldHJpY1JlcXVlc3QaNC5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJpY3Mu",
-            "djEuQ3JlYXRlTWV0cmljUmVzcG9uc2UScgoJR2V0TWV0cmljEjEuc21hcnRw",
-            "Y3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkdldE1ldHJpY3NSZXF1ZXN0GjIu",
-            "c21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLkdldE1ldHJpY3NSZXNw",
-            "b25zZUKEAgoiY29tLnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MUIM",
-            "TWV0cmljc1Byb3RvSAJQAVozZ2l0aHViLmNvbS9zbWFydHBjci9tb25pdG9y",
-            "aW5nL21ldHJpY3MvcHJvdG9zL3YxO3YxogIDU01NqgIeU21hcnRwY3IuTW9u",
-            "aXRvcmluZy5NZXRyaWNzLlYxygIeU21hcnRwY3JcTW9uaXRvcmluZ1xNZXRy",
-            "aWNzXFYx4gIqU21hcnRwY3JcTW9uaXRvcmluZ1xNZXRyaWNzXFYxXEdQQk1l",
-            "dGFkYXRh6gIhU21hcnRwY3I6Ok1vbml0b3Jpbmc6Ok1ldHJpY3M6OlYxYgZw",
-            "cm90bzM="));
+            "AFIHc3VtbWFyeUIICgZtZXRyaWMiVgoSR2V0TWV0cmljc1Jlc3BvbnNlEkAK",
+            "B21ldHJpY3MYASADKAsyJi5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJpY3Mu",
+            "djEuTWV0cmljUgdtZXRyaWNzKkAKCk1ldHJpY1R5cGUSCwoHQ09VTlRFUhAA",
+            "EgkKBUdBVUdFEAESDQoJSElTVE9HUkFNEAISCwoHU1VNTUFSWRADMv8BCg5N",
+            "ZXRyaWNzU2VydmljZRJ5CgxDcmVhdGVNZXRyaWMSMy5zbWFydHBjci5tb25p",
+            "dG9yaW5nLm1ldHJpY3MudjEuQ3JlYXRlTWV0cmljUmVxdWVzdBo0LnNtYXJ0",
+            "cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5DcmVhdGVNZXRyaWNSZXNwb25z",
+            "ZRJyCglHZXRNZXRyaWMSMS5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJpY3Mu",
+            "djEuR2V0TWV0cmljc1JlcXVlc3QaMi5zbWFydHBjci5tb25pdG9yaW5nLm1l",
+            "dHJpY3MudjEuR2V0TWV0cmljc1Jlc3BvbnNlQoQCCiJjb20uc21hcnRwY3Iu",
+            "bW9uaXRvcmluZy5tZXRyaWNzLnYxQgxNZXRyaWNzUHJvdG9IAlABWjNnaXRo",
+            "dWIuY29tL3NtYXJ0cGNyL21vbml0b3JpbmcvbWV0cmljcy9wcm90b3MvdjE7",
+            "djGiAgNTTU2qAh5TbWFydHBjci5Nb25pdG9yaW5nLk1ldHJpY3MuVjHKAh5T",
+            "bWFydHBjclxNb25pdG9yaW5nXE1ldHJpY3NcVjHiAipTbWFydHBjclxNb25p",
+            "dG9yaW5nXE1ldHJpY3NcVjFcR1BCTWV0YWRhdGHqAiFTbWFydHBjcjo6TW9u",
+            "aXRvcmluZzo6TWV0cmljczo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Smartpcr.Monitoring.Metrics.V1.MetricType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Counter), global::Smartpcr.Monitoring.Metrics.V1.Counter.Parser, new[]{ "Name", "Average", "Count", "Timestamp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Counter), global::Smartpcr.Monitoring.Metrics.V1.Counter.Parser, new[]{ "Name", "LastValue", "Sum", "Count", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Gauge), global::Smartpcr.Monitoring.Metrics.V1.Gauge.Parser, new[]{ "Name", "Value", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Histogram), global::Smartpcr.Monitoring.Metrics.V1.Histogram.Parser, new[]{ "Name", "Value", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Metrics.V1.Summary), global::Smartpcr.Monitoring.Metrics.V1.Summary.Parser, new[]{ "Name", "Value", "Timestamp" }, null, null, null, null),
@@ -144,7 +144,8 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Counter(Counter other) : this() {
       name_ = other.name_;
-      average_ = other.average_;
+      lastValue_ = other.lastValue_;
+      sum_ = other.sum_;
       count_ = other.count_;
       timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -168,20 +169,32 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
       }
     }
 
-    /// <summary>Field number for the "average" field.</summary>
-    public const int AverageFieldNumber = 2;
-    private long average_;
+    /// <summary>Field number for the "last_value" field.</summary>
+    public const int LastValueFieldNumber = 2;
+    private long lastValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Average {
-      get { return average_; }
+    public long LastValue {
+      get { return lastValue_; }
       set {
-        average_ = value;
+        lastValue_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sum" field.</summary>
+    public const int SumFieldNumber = 3;
+    private long sum_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Sum {
+      get { return sum_; }
+      set {
+        sum_ = value;
       }
     }
 
     /// <summary>Field number for the "count" field.</summary>
-    public const int CountFieldNumber = 3;
+    public const int CountFieldNumber = 4;
     private long count_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -193,7 +206,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     }
 
     /// <summary>Field number for the "timestamp" field.</summary>
-    public const int TimestampFieldNumber = 4;
+    public const int TimestampFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -220,7 +233,8 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
         return true;
       }
       if (Name != other.Name) return false;
-      if (Average != other.Average) return false;
+      if (LastValue != other.LastValue) return false;
+      if (Sum != other.Sum) return false;
       if (Count != other.Count) return false;
       if (!object.Equals(Timestamp, other.Timestamp)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -231,7 +245,8 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Average != 0L) hash ^= Average.GetHashCode();
+      if (LastValue != 0L) hash ^= LastValue.GetHashCode();
+      if (Sum != 0L) hash ^= Sum.GetHashCode();
       if (Count != 0L) hash ^= Count.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
       if (_unknownFields != null) {
@@ -256,16 +271,20 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Average != 0L) {
+      if (LastValue != 0L) {
         output.WriteRawTag(16);
-        output.WriteInt64(Average);
+        output.WriteInt64(LastValue);
+      }
+      if (Sum != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Sum);
       }
       if (Count != 0L) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt64(Count);
       }
       if (timestamp_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteMessage(Timestamp);
       }
       if (_unknownFields != null) {
@@ -282,16 +301,20 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Average != 0L) {
+      if (LastValue != 0L) {
         output.WriteRawTag(16);
-        output.WriteInt64(Average);
+        output.WriteInt64(LastValue);
+      }
+      if (Sum != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Sum);
       }
       if (Count != 0L) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt64(Count);
       }
       if (timestamp_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteMessage(Timestamp);
       }
       if (_unknownFields != null) {
@@ -307,8 +330,11 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Average != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Average);
+      if (LastValue != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastValue);
+      }
+      if (Sum != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Sum);
       }
       if (Count != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Count);
@@ -331,8 +357,11 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.Average != 0L) {
-        Average = other.Average;
+      if (other.LastValue != 0L) {
+        LastValue = other.LastValue;
+      }
+      if (other.Sum != 0L) {
+        Sum = other.Sum;
       }
       if (other.Count != 0L) {
         Count = other.Count;
@@ -363,14 +392,18 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             break;
           }
           case 16: {
-            Average = input.ReadInt64();
+            LastValue = input.ReadInt64();
             break;
           }
           case 24: {
+            Sum = input.ReadInt64();
+            break;
+          }
+          case 32: {
             Count = input.ReadInt64();
             break;
           }
-          case 34: {
+          case 42: {
             if (timestamp_ == null) {
               Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
@@ -397,14 +430,18 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             break;
           }
           case 16: {
-            Average = input.ReadInt64();
+            LastValue = input.ReadInt64();
             break;
           }
           case 24: {
+            Sum = input.ReadInt64();
+            break;
+          }
+          case 32: {
             Count = input.ReadInt64();
             break;
           }
-          case 34: {
+          case 42: {
             if (timestamp_ == null) {
               Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
