@@ -11,7 +11,7 @@ plugins:
     out: gen/go
     opt:
       - paths=source_relative
-  - plugin: buf.build/grpc/csharp
+  - plugin: buf.build/grpc/csharp:v1.57.0
     out: gen/csharp-grpc
   - plugin: buf.build/protocolbuffers/csharp
     out: gen/csharp
