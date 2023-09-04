@@ -2,30 +2,30 @@ package metrics
 
 import (
 	"context"
+	"go.opentelemetry.io/otel/sdk/metric"
+	"time"
+
 	"github.com/pkg/errors"
 	"google.golang.org/appengine/log"
 	"google.golang.org/protobuf/types/known/timestamppb"
+
 	v1 "monitoring/proto/gen/go/monitoring/v1"
 	"monitoring/server/store"
-	"sync"
-	"time"
 )
 
 type MetricsServer struct {
 	v1.UnimplementedMetricsServiceServer
+	Meter *metric.MeterProvider
 }
 
 var _ v1.MetricsServiceServer = &MetricsServer{}
 
 var (
-	counters     *store.ConcurrentMap[string, *v1.Counter]
-	once_counter sync.Once
+	counters *store.ConcurrentMap[string, *v1.Counter]
 )
 
 func init() {
-	once_counter.Do(func() {
-		counters = store.NewConcurrentMap[string, *v1.Counter]()
-	})
+	counters = store.NewConcurrentMap[string, *v1.Counter]()
 }
 
 func (m MetricsServer) CreateMetric(ctx context.Context, request *v1.CreateMetricRequest) (*v1.CreateMetricResponse, error) {
