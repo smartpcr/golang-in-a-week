@@ -46,7 +46,7 @@ func main() {
 	if err := ot.RegisterTracing(ctx, config.Receiver.Endpoint, ServiceName, logger); err != nil {
 		panic(err)
 	}
-	ctx, span, logger := ot.StartSpanLogger(ctx, "startup")
+	ctx, span, logger := ot.StartSpanLogger(ctx)
 	defer span.End()
 	span.AddEvent("startup")
 
@@ -56,7 +56,7 @@ func main() {
 		panic(err)
 	}
 
-	lis, err := net.Listen("tcp", ":50051")
+	lis, err := net.Listen("tcp", ":5000")
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}

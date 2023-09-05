@@ -1,5 +1,7 @@
 ## Setup
 
+based on [blob](https://www.komu.engineer/blogs/11/opentelemetry-and-go)
+
 1. install go-releaser
     ```bash
     sudo apt install goreleaser
