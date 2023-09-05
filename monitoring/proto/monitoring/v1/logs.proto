@@ -5,32 +5,37 @@ package smartpcr.monitoring.logs.v1;
 option go_package = "github.com/smartpcr/monitoring/logs/protos/v1;v1";
 
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+// logrus does not provide protobuf definitions out of the box
+enum ProtoLogLevel {
+  DEBUG = 0;
+  INFO = 1;
+  WARN = 2;
+  ERROR = 3;
+  FATAL = 4;
+  PANIC = 5;
+}
 
 message LogMessage {
-  string message = 1;
-  int32 line_number = 2;
-  string file_name = 3;
-  google.protobuf.Timestamp timestamp = 4;
+  ProtoLogLevel level = 1;
+  string message = 2;
+  int32 line_number = 3;
+  string function_name = 4;
+  string file_name = 5;
 }
 
 message LogMessages {
   repeated LogMessage messages = 1;
 }
 
-message LogMessageRequest {
-  string message = 1;
-  int32 line_number = 2;
-  string file_name = 3;
-}
-
 message LogMessageResponse {
-  string message = 1;
-  int32 line_number = 2;
-  string file_name = 3;
-  google.protobuf.Timestamp timestamp = 4;
+  LogMessage message = 1;
+  google.protobuf.Timestamp timestamp = 2;
 }
 
 service LogService {
-  rpc Log(LogMessageRequest) returns (LogMessageResponse);
+  rpc Log(LogMessage) returns (LogMessageResponse);
+  rpc GetLogs(google.protobuf.Empty) returns (LogMessages);
 }
 

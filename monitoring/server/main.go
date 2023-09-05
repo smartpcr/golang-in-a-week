@@ -46,18 +46,15 @@ func main() {
 	if err := ot.RegisterTracing(ctx, config.Receiver.Endpoint, ServiceName, logger); err != nil {
 		panic(err)
 	}
+	ctx, span, logger := ot.StartSpanLogger(ctx, "startup")
+	defer span.End()
+	span.AddEvent("startup")
 
 	logger.Infof("registering metrics at %s", config.Receiver.Endpoint)
 	metric, err := ot.RegisterOtelMetrics(ctx, config.Receiver.Endpoint, ServiceName)
 	if err != nil {
 		panic(err)
 	}
-	defer func(ctx context.Context) {
-		err := metric.Shutdown(ctx)
-		if err != nil {
-			panic(err)
-		}
-	}(ctx)
 
 	lis, err := net.Listen("tcp", ":50051")
 	if err != nil {

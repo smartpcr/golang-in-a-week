@@ -7,7 +7,7 @@ option go_package = "github.com/smartpcr/monitoring/traces/protos/v1;v1";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
 
-message TraceMessage {
+message Span {
   string trace_id = 1;
   string span_id = 2;
   string parent_span_id = 3;
@@ -15,27 +15,14 @@ message TraceMessage {
   google.protobuf.Timestamp start_time = 5;
 }
 
-message QueryTraceRequest {
-  string trace_id = 1;
-}
-
-message QueryTraceResponse {
-  repeated string trace_id = 1;
-}
-
-message Trace {
-  string trace_id = 1;
-  repeated TraceMessage messages = 2;
-}
-
-message CreateTraceRequest {
+message CreateSpanRequest {
   string trace_id = 1;
   string span_id = 2;
   string parent_span_id = 3;
   string name = 4;
 }
 
-message CreateTraceResponse {
+message CreateSpanResponse {
   string trace_id = 1;
   string span_id = 2;
   string parent_span_id = 3;
@@ -49,12 +36,15 @@ message GetTraceRequest {
 
 message GetTraceResponse {
   string trace_id = 1;
-  repeated TraceMessage messages = 2;
+  repeated Span spans = 2;
 }
 
-service Traces {
-  rpc CreateTrace(CreateTraceRequest) returns (CreateTraceResponse) {}
+message Traces {
+  repeated string trace_ids = 1;
+}
+
+service TracesService {
+  rpc CreateSpan(CreateSpanRequest) returns (CreateSpanResponse) {}
   rpc GetTrace(GetTraceRequest) returns (GetTraceResponse) {}
-  rpc QueryTraces(QueryTraceRequest) returns (QueryTraceResponse) {}
-  rpc GetAllTraces(google.protobuf.Empty) returns (Trace) {}
+  rpc GetAllTraces(google.protobuf.Empty) returns (Traces) {}
 }

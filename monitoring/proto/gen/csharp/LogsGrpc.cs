@@ -46,17 +46,29 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest> __Marshaller_smartpcr_monitoring_logs_v1_LogMessageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest.Parser));
+    static readonly grpc::Marshaller<global::Smartpcr.Monitoring.Logs.V1.LogMessage> __Marshaller_smartpcr_monitoring_logs_v1_LogMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Smartpcr.Monitoring.Logs.V1.LogMessage.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse> __Marshaller_smartpcr_monitoring_logs_v1_LogMessageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Smartpcr.Monitoring.Logs.V1.LogMessages> __Marshaller_smartpcr_monitoring_logs_v1_LogMessages = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Smartpcr.Monitoring.Logs.V1.LogMessages.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest, global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse> __Method_Log = new grpc::Method<global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest, global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse>(
+    static readonly grpc::Method<global::Smartpcr.Monitoring.Logs.V1.LogMessage, global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse> __Method_Log = new grpc::Method<global::Smartpcr.Monitoring.Logs.V1.LogMessage, global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Log",
-        __Marshaller_smartpcr_monitoring_logs_v1_LogMessageRequest,
+        __Marshaller_smartpcr_monitoring_logs_v1_LogMessage,
         __Marshaller_smartpcr_monitoring_logs_v1_LogMessageResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Smartpcr.Monitoring.Logs.V1.LogMessages> __Method_GetLogs = new grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Smartpcr.Monitoring.Logs.V1.LogMessages>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetLogs",
+        __Marshaller_google_protobuf_Empty,
+        __Marshaller_smartpcr_monitoring_logs_v1_LogMessages);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,7 +81,13 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     public abstract partial class LogServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse> Log(global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse> Log(global::Smartpcr.Monitoring.Logs.V1.LogMessage request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Smartpcr.Monitoring.Logs.V1.LogMessages> GetLogs(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -104,24 +122,44 @@ namespace Smartpcr.Monitoring.Logs.V1 {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse Log(global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse Log(global::Smartpcr.Monitoring.Logs.V1.LogMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Log(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse Log(global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest request, grpc::CallOptions options)
+      public virtual global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse Log(global::Smartpcr.Monitoring.Logs.V1.LogMessage request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Log, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse> LogAsync(global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse> LogAsync(global::Smartpcr.Monitoring.Logs.V1.LogMessage request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LogAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse> LogAsync(global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse> LogAsync(global::Smartpcr.Monitoring.Logs.V1.LogMessage request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Log, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Smartpcr.Monitoring.Logs.V1.LogMessages GetLogs(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetLogs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Smartpcr.Monitoring.Logs.V1.LogMessages GetLogs(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetLogs, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Smartpcr.Monitoring.Logs.V1.LogMessages> GetLogsAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetLogsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Smartpcr.Monitoring.Logs.V1.LogMessages> GetLogsAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetLogs, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -137,7 +175,8 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     public static grpc::ServerServiceDefinition BindService(LogServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Log, serviceImpl.Log).Build();
+          .AddMethod(__Method_Log, serviceImpl.Log)
+          .AddMethod(__Method_GetLogs, serviceImpl.GetLogs).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -147,7 +186,8 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, LogServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Log, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest, global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse>(serviceImpl.Log));
+      serviceBinder.AddMethod(__Method_Log, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Smartpcr.Monitoring.Logs.V1.LogMessage, global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse>(serviceImpl.Log));
+      serviceBinder.AddMethod(__Method_GetLogs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Smartpcr.Monitoring.Logs.V1.LogMessages>(serviceImpl.GetLogs));
     }
 
   }

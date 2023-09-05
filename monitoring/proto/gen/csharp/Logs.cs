@@ -25,39 +25,55 @@ namespace Smartpcr.Monitoring.Logs.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chhtb25pdG9yaW5nL3YxL2xvZ3MucHJvdG8SG3NtYXJ0cGNyLm1vbml0b3Jp",
-            "bmcubG9ncy52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKe",
-            "AQoKTG9nTWVzc2FnZRIYCgdtZXNzYWdlGAEgASgJUgdtZXNzYWdlEh8KC2xp",
-            "bmVfbnVtYmVyGAIgASgFUgpsaW5lTnVtYmVyEhsKCWZpbGVfbmFtZRgDIAEo",
-            "CVIIZmlsZU5hbWUSOAoJdGltZXN0YW1wGAQgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcFIJdGltZXN0YW1wIlIKC0xvZ01lc3NhZ2VzEkMKCG1l",
-            "c3NhZ2VzGAEgAygLMicuc21hcnRwY3IubW9uaXRvcmluZy5sb2dzLnYxLkxv",
-            "Z01lc3NhZ2VSCG1lc3NhZ2VzImsKEUxvZ01lc3NhZ2VSZXF1ZXN0EhgKB21l",
-            "c3NhZ2UYASABKAlSB21lc3NhZ2USHwoLbGluZV9udW1iZXIYAiABKAVSCmxp",
-            "bmVOdW1iZXISGwoJZmlsZV9uYW1lGAMgASgJUghmaWxlTmFtZSKmAQoSTG9n",
-            "TWVzc2FnZVJlc3BvbnNlEhgKB21lc3NhZ2UYASABKAlSB21lc3NhZ2USHwoL",
-            "bGluZV9udW1iZXIYAiABKAVSCmxpbmVOdW1iZXISGwoJZmlsZV9uYW1lGAMg",
-            "ASgJUghmaWxlTmFtZRI4Cgl0aW1lc3RhbXAYBCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wUgl0aW1lc3RhbXAydAoKTG9nU2VydmljZRJmCgNM",
-            "b2cSLi5zbWFydHBjci5tb25pdG9yaW5nLmxvZ3MudjEuTG9nTWVzc2FnZVJl",
-            "cXVlc3QaLy5zbWFydHBjci5tb25pdG9yaW5nLmxvZ3MudjEuTG9nTWVzc2Fn",
-            "ZVJlc3BvbnNlQu8BCh9jb20uc21hcnRwY3IubW9uaXRvcmluZy5sb2dzLnYx",
-            "QglMb2dzUHJvdG9IAlABWjBnaXRodWIuY29tL3NtYXJ0cGNyL21vbml0b3Jp",
-            "bmcvbG9ncy9wcm90b3MvdjE7djGiAgNTTUyqAhtTbWFydHBjci5Nb25pdG9y",
-            "aW5nLkxvZ3MuVjHKAhtTbWFydHBjclxNb25pdG9yaW5nXExvZ3NcVjHiAidT",
-            "bWFydHBjclxNb25pdG9yaW5nXExvZ3NcVjFcR1BCTWV0YWRhdGHqAh5TbWFy",
-            "dHBjcjo6TW9uaXRvcmluZzo6TG9nczo6VjFiBnByb3RvMw=="));
+            "bmcubG9ncy52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxob",
+            "Z29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvIssBCgpMb2dNZXNzYWdlEkAK",
+            "BWxldmVsGAEgASgOMiouc21hcnRwY3IubW9uaXRvcmluZy5sb2dzLnYxLlBy",
+            "b3RvTG9nTGV2ZWxSBWxldmVsEhgKB21lc3NhZ2UYAiABKAlSB21lc3NhZ2US",
+            "HwoLbGluZV9udW1iZXIYAyABKAVSCmxpbmVOdW1iZXISIwoNZnVuY3Rpb25f",
+            "bmFtZRgEIAEoCVIMZnVuY3Rpb25OYW1lEhsKCWZpbGVfbmFtZRgFIAEoCVII",
+            "ZmlsZU5hbWUiUgoLTG9nTWVzc2FnZXMSQwoIbWVzc2FnZXMYASADKAsyJy5z",
+            "bWFydHBjci5tb25pdG9yaW5nLmxvZ3MudjEuTG9nTWVzc2FnZVIIbWVzc2Fn",
+            "ZXMikQEKEkxvZ01lc3NhZ2VSZXNwb25zZRJBCgdtZXNzYWdlGAEgASgLMicu",
+            "c21hcnRwY3IubW9uaXRvcmluZy5sb2dzLnYxLkxvZ01lc3NhZ2VSB21lc3Nh",
+            "Z2USOAoJdGltZXN0YW1wGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcFIJdGltZXN0YW1wKk8KDVByb3RvTG9nTGV2ZWwSCQoFREVCVUcQABII",
+            "CgRJTkZPEAESCAoEV0FSThACEgkKBUVSUk9SEAMSCQoFRkFUQUwQBBIJCgVQ",
+            "QU5JQxAFMroBCgpMb2dTZXJ2aWNlEl8KA0xvZxInLnNtYXJ0cGNyLm1vbml0",
+            "b3JpbmcubG9ncy52MS5Mb2dNZXNzYWdlGi8uc21hcnRwY3IubW9uaXRvcmlu",
+            "Zy5sb2dzLnYxLkxvZ01lc3NhZ2VSZXNwb25zZRJLCgdHZXRMb2dzEhYuZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5Giguc21hcnRwY3IubW9uaXRvcmluZy5sb2dz",
+            "LnYxLkxvZ01lc3NhZ2VzQu8BCh9jb20uc21hcnRwY3IubW9uaXRvcmluZy5s",
+            "b2dzLnYxQglMb2dzUHJvdG9IAlABWjBnaXRodWIuY29tL3NtYXJ0cGNyL21v",
+            "bml0b3JpbmcvbG9ncy9wcm90b3MvdjE7djGiAgNTTUyqAhtTbWFydHBjci5N",
+            "b25pdG9yaW5nLkxvZ3MuVjHKAhtTbWFydHBjclxNb25pdG9yaW5nXExvZ3Nc",
+            "VjHiAidTbWFydHBjclxNb25pdG9yaW5nXExvZ3NcVjFcR1BCTWV0YWRhdGHq",
+            "Ah5TbWFydHBjcjo6TW9uaXRvcmluZzo6TG9nczo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Logs.V1.LogMessage), global::Smartpcr.Monitoring.Logs.V1.LogMessage.Parser, new[]{ "Message", "LineNumber", "FileName", "Timestamp" }, null, null, null, null),
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Smartpcr.Monitoring.Logs.V1.ProtoLogLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Logs.V1.LogMessage), global::Smartpcr.Monitoring.Logs.V1.LogMessage.Parser, new[]{ "Level", "Message", "LineNumber", "FunctionName", "FileName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Logs.V1.LogMessages), global::Smartpcr.Monitoring.Logs.V1.LogMessages.Parser, new[]{ "Messages" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest), global::Smartpcr.Monitoring.Logs.V1.LogMessageRequest.Parser, new[]{ "Message", "LineNumber", "FileName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse), global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse.Parser, new[]{ "Message", "LineNumber", "FileName", "Timestamp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse), global::Smartpcr.Monitoring.Logs.V1.LogMessageResponse.Parser, new[]{ "Message", "Timestamp" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// logrus does not provide protobuf definitions out of the box
+  /// </summary>
+  public enum ProtoLogLevel {
+    [pbr::OriginalName("DEBUG")] Debug = 0,
+    [pbr::OriginalName("INFO")] Info = 1,
+    [pbr::OriginalName("WARN")] Warn = 2,
+    [pbr::OriginalName("ERROR")] Error = 3,
+    [pbr::OriginalName("FATAL")] Fatal = 4,
+    [pbr::OriginalName("PANIC")] Panic = 5,
+  }
+
+  #endregion
+
   #region Messages
   public sealed partial class LogMessage : pb::IMessage<LogMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -93,10 +109,11 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogMessage(LogMessage other) : this() {
+      level_ = other.level_;
       message_ = other.message_;
       lineNumber_ = other.lineNumber_;
+      functionName_ = other.functionName_;
       fileName_ = other.fileName_;
-      timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -106,8 +123,20 @@ namespace Smartpcr.Monitoring.Logs.V1 {
       return new LogMessage(this);
     }
 
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 1;
+    private global::Smartpcr.Monitoring.Logs.V1.ProtoLogLevel level_ = global::Smartpcr.Monitoring.Logs.V1.ProtoLogLevel.Debug;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Smartpcr.Monitoring.Logs.V1.ProtoLogLevel Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
     /// <summary>Field number for the "message" field.</summary>
-    public const int MessageFieldNumber = 1;
+    public const int MessageFieldNumber = 2;
     private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,7 +148,7 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     }
 
     /// <summary>Field number for the "line_number" field.</summary>
-    public const int LineNumberFieldNumber = 2;
+    public const int LineNumberFieldNumber = 3;
     private int lineNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -130,8 +159,20 @@ namespace Smartpcr.Monitoring.Logs.V1 {
       }
     }
 
+    /// <summary>Field number for the "function_name" field.</summary>
+    public const int FunctionNameFieldNumber = 4;
+    private string functionName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FunctionName {
+      get { return functionName_; }
+      set {
+        functionName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "file_name" field.</summary>
-    public const int FileNameFieldNumber = 3;
+    public const int FileNameFieldNumber = 5;
     private string fileName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,18 +180,6 @@ namespace Smartpcr.Monitoring.Logs.V1 {
       get { return fileName_; }
       set {
         fileName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "timestamp" field.</summary>
-    public const int TimestampFieldNumber = 4;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
-      get { return timestamp_; }
-      set {
-        timestamp_ = value;
       }
     }
 
@@ -169,10 +198,11 @@ namespace Smartpcr.Monitoring.Logs.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Level != other.Level) return false;
       if (Message != other.Message) return false;
       if (LineNumber != other.LineNumber) return false;
+      if (FunctionName != other.FunctionName) return false;
       if (FileName != other.FileName) return false;
-      if (!object.Equals(Timestamp, other.Timestamp)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -180,10 +210,11 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Level != global::Smartpcr.Monitoring.Logs.V1.ProtoLogLevel.Debug) hash ^= Level.GetHashCode();
       if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (LineNumber != 0) hash ^= LineNumber.GetHashCode();
+      if (FunctionName.Length != 0) hash ^= FunctionName.GetHashCode();
       if (FileName.Length != 0) hash ^= FileName.GetHashCode();
-      if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -202,21 +233,25 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Level != global::Smartpcr.Monitoring.Logs.V1.ProtoLogLevel.Debug) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Level);
+      }
       if (Message.Length != 0) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteString(Message);
       }
       if (LineNumber != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt32(LineNumber);
       }
-      if (FileName.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FileName);
-      }
-      if (timestamp_ != null) {
+      if (FunctionName.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteMessage(Timestamp);
+        output.WriteString(FunctionName);
+      }
+      if (FileName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(FileName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -228,21 +263,25 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Level != global::Smartpcr.Monitoring.Logs.V1.ProtoLogLevel.Debug) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Level);
+      }
       if (Message.Length != 0) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteString(Message);
       }
       if (LineNumber != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt32(LineNumber);
       }
-      if (FileName.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FileName);
-      }
-      if (timestamp_ != null) {
+      if (FunctionName.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteMessage(Timestamp);
+        output.WriteString(FunctionName);
+      }
+      if (FileName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(FileName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -254,17 +293,20 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Level != global::Smartpcr.Monitoring.Logs.V1.ProtoLogLevel.Debug) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
+      }
       if (Message.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (LineNumber != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(LineNumber);
       }
+      if (FunctionName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FunctionName);
+      }
       if (FileName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FileName);
-      }
-      if (timestamp_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -278,20 +320,20 @@ namespace Smartpcr.Monitoring.Logs.V1 {
       if (other == null) {
         return;
       }
+      if (other.Level != global::Smartpcr.Monitoring.Logs.V1.ProtoLogLevel.Debug) {
+        Level = other.Level;
+      }
       if (other.Message.Length != 0) {
         Message = other.Message;
       }
       if (other.LineNumber != 0) {
         LineNumber = other.LineNumber;
       }
+      if (other.FunctionName.Length != 0) {
+        FunctionName = other.FunctionName;
+      }
       if (other.FileName.Length != 0) {
         FileName = other.FileName;
-      }
-      if (other.timestamp_ != null) {
-        if (timestamp_ == null) {
-          Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        Timestamp.MergeFrom(other.Timestamp);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -308,23 +350,24 @@ namespace Smartpcr.Monitoring.Logs.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            Level = (global::Smartpcr.Monitoring.Logs.V1.ProtoLogLevel) input.ReadEnum();
+            break;
+          }
+          case 18: {
             Message = input.ReadString();
             break;
           }
-          case 16: {
+          case 24: {
             LineNumber = input.ReadInt32();
             break;
           }
-          case 26: {
-            FileName = input.ReadString();
+          case 34: {
+            FunctionName = input.ReadString();
             break;
           }
-          case 34: {
-            if (timestamp_ == null) {
-              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(Timestamp);
+          case 42: {
+            FileName = input.ReadString();
             break;
           }
         }
@@ -342,23 +385,24 @@ namespace Smartpcr.Monitoring.Logs.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 8: {
+            Level = (global::Smartpcr.Monitoring.Logs.V1.ProtoLogLevel) input.ReadEnum();
+            break;
+          }
+          case 18: {
             Message = input.ReadString();
             break;
           }
-          case 16: {
+          case 24: {
             LineNumber = input.ReadInt32();
             break;
           }
-          case 26: {
-            FileName = input.ReadString();
+          case 34: {
+            FunctionName = input.ReadString();
             break;
           }
-          case 34: {
-            if (timestamp_ == null) {
-              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(Timestamp);
+          case 42: {
+            FileName = input.ReadString();
             break;
           }
         }
@@ -546,269 +590,6 @@ namespace Smartpcr.Monitoring.Logs.V1 {
 
   }
 
-  public sealed partial class LogMessageRequest : pb::IMessage<LogMessageRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<LogMessageRequest> _parser = new pb::MessageParser<LogMessageRequest>(() => new LogMessageRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<LogMessageRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Smartpcr.Monitoring.Logs.V1.LogsReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public LogMessageRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public LogMessageRequest(LogMessageRequest other) : this() {
-      message_ = other.message_;
-      lineNumber_ = other.lineNumber_;
-      fileName_ = other.fileName_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public LogMessageRequest Clone() {
-      return new LogMessageRequest(this);
-    }
-
-    /// <summary>Field number for the "message" field.</summary>
-    public const int MessageFieldNumber = 1;
-    private string message_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Message {
-      get { return message_; }
-      set {
-        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "line_number" field.</summary>
-    public const int LineNumberFieldNumber = 2;
-    private int lineNumber_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int LineNumber {
-      get { return lineNumber_; }
-      set {
-        lineNumber_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "file_name" field.</summary>
-    public const int FileNameFieldNumber = 3;
-    private string fileName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FileName {
-      get { return fileName_; }
-      set {
-        fileName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as LogMessageRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(LogMessageRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Message != other.Message) return false;
-      if (LineNumber != other.LineNumber) return false;
-      if (FileName != other.FileName) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Message.Length != 0) hash ^= Message.GetHashCode();
-      if (LineNumber != 0) hash ^= LineNumber.GetHashCode();
-      if (FileName.Length != 0) hash ^= FileName.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Message.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Message);
-      }
-      if (LineNumber != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(LineNumber);
-      }
-      if (FileName.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FileName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Message.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Message);
-      }
-      if (LineNumber != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(LineNumber);
-      }
-      if (FileName.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FileName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Message.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
-      }
-      if (LineNumber != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LineNumber);
-      }
-      if (FileName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FileName);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(LogMessageRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Message.Length != 0) {
-        Message = other.Message;
-      }
-      if (other.LineNumber != 0) {
-        LineNumber = other.LineNumber;
-      }
-      if (other.FileName.Length != 0) {
-        FileName = other.FileName;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Message = input.ReadString();
-            break;
-          }
-          case 16: {
-            LineNumber = input.ReadInt32();
-            break;
-          }
-          case 26: {
-            FileName = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Message = input.ReadString();
-            break;
-          }
-          case 16: {
-            LineNumber = input.ReadInt32();
-            break;
-          }
-          case 26: {
-            FileName = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class LogMessageResponse : pb::IMessage<LogMessageResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -823,7 +604,7 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Smartpcr.Monitoring.Logs.V1.LogsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Smartpcr.Monitoring.Logs.V1.LogsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -843,9 +624,7 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogMessageResponse(LogMessageResponse other) : this() {
-      message_ = other.message_;
-      lineNumber_ = other.lineNumber_;
-      fileName_ = other.fileName_;
+      message_ = other.message_ != null ? other.message_.Clone() : null;
       timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -858,42 +637,18 @@ namespace Smartpcr.Monitoring.Logs.V1 {
 
     /// <summary>Field number for the "message" field.</summary>
     public const int MessageFieldNumber = 1;
-    private string message_ = "";
+    private global::Smartpcr.Monitoring.Logs.V1.LogMessage message_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Message {
+    public global::Smartpcr.Monitoring.Logs.V1.LogMessage Message {
       get { return message_; }
       set {
-        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "line_number" field.</summary>
-    public const int LineNumberFieldNumber = 2;
-    private int lineNumber_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int LineNumber {
-      get { return lineNumber_; }
-      set {
-        lineNumber_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "file_name" field.</summary>
-    public const int FileNameFieldNumber = 3;
-    private string fileName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FileName {
-      get { return fileName_; }
-      set {
-        fileName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        message_ = value;
       }
     }
 
     /// <summary>Field number for the "timestamp" field.</summary>
-    public const int TimestampFieldNumber = 4;
+    public const int TimestampFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -919,9 +674,7 @@ namespace Smartpcr.Monitoring.Logs.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Message != other.Message) return false;
-      if (LineNumber != other.LineNumber) return false;
-      if (FileName != other.FileName) return false;
+      if (!object.Equals(Message, other.Message)) return false;
       if (!object.Equals(Timestamp, other.Timestamp)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -930,9 +683,7 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Message.Length != 0) hash ^= Message.GetHashCode();
-      if (LineNumber != 0) hash ^= LineNumber.GetHashCode();
-      if (FileName.Length != 0) hash ^= FileName.GetHashCode();
+      if (message_ != null) hash ^= Message.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -952,20 +703,12 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Message.Length != 0) {
+      if (message_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(Message);
-      }
-      if (LineNumber != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(LineNumber);
-      }
-      if (FileName.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FileName);
+        output.WriteMessage(Message);
       }
       if (timestamp_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(18);
         output.WriteMessage(Timestamp);
       }
       if (_unknownFields != null) {
@@ -978,20 +721,12 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Message.Length != 0) {
+      if (message_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(Message);
-      }
-      if (LineNumber != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(LineNumber);
-      }
-      if (FileName.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(FileName);
+        output.WriteMessage(Message);
       }
       if (timestamp_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(18);
         output.WriteMessage(Timestamp);
       }
       if (_unknownFields != null) {
@@ -1004,14 +739,8 @@ namespace Smartpcr.Monitoring.Logs.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Message.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
-      }
-      if (LineNumber != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LineNumber);
-      }
-      if (FileName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FileName);
+      if (message_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Message);
       }
       if (timestamp_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
@@ -1028,14 +757,11 @@ namespace Smartpcr.Monitoring.Logs.V1 {
       if (other == null) {
         return;
       }
-      if (other.Message.Length != 0) {
-        Message = other.Message;
-      }
-      if (other.LineNumber != 0) {
-        LineNumber = other.LineNumber;
-      }
-      if (other.FileName.Length != 0) {
-        FileName = other.FileName;
+      if (other.message_ != null) {
+        if (message_ == null) {
+          Message = new global::Smartpcr.Monitoring.Logs.V1.LogMessage();
+        }
+        Message.MergeFrom(other.Message);
       }
       if (other.timestamp_ != null) {
         if (timestamp_ == null) {
@@ -1059,18 +785,13 @@ namespace Smartpcr.Monitoring.Logs.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Message = input.ReadString();
+            if (message_ == null) {
+              Message = new global::Smartpcr.Monitoring.Logs.V1.LogMessage();
+            }
+            input.ReadMessage(Message);
             break;
           }
-          case 16: {
-            LineNumber = input.ReadInt32();
-            break;
-          }
-          case 26: {
-            FileName = input.ReadString();
-            break;
-          }
-          case 34: {
+          case 18: {
             if (timestamp_ == null) {
               Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
@@ -1093,18 +814,13 @@ namespace Smartpcr.Monitoring.Logs.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Message = input.ReadString();
+            if (message_ == null) {
+              Message = new global::Smartpcr.Monitoring.Logs.V1.LogMessage();
+            }
+            input.ReadMessage(Message);
             break;
           }
-          case 16: {
-            LineNumber = input.ReadInt32();
-            break;
-          }
-          case 26: {
-            FileName = input.ReadString();
-            break;
-          }
-          case 34: {
+          case 18: {
             if (timestamp_ == null) {
               Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }

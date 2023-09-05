@@ -20,200 +20,163 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Traces_CreateTrace_FullMethodName  = "/smartpcr.monitoring.traces.v1.Traces/CreateTrace"
-	Traces_GetTrace_FullMethodName     = "/smartpcr.monitoring.traces.v1.Traces/GetTrace"
-	Traces_QueryTraces_FullMethodName  = "/smartpcr.monitoring.traces.v1.Traces/QueryTraces"
-	Traces_GetAllTraces_FullMethodName = "/smartpcr.monitoring.traces.v1.Traces/GetAllTraces"
+	TracesService_CreateSpan_FullMethodName   = "/smartpcr.monitoring.traces.v1.TracesService/CreateSpan"
+	TracesService_GetTrace_FullMethodName     = "/smartpcr.monitoring.traces.v1.TracesService/GetTrace"
+	TracesService_GetAllTraces_FullMethodName = "/smartpcr.monitoring.traces.v1.TracesService/GetAllTraces"
 )
 
-// TracesClient is the client API for Traces service.
+// TracesServiceClient is the client API for TracesService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type TracesClient interface {
-	CreateTrace(ctx context.Context, in *CreateTraceRequest, opts ...grpc.CallOption) (*CreateTraceResponse, error)
+type TracesServiceClient interface {
+	CreateSpan(ctx context.Context, in *CreateSpanRequest, opts ...grpc.CallOption) (*CreateSpanResponse, error)
 	GetTrace(ctx context.Context, in *GetTraceRequest, opts ...grpc.CallOption) (*GetTraceResponse, error)
-	QueryTraces(ctx context.Context, in *QueryTraceRequest, opts ...grpc.CallOption) (*QueryTraceResponse, error)
-	GetAllTraces(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*Trace, error)
+	GetAllTraces(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*Traces, error)
 }
 
-type tracesClient struct {
+type tracesServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewTracesClient(cc grpc.ClientConnInterface) TracesClient {
-	return &tracesClient{cc}
+func NewTracesServiceClient(cc grpc.ClientConnInterface) TracesServiceClient {
+	return &tracesServiceClient{cc}
 }
 
-func (c *tracesClient) CreateTrace(ctx context.Context, in *CreateTraceRequest, opts ...grpc.CallOption) (*CreateTraceResponse, error) {
-	out := new(CreateTraceResponse)
-	err := c.cc.Invoke(ctx, Traces_CreateTrace_FullMethodName, in, out, opts...)
+func (c *tracesServiceClient) CreateSpan(ctx context.Context, in *CreateSpanRequest, opts ...grpc.CallOption) (*CreateSpanResponse, error) {
+	out := new(CreateSpanResponse)
+	err := c.cc.Invoke(ctx, TracesService_CreateSpan_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *tracesClient) GetTrace(ctx context.Context, in *GetTraceRequest, opts ...grpc.CallOption) (*GetTraceResponse, error) {
+func (c *tracesServiceClient) GetTrace(ctx context.Context, in *GetTraceRequest, opts ...grpc.CallOption) (*GetTraceResponse, error) {
 	out := new(GetTraceResponse)
-	err := c.cc.Invoke(ctx, Traces_GetTrace_FullMethodName, in, out, opts...)
+	err := c.cc.Invoke(ctx, TracesService_GetTrace_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *tracesClient) QueryTraces(ctx context.Context, in *QueryTraceRequest, opts ...grpc.CallOption) (*QueryTraceResponse, error) {
-	out := new(QueryTraceResponse)
-	err := c.cc.Invoke(ctx, Traces_QueryTraces_FullMethodName, in, out, opts...)
+func (c *tracesServiceClient) GetAllTraces(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*Traces, error) {
+	out := new(Traces)
+	err := c.cc.Invoke(ctx, TracesService_GetAllTraces_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *tracesClient) GetAllTraces(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*Trace, error) {
-	out := new(Trace)
-	err := c.cc.Invoke(ctx, Traces_GetAllTraces_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-// TracesServer is the server API for Traces service.
-// All implementations must embed UnimplementedTracesServer
+// TracesServiceServer is the server API for TracesService service.
+// All implementations must embed UnimplementedTracesServiceServer
 // for forward compatibility
-type TracesServer interface {
-	CreateTrace(context.Context, *CreateTraceRequest) (*CreateTraceResponse, error)
+type TracesServiceServer interface {
+	CreateSpan(context.Context, *CreateSpanRequest) (*CreateSpanResponse, error)
 	GetTrace(context.Context, *GetTraceRequest) (*GetTraceResponse, error)
-	QueryTraces(context.Context, *QueryTraceRequest) (*QueryTraceResponse, error)
-	GetAllTraces(context.Context, *emptypb.Empty) (*Trace, error)
-	mustEmbedUnimplementedTracesServer()
+	GetAllTraces(context.Context, *emptypb.Empty) (*Traces, error)
+	mustEmbedUnimplementedTracesServiceServer()
 }
 
-// UnimplementedTracesServer must be embedded to have forward compatible implementations.
-type UnimplementedTracesServer struct {
+// UnimplementedTracesServiceServer must be embedded to have forward compatible implementations.
+type UnimplementedTracesServiceServer struct {
 }
 
-func (UnimplementedTracesServer) CreateTrace(context.Context, *CreateTraceRequest) (*CreateTraceResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CreateTrace not implemented")
+func (UnimplementedTracesServiceServer) CreateSpan(context.Context, *CreateSpanRequest) (*CreateSpanResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateSpan not implemented")
 }
-func (UnimplementedTracesServer) GetTrace(context.Context, *GetTraceRequest) (*GetTraceResponse, error) {
+func (UnimplementedTracesServiceServer) GetTrace(context.Context, *GetTraceRequest) (*GetTraceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetTrace not implemented")
 }
-func (UnimplementedTracesServer) QueryTraces(context.Context, *QueryTraceRequest) (*QueryTraceResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method QueryTraces not implemented")
-}
-func (UnimplementedTracesServer) GetAllTraces(context.Context, *emptypb.Empty) (*Trace, error) {
+func (UnimplementedTracesServiceServer) GetAllTraces(context.Context, *emptypb.Empty) (*Traces, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAllTraces not implemented")
 }
-func (UnimplementedTracesServer) mustEmbedUnimplementedTracesServer() {}
+func (UnimplementedTracesServiceServer) mustEmbedUnimplementedTracesServiceServer() {}
 
-// UnsafeTracesServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to TracesServer will
+// UnsafeTracesServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to TracesServiceServer will
 // result in compilation errors.
-type UnsafeTracesServer interface {
-	mustEmbedUnimplementedTracesServer()
+type UnsafeTracesServiceServer interface {
+	mustEmbedUnimplementedTracesServiceServer()
 }
 
-func RegisterTracesServer(s grpc.ServiceRegistrar, srv TracesServer) {
-	s.RegisterService(&Traces_ServiceDesc, srv)
+func RegisterTracesServiceServer(s grpc.ServiceRegistrar, srv TracesServiceServer) {
+	s.RegisterService(&TracesService_ServiceDesc, srv)
 }
 
-func _Traces_CreateTrace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CreateTraceRequest)
+func _TracesService_CreateSpan_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateSpanRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(TracesServer).CreateTrace(ctx, in)
+		return srv.(TracesServiceServer).CreateSpan(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Traces_CreateTrace_FullMethodName,
+		FullMethod: TracesService_CreateSpan_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TracesServer).CreateTrace(ctx, req.(*CreateTraceRequest))
+		return srv.(TracesServiceServer).CreateSpan(ctx, req.(*CreateSpanRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Traces_GetTrace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TracesService_GetTrace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetTraceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(TracesServer).GetTrace(ctx, in)
+		return srv.(TracesServiceServer).GetTrace(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Traces_GetTrace_FullMethodName,
+		FullMethod: TracesService_GetTrace_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TracesServer).GetTrace(ctx, req.(*GetTraceRequest))
+		return srv.(TracesServiceServer).GetTrace(ctx, req.(*GetTraceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Traces_QueryTraces_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(QueryTraceRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(TracesServer).QueryTraces(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: Traces_QueryTraces_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TracesServer).QueryTraces(ctx, req.(*QueryTraceRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _Traces_GetAllTraces_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TracesService_GetAllTraces_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(TracesServer).GetAllTraces(ctx, in)
+		return srv.(TracesServiceServer).GetAllTraces(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Traces_GetAllTraces_FullMethodName,
+		FullMethod: TracesService_GetAllTraces_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TracesServer).GetAllTraces(ctx, req.(*emptypb.Empty))
+		return srv.(TracesServiceServer).GetAllTraces(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// Traces_ServiceDesc is the grpc.ServiceDesc for Traces service.
+// TracesService_ServiceDesc is the grpc.ServiceDesc for TracesService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var Traces_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "smartpcr.monitoring.traces.v1.Traces",
-	HandlerType: (*TracesServer)(nil),
+var TracesService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "smartpcr.monitoring.traces.v1.TracesService",
+	HandlerType: (*TracesServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "CreateTrace",
-			Handler:    _Traces_CreateTrace_Handler,
+			MethodName: "CreateSpan",
+			Handler:    _TracesService_CreateSpan_Handler,
 		},
 		{
 			MethodName: "GetTrace",
-			Handler:    _Traces_GetTrace_Handler,
-		},
-		{
-			MethodName: "QueryTraces",
-			Handler:    _Traces_QueryTraces_Handler,
+			Handler:    _TracesService_GetTrace_Handler,
 		},
 		{
 			MethodName: "GetAllTraces",
-			Handler:    _Traces_GetAllTraces_Handler,
+			Handler:    _TracesService_GetAllTraces_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

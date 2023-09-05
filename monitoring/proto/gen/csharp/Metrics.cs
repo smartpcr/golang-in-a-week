@@ -58,11 +58,11 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             "aW5nLm1ldHJpY3MudjEuU3VtbWFyeUgAUgdzdW1tYXJ5QggKBm1ldHJpYyJT",
             "ChFHZXRNZXRyaWNzUmVxdWVzdBI+CgR0eXBlGAEgASgOMiouc21hcnRwY3Iu",
             "bW9uaXRvcmluZy5tZXRyaWNzLnYxLk1ldHJpY1R5cGVSBHR5cGUipgIKBk1l",
-            "dHJpYxJDCgdjb3VudGVyGAIgASgLMicuc21hcnRwY3IubW9uaXRvcmluZy5t",
-            "ZXRyaWNzLnYxLkNvdW50ZXJIAFIHY291bnRlchI9CgVnYXVnZRgDIAEoCzIl",
+            "dHJpYxJDCgdjb3VudGVyGAEgASgLMicuc21hcnRwY3IubW9uaXRvcmluZy5t",
+            "ZXRyaWNzLnYxLkNvdW50ZXJIAFIHY291bnRlchI9CgVnYXVnZRgCIAEoCzIl",
             "LnNtYXJ0cGNyLm1vbml0b3JpbmcubWV0cmljcy52MS5HYXVnZUgAUgVnYXVn",
-            "ZRJJCgloaXN0b2dyYW0YBCABKAsyKS5zbWFydHBjci5tb25pdG9yaW5nLm1l",
-            "dHJpY3MudjEuSGlzdG9ncmFtSABSCWhpc3RvZ3JhbRJDCgdzdW1tYXJ5GAUg",
+            "ZRJJCgloaXN0b2dyYW0YAyABKAsyKS5zbWFydHBjci5tb25pdG9yaW5nLm1l",
+            "dHJpY3MudjEuSGlzdG9ncmFtSABSCWhpc3RvZ3JhbRJDCgdzdW1tYXJ5GAQg",
             "ASgLMicuc21hcnRwY3IubW9uaXRvcmluZy5tZXRyaWNzLnYxLlN1bW1hcnlI",
             "AFIHc3VtbWFyeUIICgZtZXRyaWMiVgoSR2V0TWV0cmljc1Jlc3BvbnNlEkAK",
             "B21ldHJpY3MYASADKAsyJi5zbWFydHBjci5tb25pdG9yaW5nLm1ldHJpY3Mu",
@@ -2664,7 +2664,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     }
 
     /// <summary>Field number for the "counter" field.</summary>
-    public const int CounterFieldNumber = 2;
+    public const int CounterFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Smartpcr.Monitoring.Metrics.V1.Counter Counter {
@@ -2676,7 +2676,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     }
 
     /// <summary>Field number for the "gauge" field.</summary>
-    public const int GaugeFieldNumber = 3;
+    public const int GaugeFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Smartpcr.Monitoring.Metrics.V1.Gauge Gauge {
@@ -2688,7 +2688,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     }
 
     /// <summary>Field number for the "histogram" field.</summary>
-    public const int HistogramFieldNumber = 4;
+    public const int HistogramFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Smartpcr.Monitoring.Metrics.V1.Histogram Histogram {
@@ -2700,7 +2700,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     }
 
     /// <summary>Field number for the "summary" field.</summary>
-    public const int SummaryFieldNumber = 5;
+    public const int SummaryFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Smartpcr.Monitoring.Metrics.V1.Summary Summary {
@@ -2715,10 +2715,10 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     /// <summary>Enum of possible cases for the "metric" oneof.</summary>
     public enum MetricOneofCase {
       None = 0,
-      Counter = 2,
-      Gauge = 3,
-      Histogram = 4,
-      Summary = 5,
+      Counter = 1,
+      Gauge = 2,
+      Histogram = 3,
+      Summary = 4,
     }
     private MetricOneofCase metricCase_ = MetricOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2785,19 +2785,19 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
       output.WriteRawMessage(this);
     #else
       if (metricCase_ == MetricOneofCase.Counter) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Counter);
       }
       if (metricCase_ == MetricOneofCase.Gauge) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(Gauge);
       }
       if (metricCase_ == MetricOneofCase.Histogram) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(Histogram);
       }
       if (metricCase_ == MetricOneofCase.Summary) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteMessage(Summary);
       }
       if (_unknownFields != null) {
@@ -2811,19 +2811,19 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (metricCase_ == MetricOneofCase.Counter) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Counter);
       }
       if (metricCase_ == MetricOneofCase.Gauge) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(Gauge);
       }
       if (metricCase_ == MetricOneofCase.Histogram) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(Histogram);
       }
       if (metricCase_ == MetricOneofCase.Summary) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteMessage(Summary);
       }
       if (_unknownFields != null) {
@@ -2902,7 +2902,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 10: {
             global::Smartpcr.Monitoring.Metrics.V1.Counter subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Counter();
             if (metricCase_ == MetricOneofCase.Counter) {
               subBuilder.MergeFrom(Counter);
@@ -2911,7 +2911,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             Counter = subBuilder;
             break;
           }
-          case 26: {
+          case 18: {
             global::Smartpcr.Monitoring.Metrics.V1.Gauge subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Gauge();
             if (metricCase_ == MetricOneofCase.Gauge) {
               subBuilder.MergeFrom(Gauge);
@@ -2920,7 +2920,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             Gauge = subBuilder;
             break;
           }
-          case 34: {
+          case 26: {
             global::Smartpcr.Monitoring.Metrics.V1.Histogram subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Histogram();
             if (metricCase_ == MetricOneofCase.Histogram) {
               subBuilder.MergeFrom(Histogram);
@@ -2929,7 +2929,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             Histogram = subBuilder;
             break;
           }
-          case 42: {
+          case 34: {
             global::Smartpcr.Monitoring.Metrics.V1.Summary subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Summary();
             if (metricCase_ == MetricOneofCase.Summary) {
               subBuilder.MergeFrom(Summary);
@@ -2953,7 +2953,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 10: {
             global::Smartpcr.Monitoring.Metrics.V1.Counter subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Counter();
             if (metricCase_ == MetricOneofCase.Counter) {
               subBuilder.MergeFrom(Counter);
@@ -2962,7 +2962,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             Counter = subBuilder;
             break;
           }
-          case 26: {
+          case 18: {
             global::Smartpcr.Monitoring.Metrics.V1.Gauge subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Gauge();
             if (metricCase_ == MetricOneofCase.Gauge) {
               subBuilder.MergeFrom(Gauge);
@@ -2971,7 +2971,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             Gauge = subBuilder;
             break;
           }
-          case 34: {
+          case 26: {
             global::Smartpcr.Monitoring.Metrics.V1.Histogram subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Histogram();
             if (metricCase_ == MetricOneofCase.Histogram) {
               subBuilder.MergeFrom(Histogram);
@@ -2980,7 +2980,7 @@ namespace Smartpcr.Monitoring.Metrics.V1 {
             Histogram = subBuilder;
             break;
           }
-          case 42: {
+          case 34: {
             global::Smartpcr.Monitoring.Metrics.V1.Summary subBuilder = new global::Smartpcr.Monitoring.Metrics.V1.Summary();
             if (metricCase_ == MetricOneofCase.Summary) {
               subBuilder.MergeFrom(Summary);

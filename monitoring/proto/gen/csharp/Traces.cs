@@ -26,69 +26,61 @@ namespace Smartpcr.Monitoring.Traces.V1 {
           string.Concat(
             "Chptb25pdG9yaW5nL3YxL3RyYWNlcy5wcm90bxIdc21hcnRwY3IubW9uaXRv",
             "cmluZy50cmFjZXMudjEaH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
-            "dG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90byK3AQoMVHJhY2VNZXNz",
-            "YWdlEhkKCHRyYWNlX2lkGAEgASgJUgd0cmFjZUlkEhcKB3NwYW5faWQYAiAB",
-            "KAlSBnNwYW5JZBIkCg5wYXJlbnRfc3Bhbl9pZBgDIAEoCVIMcGFyZW50U3Bh",
-            "bklkEhIKBG5hbWUYBCABKAlSBG5hbWUSOQoKc3RhcnRfdGltZRgFIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXN0YXJ0VGltZSIuChFRdWVy",
-            "eVRyYWNlUmVxdWVzdBIZCgh0cmFjZV9pZBgBIAEoCVIHdHJhY2VJZCIvChJR",
-            "dWVyeVRyYWNlUmVzcG9uc2USGQoIdHJhY2VfaWQYASADKAlSB3RyYWNlSWQi",
-            "awoFVHJhY2USGQoIdHJhY2VfaWQYASABKAlSB3RyYWNlSWQSRwoIbWVzc2Fn",
-            "ZXMYAiADKAsyKy5zbWFydHBjci5tb25pdG9yaW5nLnRyYWNlcy52MS5UcmFj",
-            "ZU1lc3NhZ2VSCG1lc3NhZ2VzIoIBChJDcmVhdGVUcmFjZVJlcXVlc3QSGQoI",
-            "dHJhY2VfaWQYASABKAlSB3RyYWNlSWQSFwoHc3Bhbl9pZBgCIAEoCVIGc3Bh",
-            "bklkEiQKDnBhcmVudF9zcGFuX2lkGAMgASgJUgxwYXJlbnRTcGFuSWQSEgoE",
-            "bmFtZRgEIAEoCVIEbmFtZSK+AQoTQ3JlYXRlVHJhY2VSZXNwb25zZRIZCgh0",
+            "dG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90byKvAQoEU3BhbhIZCgh0",
             "cmFjZV9pZBgBIAEoCVIHdHJhY2VJZBIXCgdzcGFuX2lkGAIgASgJUgZzcGFu",
             "SWQSJAoOcGFyZW50X3NwYW5faWQYAyABKAlSDHBhcmVudFNwYW5JZBISCgRu",
             "YW1lGAQgASgJUgRuYW1lEjkKCnN0YXJ0X3RpbWUYBSABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUiLAoPR2V0VHJhY2VSZXF1",
-            "ZXN0EhkKCHRyYWNlX2lkGAEgASgJUgd0cmFjZUlkInYKEEdldFRyYWNlUmVz",
-            "cG9uc2USGQoIdHJhY2VfaWQYASABKAlSB3RyYWNlSWQSRwoIbWVzc2FnZXMY",
-            "AiADKAsyKy5zbWFydHBjci5tb25pdG9yaW5nLnRyYWNlcy52MS5UcmFjZU1l",
-            "c3NhZ2VSCG1lc3NhZ2VzMrUDCgZUcmFjZXMSdgoLQ3JlYXRlVHJhY2USMS5z",
-            "bWFydHBjci5tb25pdG9yaW5nLnRyYWNlcy52MS5DcmVhdGVUcmFjZVJlcXVl",
-            "c3QaMi5zbWFydHBjci5tb25pdG9yaW5nLnRyYWNlcy52MS5DcmVhdGVUcmFj",
-            "ZVJlc3BvbnNlIgASbQoIR2V0VHJhY2USLi5zbWFydHBjci5tb25pdG9yaW5n",
-            "LnRyYWNlcy52MS5HZXRUcmFjZVJlcXVlc3QaLy5zbWFydHBjci5tb25pdG9y",
-            "aW5nLnRyYWNlcy52MS5HZXRUcmFjZVJlc3BvbnNlIgASdAoLUXVlcnlUcmFj",
-            "ZXMSMC5zbWFydHBjci5tb25pdG9yaW5nLnRyYWNlcy52MS5RdWVyeVRyYWNl",
-            "UmVxdWVzdBoxLnNtYXJ0cGNyLm1vbml0b3JpbmcudHJhY2VzLnYxLlF1ZXJ5",
-            "VHJhY2VSZXNwb25zZSIAEk4KDEdldEFsbFRyYWNlcxIWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eRokLnNtYXJ0cGNyLm1vbml0b3JpbmcudHJhY2VzLnYxLlRy",
-            "YWNlIgBC/QEKIWNvbS5zbWFydHBjci5tb25pdG9yaW5nLnRyYWNlcy52MUIL",
-            "VHJhY2VzUHJvdG9IAlABWjJnaXRodWIuY29tL3NtYXJ0cGNyL21vbml0b3Jp",
-            "bmcvdHJhY2VzL3Byb3Rvcy92MTt2MaICA1NNVKoCHVNtYXJ0cGNyLk1vbml0",
-            "b3JpbmcuVHJhY2VzLlYxygIdU21hcnRwY3JcTW9uaXRvcmluZ1xUcmFjZXNc",
-            "VjHiAilTbWFydHBjclxNb25pdG9yaW5nXFRyYWNlc1xWMVxHUEJNZXRhZGF0",
-            "YeoCIFNtYXJ0cGNyOjpNb25pdG9yaW5nOjpUcmFjZXM6OlYxYgZwcm90bzM="));
+            "cHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUigQEKEUNyZWF0ZVNwYW5S",
+            "ZXF1ZXN0EhkKCHRyYWNlX2lkGAEgASgJUgd0cmFjZUlkEhcKB3NwYW5faWQY",
+            "AiABKAlSBnNwYW5JZBIkCg5wYXJlbnRfc3Bhbl9pZBgDIAEoCVIMcGFyZW50",
+            "U3BhbklkEhIKBG5hbWUYBCABKAlSBG5hbWUivQEKEkNyZWF0ZVNwYW5SZXNw",
+            "b25zZRIZCgh0cmFjZV9pZBgBIAEoCVIHdHJhY2VJZBIXCgdzcGFuX2lkGAIg",
+            "ASgJUgZzcGFuSWQSJAoOcGFyZW50X3NwYW5faWQYAyABKAlSDHBhcmVudFNw",
+            "YW5JZBISCgRuYW1lGAQgASgJUgRuYW1lEjkKCnN0YXJ0X3RpbWUYBSABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUiLAoPR2V0",
+            "VHJhY2VSZXF1ZXN0EhkKCHRyYWNlX2lkGAEgASgJUgd0cmFjZUlkImgKEEdl",
+            "dFRyYWNlUmVzcG9uc2USGQoIdHJhY2VfaWQYASABKAlSB3RyYWNlSWQSOQoF",
+            "c3BhbnMYAiADKAsyIy5zbWFydHBjci5tb25pdG9yaW5nLnRyYWNlcy52MS5T",
+            "cGFuUgVzcGFucyIlCgZUcmFjZXMSGwoJdHJhY2VfaWRzGAEgAygJUgh0cmFj",
+            "ZUlkczLEAgoNVHJhY2VzU2VydmljZRJzCgpDcmVhdGVTcGFuEjAuc21hcnRw",
+            "Y3IubW9uaXRvcmluZy50cmFjZXMudjEuQ3JlYXRlU3BhblJlcXVlc3QaMS5z",
+            "bWFydHBjci5tb25pdG9yaW5nLnRyYWNlcy52MS5DcmVhdGVTcGFuUmVzcG9u",
+            "c2UiABJtCghHZXRUcmFjZRIuLnNtYXJ0cGNyLm1vbml0b3JpbmcudHJhY2Vz",
+            "LnYxLkdldFRyYWNlUmVxdWVzdBovLnNtYXJ0cGNyLm1vbml0b3JpbmcudHJh",
+            "Y2VzLnYxLkdldFRyYWNlUmVzcG9uc2UiABJPCgxHZXRBbGxUcmFjZXMSFi5n",
+            "b29nbGUucHJvdG9idWYuRW1wdHkaJS5zbWFydHBjci5tb25pdG9yaW5nLnRy",
+            "YWNlcy52MS5UcmFjZXMiAEL9AQohY29tLnNtYXJ0cGNyLm1vbml0b3Jpbmcu",
+            "dHJhY2VzLnYxQgtUcmFjZXNQcm90b0gCUAFaMmdpdGh1Yi5jb20vc21hcnRw",
+            "Y3IvbW9uaXRvcmluZy90cmFjZXMvcHJvdG9zL3YxO3YxogIDU01UqgIdU21h",
+            "cnRwY3IuTW9uaXRvcmluZy5UcmFjZXMuVjHKAh1TbWFydHBjclxNb25pdG9y",
+            "aW5nXFRyYWNlc1xWMeICKVNtYXJ0cGNyXE1vbml0b3JpbmdcVHJhY2VzXFYx",
+            "XEdQQk1ldGFkYXRh6gIgU21hcnRwY3I6Ok1vbml0b3Jpbmc6OlRyYWNlczo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.TraceMessage), global::Smartpcr.Monitoring.Traces.V1.TraceMessage.Parser, new[]{ "TraceId", "SpanId", "ParentSpanId", "Name", "StartTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.QueryTraceRequest), global::Smartpcr.Monitoring.Traces.V1.QueryTraceRequest.Parser, new[]{ "TraceId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.QueryTraceResponse), global::Smartpcr.Monitoring.Traces.V1.QueryTraceResponse.Parser, new[]{ "TraceId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.Trace), global::Smartpcr.Monitoring.Traces.V1.Trace.Parser, new[]{ "TraceId", "Messages" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.CreateTraceRequest), global::Smartpcr.Monitoring.Traces.V1.CreateTraceRequest.Parser, new[]{ "TraceId", "SpanId", "ParentSpanId", "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.CreateTraceResponse), global::Smartpcr.Monitoring.Traces.V1.CreateTraceResponse.Parser, new[]{ "TraceId", "SpanId", "ParentSpanId", "Name", "StartTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.Span), global::Smartpcr.Monitoring.Traces.V1.Span.Parser, new[]{ "TraceId", "SpanId", "ParentSpanId", "Name", "StartTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.CreateSpanRequest), global::Smartpcr.Monitoring.Traces.V1.CreateSpanRequest.Parser, new[]{ "TraceId", "SpanId", "ParentSpanId", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.CreateSpanResponse), global::Smartpcr.Monitoring.Traces.V1.CreateSpanResponse.Parser, new[]{ "TraceId", "SpanId", "ParentSpanId", "Name", "StartTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.GetTraceRequest), global::Smartpcr.Monitoring.Traces.V1.GetTraceRequest.Parser, new[]{ "TraceId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.GetTraceResponse), global::Smartpcr.Monitoring.Traces.V1.GetTraceResponse.Parser, new[]{ "TraceId", "Messages" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.GetTraceResponse), global::Smartpcr.Monitoring.Traces.V1.GetTraceResponse.Parser, new[]{ "TraceId", "Spans" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Smartpcr.Monitoring.Traces.V1.Traces), global::Smartpcr.Monitoring.Traces.V1.Traces.Parser, new[]{ "TraceIds" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class TraceMessage : pb::IMessage<TraceMessage>
+  public sealed partial class Span : pb::IMessage<Span>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<TraceMessage> _parser = new pb::MessageParser<TraceMessage>(() => new TraceMessage());
+    private static readonly pb::MessageParser<Span> _parser = new pb::MessageParser<Span>(() => new Span());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TraceMessage> Parser { get { return _parser; } }
+    public static pb::MessageParser<Span> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,7 +96,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TraceMessage() {
+    public Span() {
       OnConstruction();
     }
 
@@ -112,7 +104,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TraceMessage(TraceMessage other) : this() {
+    public Span(Span other) : this() {
       traceId_ = other.traceId_;
       spanId_ = other.spanId_;
       parentSpanId_ = other.parentSpanId_;
@@ -123,8 +115,8 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TraceMessage Clone() {
-      return new TraceMessage(this);
+    public Span Clone() {
+      return new Span(this);
     }
 
     /// <summary>Field number for the "trace_id" field.</summary>
@@ -190,12 +182,12 @@ namespace Smartpcr.Monitoring.Traces.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as TraceMessage);
+      return Equals(other as Span);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TraceMessage other) {
+    public bool Equals(Span other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -320,7 +312,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TraceMessage other) {
+    public void MergeFrom(Span other) {
       if (other == null) {
         return;
       }
@@ -425,16 +417,16 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
   }
 
-  public sealed partial class QueryTraceRequest : pb::IMessage<QueryTraceRequest>
+  public sealed partial class CreateSpanRequest : pb::IMessage<CreateSpanRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<QueryTraceRequest> _parser = new pb::MessageParser<QueryTraceRequest>(() => new QueryTraceRequest());
+    private static readonly pb::MessageParser<CreateSpanRequest> _parser = new pb::MessageParser<CreateSpanRequest>(() => new CreateSpanRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<QueryTraceRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<CreateSpanRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -450,7 +442,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QueryTraceRequest() {
+    public CreateSpanRequest() {
       OnConstruction();
     }
 
@@ -458,589 +450,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QueryTraceRequest(QueryTraceRequest other) : this() {
-      traceId_ = other.traceId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QueryTraceRequest Clone() {
-      return new QueryTraceRequest(this);
-    }
-
-    /// <summary>Field number for the "trace_id" field.</summary>
-    public const int TraceIdFieldNumber = 1;
-    private string traceId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string TraceId {
-      get { return traceId_; }
-      set {
-        traceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as QueryTraceRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(QueryTraceRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (TraceId != other.TraceId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (TraceId.Length != 0) hash ^= TraceId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (TraceId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(TraceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TraceId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(TraceId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (TraceId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(TraceId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(QueryTraceRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.TraceId.Length != 0) {
-        TraceId = other.TraceId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            TraceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            TraceId = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class QueryTraceResponse : pb::IMessage<QueryTraceResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<QueryTraceResponse> _parser = new pb::MessageParser<QueryTraceResponse>(() => new QueryTraceResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<QueryTraceResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Smartpcr.Monitoring.Traces.V1.TracesReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QueryTraceResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QueryTraceResponse(QueryTraceResponse other) : this() {
-      traceId_ = other.traceId_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QueryTraceResponse Clone() {
-      return new QueryTraceResponse(this);
-    }
-
-    /// <summary>Field number for the "trace_id" field.</summary>
-    public const int TraceIdFieldNumber = 1;
-    private static readonly pb::FieldCodec<string> _repeated_traceId_codec
-        = pb::FieldCodec.ForString(10);
-    private readonly pbc::RepeatedField<string> traceId_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> TraceId {
-      get { return traceId_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as QueryTraceResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(QueryTraceResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!traceId_.Equals(other.traceId_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= traceId_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      traceId_.WriteTo(output, _repeated_traceId_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      traceId_.WriteTo(ref output, _repeated_traceId_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      size += traceId_.CalculateSize(_repeated_traceId_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(QueryTraceResponse other) {
-      if (other == null) {
-        return;
-      }
-      traceId_.Add(other.traceId_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            traceId_.AddEntriesFrom(input, _repeated_traceId_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            traceId_.AddEntriesFrom(ref input, _repeated_traceId_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class Trace : pb::IMessage<Trace>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<Trace> _parser = new pb::MessageParser<Trace>(() => new Trace());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Trace> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Smartpcr.Monitoring.Traces.V1.TracesReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Trace() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Trace(Trace other) : this() {
-      traceId_ = other.traceId_;
-      messages_ = other.messages_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Trace Clone() {
-      return new Trace(this);
-    }
-
-    /// <summary>Field number for the "trace_id" field.</summary>
-    public const int TraceIdFieldNumber = 1;
-    private string traceId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string TraceId {
-      get { return traceId_; }
-      set {
-        traceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "messages" field.</summary>
-    public const int MessagesFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Smartpcr.Monitoring.Traces.V1.TraceMessage> _repeated_messages_codec
-        = pb::FieldCodec.ForMessage(18, global::Smartpcr.Monitoring.Traces.V1.TraceMessage.Parser);
-    private readonly pbc::RepeatedField<global::Smartpcr.Monitoring.Traces.V1.TraceMessage> messages_ = new pbc::RepeatedField<global::Smartpcr.Monitoring.Traces.V1.TraceMessage>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Smartpcr.Monitoring.Traces.V1.TraceMessage> Messages {
-      get { return messages_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as Trace);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Trace other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (TraceId != other.TraceId) return false;
-      if(!messages_.Equals(other.messages_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (TraceId.Length != 0) hash ^= TraceId.GetHashCode();
-      hash ^= messages_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (TraceId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(TraceId);
-      }
-      messages_.WriteTo(output, _repeated_messages_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TraceId.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(TraceId);
-      }
-      messages_.WriteTo(ref output, _repeated_messages_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (TraceId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(TraceId);
-      }
-      size += messages_.CalculateSize(_repeated_messages_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Trace other) {
-      if (other == null) {
-        return;
-      }
-      if (other.TraceId.Length != 0) {
-        TraceId = other.TraceId;
-      }
-      messages_.Add(other.messages_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            TraceId = input.ReadString();
-            break;
-          }
-          case 18: {
-            messages_.AddEntriesFrom(input, _repeated_messages_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            TraceId = input.ReadString();
-            break;
-          }
-          case 18: {
-            messages_.AddEntriesFrom(ref input, _repeated_messages_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class CreateTraceRequest : pb::IMessage<CreateTraceRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<CreateTraceRequest> _parser = new pb::MessageParser<CreateTraceRequest>(() => new CreateTraceRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<CreateTraceRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Smartpcr.Monitoring.Traces.V1.TracesReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateTraceRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateTraceRequest(CreateTraceRequest other) : this() {
+    public CreateSpanRequest(CreateSpanRequest other) : this() {
       traceId_ = other.traceId_;
       spanId_ = other.spanId_;
       parentSpanId_ = other.parentSpanId_;
@@ -1050,8 +460,8 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateTraceRequest Clone() {
-      return new CreateTraceRequest(this);
+    public CreateSpanRequest Clone() {
+      return new CreateSpanRequest(this);
     }
 
     /// <summary>Field number for the "trace_id" field.</summary>
@@ -1105,12 +515,12 @@ namespace Smartpcr.Monitoring.Traces.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as CreateTraceRequest);
+      return Equals(other as CreateSpanRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(CreateTraceRequest other) {
+    public bool Equals(CreateSpanRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1222,7 +632,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(CreateTraceRequest other) {
+    public void MergeFrom(CreateSpanRequest other) {
       if (other == null) {
         return;
       }
@@ -1307,21 +717,21 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
   }
 
-  public sealed partial class CreateTraceResponse : pb::IMessage<CreateTraceResponse>
+  public sealed partial class CreateSpanResponse : pb::IMessage<CreateSpanResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CreateTraceResponse> _parser = new pb::MessageParser<CreateTraceResponse>(() => new CreateTraceResponse());
+    private static readonly pb::MessageParser<CreateSpanResponse> _parser = new pb::MessageParser<CreateSpanResponse>(() => new CreateSpanResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<CreateTraceResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<CreateSpanResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Smartpcr.Monitoring.Traces.V1.TracesReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Smartpcr.Monitoring.Traces.V1.TracesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1332,7 +742,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateTraceResponse() {
+    public CreateSpanResponse() {
       OnConstruction();
     }
 
@@ -1340,7 +750,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateTraceResponse(CreateTraceResponse other) : this() {
+    public CreateSpanResponse(CreateSpanResponse other) : this() {
       traceId_ = other.traceId_;
       spanId_ = other.spanId_;
       parentSpanId_ = other.parentSpanId_;
@@ -1351,8 +761,8 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateTraceResponse Clone() {
-      return new CreateTraceResponse(this);
+    public CreateSpanResponse Clone() {
+      return new CreateSpanResponse(this);
     }
 
     /// <summary>Field number for the "trace_id" field.</summary>
@@ -1418,12 +828,12 @@ namespace Smartpcr.Monitoring.Traces.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as CreateTraceResponse);
+      return Equals(other as CreateSpanResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(CreateTraceResponse other) {
+    public bool Equals(CreateSpanResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1548,7 +958,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(CreateTraceResponse other) {
+    public void MergeFrom(CreateSpanResponse other) {
       if (other == null) {
         return;
       }
@@ -1667,7 +1077,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Smartpcr.Monitoring.Traces.V1.TracesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Smartpcr.Monitoring.Traces.V1.TracesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1856,7 +1266,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Smartpcr.Monitoring.Traces.V1.TracesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Smartpcr.Monitoring.Traces.V1.TracesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1877,7 +1287,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetTraceResponse(GetTraceResponse other) : this() {
       traceId_ = other.traceId_;
-      messages_ = other.messages_.Clone();
+      spans_ = other.spans_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1899,15 +1309,15 @@ namespace Smartpcr.Monitoring.Traces.V1 {
       }
     }
 
-    /// <summary>Field number for the "messages" field.</summary>
-    public const int MessagesFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Smartpcr.Monitoring.Traces.V1.TraceMessage> _repeated_messages_codec
-        = pb::FieldCodec.ForMessage(18, global::Smartpcr.Monitoring.Traces.V1.TraceMessage.Parser);
-    private readonly pbc::RepeatedField<global::Smartpcr.Monitoring.Traces.V1.TraceMessage> messages_ = new pbc::RepeatedField<global::Smartpcr.Monitoring.Traces.V1.TraceMessage>();
+    /// <summary>Field number for the "spans" field.</summary>
+    public const int SpansFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Smartpcr.Monitoring.Traces.V1.Span> _repeated_spans_codec
+        = pb::FieldCodec.ForMessage(18, global::Smartpcr.Monitoring.Traces.V1.Span.Parser);
+    private readonly pbc::RepeatedField<global::Smartpcr.Monitoring.Traces.V1.Span> spans_ = new pbc::RepeatedField<global::Smartpcr.Monitoring.Traces.V1.Span>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Smartpcr.Monitoring.Traces.V1.TraceMessage> Messages {
-      get { return messages_; }
+    public pbc::RepeatedField<global::Smartpcr.Monitoring.Traces.V1.Span> Spans {
+      get { return spans_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1926,7 +1336,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
         return true;
       }
       if (TraceId != other.TraceId) return false;
-      if(!messages_.Equals(other.messages_)) return false;
+      if(!spans_.Equals(other.spans_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1935,7 +1345,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (TraceId.Length != 0) hash ^= TraceId.GetHashCode();
-      hash ^= messages_.GetHashCode();
+      hash ^= spans_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1958,7 +1368,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
         output.WriteRawTag(10);
         output.WriteString(TraceId);
       }
-      messages_.WriteTo(output, _repeated_messages_codec);
+      spans_.WriteTo(output, _repeated_spans_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1973,7 +1383,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
         output.WriteRawTag(10);
         output.WriteString(TraceId);
       }
-      messages_.WriteTo(ref output, _repeated_messages_codec);
+      spans_.WriteTo(ref output, _repeated_spans_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1987,7 +1397,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
       if (TraceId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TraceId);
       }
-      size += messages_.CalculateSize(_repeated_messages_codec);
+      size += spans_.CalculateSize(_repeated_spans_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2003,7 +1413,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
       if (other.TraceId.Length != 0) {
         TraceId = other.TraceId;
       }
-      messages_.Add(other.messages_);
+      spans_.Add(other.spans_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2024,7 +1434,7 @@ namespace Smartpcr.Monitoring.Traces.V1 {
             break;
           }
           case 18: {
-            messages_.AddEntriesFrom(input, _repeated_messages_codec);
+            spans_.AddEntriesFrom(input, _repeated_spans_codec);
             break;
           }
         }
@@ -2047,7 +1457,185 @@ namespace Smartpcr.Monitoring.Traces.V1 {
             break;
           }
           case 18: {
-            messages_.AddEntriesFrom(ref input, _repeated_messages_codec);
+            spans_.AddEntriesFrom(ref input, _repeated_spans_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class Traces : pb::IMessage<Traces>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Traces> _parser = new pb::MessageParser<Traces>(() => new Traces());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Traces> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Smartpcr.Monitoring.Traces.V1.TracesReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Traces() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Traces(Traces other) : this() {
+      traceIds_ = other.traceIds_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Traces Clone() {
+      return new Traces(this);
+    }
+
+    /// <summary>Field number for the "trace_ids" field.</summary>
+    public const int TraceIdsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_traceIds_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> traceIds_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TraceIds {
+      get { return traceIds_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Traces);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Traces other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!traceIds_.Equals(other.traceIds_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= traceIds_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      traceIds_.WriteTo(output, _repeated_traceIds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      traceIds_.WriteTo(ref output, _repeated_traceIds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += traceIds_.CalculateSize(_repeated_traceIds_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Traces other) {
+      if (other == null) {
+        return;
+      }
+      traceIds_.Add(other.traceIds_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            traceIds_.AddEntriesFrom(input, _repeated_traceIds_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            traceIds_.AddEntriesFrom(ref input, _repeated_traceIds_codec);
             break;
           }
         }
