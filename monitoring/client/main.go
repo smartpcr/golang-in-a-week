@@ -130,4 +130,8 @@ func generateLogs(ctx context.Context, logClient v1.LogServiceClient) {
 		Level:   v1.ProtoLogLevel_INFO,
 		Message: "test log",
 	})
+	if err != nil {
+		log.Fatalf("failed to log: %v", err)
+	}
+	log.Printf("logged: %s", logResp.Message)
 }
