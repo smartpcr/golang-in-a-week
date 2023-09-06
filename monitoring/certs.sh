@@ -5,7 +5,7 @@ set -e # fail if any command fails
 
 setup_certs(){
   { # create CA.
-    if [[ ! -f confs/rootCA.key && ! -f confs/rootCA.crt ]]; then
+    if [[ ! -f certs/rootCA.key && ! -f certs/rootCA.crt ]]; then
       openssl \
         req \
         -new \
@@ -14,13 +14,13 @@ setup_certs(){
         -nodes \
         -x509 \
         -subj "/C=US/ST=CA/O=MyOrg/CN=myOrgCA" \
-        -keyout confs/rootCA.key \
-        -out confs/rootCA.crt
+        -keyout certs/rootCA.key \
+        -out certs/rootCA.crt
     fi
   }
 
   { # create server certs.
-    if [[ ! -f confs/server.key && ! -f confs/server.crt ]]; then
+    if [[ ! -f certs/server.key && ! -f certs/server.crt ]]; then
       openssl \
         req \
         -new \
@@ -30,15 +30,15 @@ setup_certs(){
         -x509 \
         -subj "/C=US/ST=CA/O=MyOrg/CN=myOrgCA" \
         -addext "subjectAltName=DNS:example.com,DNS:example.net,DNS:otel_collector,DNS:localhost" \
-        -CA confs/rootCA.crt \
-        -CAkey confs/rootCA.key  \
-        -keyout confs/server.key \
-        -out confs/server.crt
+        -CA certs/rootCA.crt \
+        -CAkey certs/rootCA.key  \
+        -keyout certs/server.key \
+        -out certs/server.crt
     fi
   }
 
   { # create client certs.
-    if [[ ! -f confs/client.key && ! -f confs/client.crt ]]; then
+    if [[ ! -f certs/client.key && ! -f certs/client.crt ]]; then
       openssl \
         req \
         -new \
@@ -48,19 +48,19 @@ setup_certs(){
         -x509 \
         -subj "/C=US/ST=CA/O=MyOrg/CN=myOrgCA" \
         -addext "subjectAltName=DNS:example.com,DNS:example.net,DNS:otel_collector,DNS:localhost" \
-        -CA confs/rootCA.crt \
-        -CAkey confs/rootCA.key  \
-        -keyout confs/client.key \
-        -out confs/client.crt
+        -CA certs/rootCA.crt \
+        -CAkey certs/rootCA.key  \
+        -keyout certs/client.key \
+        -out certs/client.crt
     fi
   }
 
   { # clean
-    rm -rf confs/*.csr
-    rm -rf confs/*.srl
+    rm -rf certs/*.csr
+    rm -rf certs/*.srl
 
-    chmod 666 confs/rootCA.crt confs/server.crt confs/client.crt
-    chmod 644 confs/rootCA.key confs/server.key confs/client.key
+    chmod 666 certs/rootCA.crt certs/server.crt certs/client.crt
+    chmod 644 certs/rootCA.key certs/server.key certs/client.key
   }
 }
 setup_certs

@@ -5,6 +5,7 @@ import (
 	"github.com/fsnotify/fsnotify"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
+	"os"
 )
 
 const ServiceName = "open-telemetry-test"
@@ -20,6 +21,13 @@ type Configuration struct {
 var Config Configuration
 
 func init() {
+	cwd, _ := os.Getwd()
+	fmt.Println("Current working directory:", cwd)
+
+	if _, err := os.Stat("./config.yaml"); os.IsNotExist(err) {
+		log.Fatal("Config file does not exist!")
+	}
+
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
 	viper.AddConfigPath(".")
