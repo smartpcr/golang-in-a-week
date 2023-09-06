@@ -1,6 +1,6 @@
 # API
 
-this module contains all the APIs required to interacts with the monitoring service.
+the schema.v1 contains 3 services required to verify monitoring service.
 
 ## Structure
 
