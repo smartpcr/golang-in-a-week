@@ -34,6 +34,10 @@ generate-stub: ## generate stub for go and c#
 ## --------------------------------------
 ##@ Setup:
 
+.PHONY: pre-requirement
+pre-requirement: ## install protoc-gen-go and buf
+	@./pre-req.sh
+
 .PHONY: setup
 setup: ## retrieve token for buf.build
 	@./init.sh
@@ -63,3 +67,8 @@ generate-certs: ## Generate certificate for service authentication
 .PHONY: start-monitoring-stack
 start-monitoring-stack: generate-certs ## Run monitoring stack: grafana, prometheus, open-telemetry-collector, jaeger-all-in-one
 	docker-compose up -d
+
+.PHONY: start
+start: start-monitoring-stack ## Run server and client
+	go run ./server/main.go
+	go run ./client/main.go

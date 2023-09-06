@@ -10,7 +10,6 @@ based on [blob](https://www.komu.engineer/blogs/11/opentelemetry-and-go)
     ```bash
     sudo apt update
     sudo apt install protobuf-compiler
-
     go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.31.0
 
     VERSION="1.26.1"
