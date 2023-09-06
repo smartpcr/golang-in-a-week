@@ -2,6 +2,11 @@ BUF_REGISTRY ?= buf.build
 BUF_REGISTRY_USERNAME ?= smartpcr
 SERVICE_NAME ?= monitoring
 BUF_TAG ?= $(shell date ++%Y%m%d%H%M)
+ifeq (,$(shell go env GOBIN))
+GOBIN=$(shell go env GOPATH)/bin
+else
+GOBIN=$(shell go env GOBIN)
+endif
 
 .DEFAULT_GOAL:=help
 
@@ -56,19 +61,42 @@ publish-proto: setup ## publish proto contract to buf.build
 
 
 ## --------------------------------------
-## Monitoring
+## Certs
 ## --------------------------------------
-##@ Monitoring:
+##@ Certs:
 
 .PHONY: generate-certs
 generate-certs: ## Generate certificate for service authentication
 	@./certs.sh
 
-.PHONY: start-monitoring-stack
-start-monitoring-stack: generate-certs ## Run monitoring stack: grafana, prometheus, open-telemetry-collector, jaeger-all-in-one
-	docker-compose up -d
 
-.PHONY: start
-start: start-monitoring-stack ## Run server and client
+## --------------------------------------
+## Build
+## --------------------------------------
+##@ Build:
+
+.PHONY: build-server
+build-server: ## Build server
+	go build -o ./bin/server ./server/main.go
+	cp ${GOBIN}/dlv bin/dlv
+	docker build -t smartpcr/monitoring-server:dev -f ./server/Dockerfile .
+
+.PHONY: build-client
+build-client: ## Build client
+	go build -o ./bin/client ./client/main.go
+	cp ${GOBIN}/dlv bin/dlv
+	docker build -t smartpcr/monitoring-client:dev -f ./client/Dockerfile .
+
+## --------------------------------------
+## Run
+## --------------------------------------
+##@ Run:
+
+.PHONY: run-local
+run-local: start-monitoring-stack ## Run server and client
 	go run ./server/main.go
 	go run ./client/main.go
+
+.PHONY: run-docker
+run-docker: generate-certs build-server build-client ## Run monitoring stack: grafana, prometheus, open-telemetry-collector, jaeger-all-in-one
+	docker-compose up -d

@@ -1,6 +1,6 @@
 module monitoring/client
 
-go 1.21.0
+go 1.20
 
 require monitoring/proto v0.1.3
 

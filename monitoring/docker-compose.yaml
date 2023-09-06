@@ -6,9 +6,9 @@ services:
     command: --config=/etc/otel-collector-config.yaml
     volumes:
       - ./confs/otel-collector-config.yaml:/etc/otel-collector-config.yaml
-      - ./certs/server.crt:/etc/tls/server.crt
-      - ./certs/server.key:/etc/tls/server.key
-      - ./certs/rootCA.crt:/etc/tls/rootCA.crt
+      - ./confs/server.crt:/etc/tls/server.crt
+      - ./confs/server.key:/etc/tls/server.key
+      - ./confs/rootCA.crt:/etc/tls/rootCA.crt
     ports:
       - "4317:4317" # OTLP over gRPC receiver
       - "9464:9464" # Prometheus exporter
@@ -38,6 +38,18 @@ services:
       - "9090:9090"
     networks:
       - monitor_network
+
+  server:
+    image: smartpcr/monitoring-server:dev
+    ports:
+      - "5000:5000"
+    depends_on:
+      - otel_collector
+
+  client:
+    image: smartpcr/monitoring-client:dev
+    depends_on:
+      - server
 
 networks:
   monitor_network:
