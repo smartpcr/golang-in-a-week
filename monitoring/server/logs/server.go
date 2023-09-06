@@ -32,7 +32,7 @@ func init() {
 }
 
 func (l LogServer) Log(ctx context.Context, request *v1.LogMessage) (*v1.LogMessageResponse, error) {
-	ctx, span, logger := ot.StartSpanLogger(ctx, request.FunctionName)
+	ctx, span, logger := ot.StartSpanLogger(ctx)
 	defer span.End()
 	logger.Infof(
 		"new log message: level=%s, from %s.%s:%d\n%s",
