@@ -1,12 +1,12 @@
 module monitoring/server
 
-go 1.20
+go 1.21.0
 
 require (
 	github.com/fsnotify/fsnotify v1.6.0
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.3
-	github.com/smartpcr/go-otel v0.1.7
+	github.com/smartpcr/go-otel v0.1.9
 	github.com/spf13/viper v1.16.0
 	go.opentelemetry.io/otel/sdk/metric v0.40.0
 	google.golang.org/appengine v1.6.7
