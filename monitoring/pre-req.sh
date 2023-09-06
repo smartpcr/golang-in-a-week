@@ -37,7 +37,10 @@ else
     echo "OpenSSL version is $openssl_version which is >= 3.1.2. No need to upgrade."
 fi
 
+echo 'deb [trusted=yes] https://repo.goreleaser.com/apt/ /' | sudo tee /etc/apt/sources.list.d/goreleaser.list
+sudo apt update
 sudo apt install goreleaser
+
 sudo apt install protobuf-compiler
 go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.31.0
 
