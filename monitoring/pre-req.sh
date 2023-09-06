@@ -45,7 +45,7 @@ sudo apt install protobuf-compiler
 go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.31.0
 
 VERSION="1.26.1"
-curl -sSL "https://github.com/bufbuild/buf/releases/download/v${VERSION}/buf-$(uname -s)-$(uname -m)" -o buff
+curl -sSL "https://github.com/bufbuild/buf/releases/download/v${VERSION}/buf-$(uname -s)-$(uname -m)" -o buf
 curl -sSL "https://github.com/bufbuild/buf/releases/download/v${VERSION}/protoc-gen-buf-breaking-$(uname -s)-$(uname -m)" -o protoc-gen-buf-breaking
 curl -sSL "https://github.com/bufbuild/buf/releases/download/v${VERSION}/protoc-gen-buf-lint-$(uname -s)-$(uname -m)" -o protoc-gen-buf-lint
 chmod +x ./buf
