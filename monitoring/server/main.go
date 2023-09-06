@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/smartpcr/go-otel/pkg/ot"
 	"log"
+	"monitoring/server/config"
 	"monitoring/server/logs"
 	"monitoring/server/metrics"
 	"monitoring/server/traces"
@@ -40,18 +41,18 @@ func main() {
 
 	fmt.Println("registering logger")
 	logger := ot.RegisterLogger(ctx)
-	logger.Infof("starting %s", ServiceName)
+	logger.Infof("starting %s", config.ServiceName)
 
-	logger.Infof("registering tracing at %s", config.Receiver.Endpoint)
-	if err := ot.RegisterTracing(ctx, config.Receiver.Endpoint, ServiceName, logger); err != nil {
+	logger.Infof("registering tracing at %s", config.Config.Receiver.Endpoint)
+	if err := ot.RegisterTracing(ctx, config.Config.Receiver.Endpoint, config.ServiceName, logger); err != nil {
 		panic(err)
 	}
 	ctx, span, logger := ot.StartSpanLogger(ctx)
 	defer span.End()
 	span.AddEvent("startup")
 
-	logger.Infof("registering metrics at %s", config.Receiver.Endpoint)
-	metric, err := ot.RegisterOtelMetrics(ctx, config.Receiver.Endpoint, ServiceName)
+	logger.Infof("registering metrics at %s", config.Config.Receiver.Endpoint)
+	metric, err := ot.RegisterOtelMetrics(ctx, config.Config.Receiver.Endpoint, config.ServiceName)
 	if err != nil {
 		panic(err)
 	}
