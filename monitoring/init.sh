@@ -1,4 +1,6 @@
-#! /bin/bash
+#!/usr/bin/env bash
+set -x # have bash print command been ran
+set -e # fail if any command fails
 
 export TENANT_ID="625a8c92-2669-4d71-8ac3-923a55242192"
 export SUBSCRIPTION_ID="c5a015e6-a59b-45bd-a621-82f447f46034"
