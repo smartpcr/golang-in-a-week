@@ -3,9 +3,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/smartpcr/go-otel/pkg/ot"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials/insecure"
 	"log"
 	"math/rand"
 	v1 "monitoring/proto/gen/go/monitoring/v1"
@@ -14,6 +11,10 @@ import (
 	"sync"
 	"syscall"
 	"time"
+
+	"github.com/smartpcr/go-otel/pkg/ot"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 )
 
 func init() {
@@ -22,7 +23,7 @@ func init() {
 
 func main() {
 	conn, err := grpc.Dial(
-		"localhost:5000",
+		"localhost:5555",
 		grpc.WithTransportCredentials(insecure.NewCredentials()),
 		grpc.WithBlock(),
 	)

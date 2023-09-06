@@ -17,9 +17,9 @@ RUN mkdir .config && \
 
 COPY config.yaml /app
 COPY --chown=65532:65532 bin/server /app
-COPY --chown=65532:65532 certs/rootCA.crt /app/certs
-COPY --chown=65532:65532 certs/server.crt /app/certs
-COPY --chown=65532:65532 certs/server.key /app/certs
+COPY --chown=65532:65532 certs/rootCA.crt /app/certs/rootCA.crt
+COPY --chown=65532:65532 certs/server.crt /app/certs/server.crt
+COPY --chown=65532:65532 certs/server.key /app/certs/server.key
 COPY bin/dlv /app
 USER 65532:65532
 

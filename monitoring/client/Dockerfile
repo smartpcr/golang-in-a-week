@@ -15,11 +15,7 @@ RUN mkdir .config && \
     chown -R 65532:65532 .config && \
     chmod 700 .config
 
-COPY config.yaml /app
 COPY --chown=65532:65532 bin/client /app
-COPY --chown=65532:65532 certs/rootCA.crt /app/certs
-COPY --chown=65532:65532 certs/server.crt /app/certs
-COPY --chown=65532:65532 certs/server.key /app/certs
 COPY bin/dlv /app
 USER 65532:65532
 

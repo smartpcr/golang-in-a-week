@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/smartpcr/go-otel/pkg/ot"
 	"log"
 	"monitoring/server/config"
 	"monitoring/server/logs"
@@ -12,6 +11,8 @@ import (
 	"net"
 	"os"
 	"os/signal"
+
+	"github.com/smartpcr/go-otel/pkg/ot"
 
 	"google.golang.org/grpc"
 
@@ -57,7 +58,7 @@ func main() {
 		panic(err)
 	}
 
-	lis, err := net.Listen("tcp", ":5000")
+	lis, err := net.Listen("tcp", ":5555")
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
@@ -71,7 +72,7 @@ func main() {
 	})
 	v1.RegisterTracesServiceServer(s, &traces.TraceServer{})
 
-	log.Println("Starting gRPC server on :50051...")
+	log.Println("Starting gRPC server on :5555...")
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}

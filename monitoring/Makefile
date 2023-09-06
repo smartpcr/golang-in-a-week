@@ -77,13 +77,13 @@ generate-certs: ## Generate certificate for service authentication
 
 .PHONY: build-server
 build-server: ## Build server
-	go build -o ./bin/server ./server/main.go
+	CGO_ENABLED=0 go build -o ./bin/server -ldflags '-extldflags "-static"' ./server/main.go
 	cp ${GOBIN}/dlv bin/dlv
 	docker build -t smartpcr/monitoring-server:dev -f ./server/Dockerfile .
 
 .PHONY: build-client
 build-client: ## Build client
-	go build -o ./bin/client ./client/main.go
+	CGO_ENABLED=0 go build -o ./bin/client -ldflags '-extldflags "-static"' ./client/main.go
 	cp ${GOBIN}/dlv bin/dlv
 	docker build -t smartpcr/monitoring-client:dev -f ./client/Dockerfile .
 
