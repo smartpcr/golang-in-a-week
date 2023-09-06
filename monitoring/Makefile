@@ -41,7 +41,11 @@ generate-stub: ## generate stub for go and c#
 
 .PHONY: pre-requirement
 pre-requirement: ## install protoc-gen-go and buf
-	@./pre-req.sh
+	ifeq ($(OS),Windows_NT)
+		@./pre-req.bat
+	else
+		@./pre-req.sh
+	endif
 
 .PHONY: setup
 setup: ## retrieve token for buf.build
@@ -67,7 +71,11 @@ publish-proto: setup ## publish proto contract to buf.build
 
 .PHONY: generate-certs
 generate-certs: ## Generate certificate for service authentication
-	@./certs.sh
+	ifeq ($(OS),Windows_NT)
+		@./certs.bat
+	else
+		@./certs.sh
+	endif
 
 
 ## --------------------------------------
