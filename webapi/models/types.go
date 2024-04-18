@@ -1,20 +1,24 @@
 package models
 
+import (
+	"gorm.io/gorm"
+)
+
 type User struct {
-	Id    string
+	gorm.Model
 	Name  string
 	Email string
 }
 
 type Project struct {
-	Id          string
+	gorm.Model
 	Name        string
 	Description string
-	OwnerId     string
+	OwnerId     uint
 }
 
 type Task struct {
-	Id          string
+	gorm.Model
 	Name        string
 	Description string
 	ProjectId   string
