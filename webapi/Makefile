@@ -15,7 +15,7 @@ include .env
 env: ## load .env variables
 	@pwsh -Command '$$content = Get-Content ".\.env"; $$content | ForEach-Object {$$split = $$_.Split("="); if ($$split.Length -gt 1) { [System.Environment]::SetEnvironmentVariable($$split[0], $$split[1]) } }'
 	@echo "Environment variables loaded"
-	@echo ${DB_TYPE}
+	@echo "Db type: ${DB_TYPE}"
 
 ## --------------------------------------
 ## Build
@@ -41,6 +41,28 @@ build-client: env ## build client
 ## DB
 ## --------------------------------------
 ##@ Database
+
+start-db: env ## start database based on ${DB_TYPE}
+ifeq (${DB_TYPE},postgres)
+	@$(MAKE) start-postgres
+else ifeq (${DB_TYPE},mongo)
+	@$(MAKE) start-mongo
+else ifeq (${DB_TYPE},mysql)
+	@$(MAKE) start-mysql
+else
+	$(error Unknown DB_TYPE: ${DB_TYPE})
+endif
+
+stop-db: env ## stop database based on ${DB_TYPE}
+ifeq (${DB_TYPE},postgres)
+	@$(MAKE) stop-postgres
+else ifeq (${DB_TYPE},mongo)
+	@$(MAKE) stop-mongo
+else ifeq (${DB_TYPE},mysql)
+	@$(MAKE) stop-mysql
+else
+	$(error Unknown DB_TYPE: ${DB_TYPE})
+endif
 
 .PHONY: start-postgres
 start-postgres: env ## start postgres database
