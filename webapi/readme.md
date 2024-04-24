@@ -17,3 +17,4 @@
 - [ ] use cache to improve performance, first tier is in-memory and then fallback to file
 - [ ] use swagger for api documentation
 - [ ] cli generated from swagger
+- [ ] support multiple database backends, such as sqlite, mysql, postgresql, mongodb, etc

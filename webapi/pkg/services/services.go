@@ -1,13 +1,12 @@
 package services
 
 import (
-	"database/sql"
 	"net/http"
 	"reflect"
 
 	"github.com/gorilla/mux"
-	"webapi/models"
-	"webapi/store"
+	"webapi/pkg/store"
+	"webapi/types"
 )
 
 type Service interface {
@@ -19,15 +18,15 @@ type Service interface {
 	HandleDelete(writer http.ResponseWriter, request *http.Request)
 }
 
-func CreateService[T any](db *sql.DB) Service {
+func CreateService[T any](db *store.DbStorage) Service {
 	typeName := reflect.TypeOf((*T)(nil)).Elem().Name()
 	switch typeName {
 	case "User":
-		return &UserService{repo: store.CreateRepository[models.User](db)}
+		return &UserService{repo: store.CreateRepository[types.User](db)}
 	case "Project":
-		return &ProjectService{repo: store.CreateRepository[models.Project](db)}
+		return &ProjectService{repo: store.CreateRepository[types.Project](db)}
 	case "Task":
-		return &TaskService{repo: store.CreateRepository[models.Task](db)}
+		return &TaskService{repo: store.CreateRepository[types.Task](db)}
 	default:
 		panic("Unknown type")
 	}

@@ -4,12 +4,12 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"webapi/models"
-	"webapi/store"
+	"webapi/pkg/store"
+	"webapi/types"
 )
 
 type ProjectService struct {
-	repo store.Repository[models.Project]
+	repo store.Repository[types.Project]
 }
 
 func (p *ProjectService) RegisterRoutes(r *mux.Router) {

@@ -4,12 +4,12 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"webapi/models"
-	"webapi/store"
+	"webapi/pkg/store"
+	"webapi/types"
 )
 
 type TaskService struct {
-	repo store.Repository[models.Task]
+	repo store.Repository[types.Task]
 }
 
 func (t *TaskService) RegisterRoutes(r *mux.Router) {

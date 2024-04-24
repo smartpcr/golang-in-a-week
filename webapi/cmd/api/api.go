@@ -1,21 +1,21 @@
-package api
+package main
 
 import (
-	"database/sql"
 	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"webapi/models"
-	"webapi/services"
+	"webapi/pkg/services"
+	"webapi/pkg/store"
+	"webapi/types"
 )
 
 type APIServer struct {
 	address string
-	db      *sql.DB
+	db      *store.DbStorage
 }
 
-func NewAPIServer(address string, db *sql.DB) *APIServer {
+func NewAPIServer(address string, db *store.DbStorage) *APIServer {
 	return &APIServer{
 		address: address,
 		db:      db,
@@ -27,11 +27,11 @@ func (s *APIServer) Serve() {
 	subRouter := router.PathPrefix("/api/v1").Subrouter()
 
 	// register the handlers
-	userService := services.CreateService[models.User](s.db)
+	userService := services.CreateService[types.User](s.db)
 	userService.RegisterRoutes(subRouter)
-	projectService := services.CreateService[models.Project](s.db)
+	projectService := services.CreateService[types.Project](s.db)
 	projectService.RegisterRoutes(subRouter)
-	tasksService := services.CreateService[models.Task](s.db)
+	tasksService := services.CreateService[types.Task](s.db)
 	tasksService.RegisterRoutes(subRouter)
 
 	err := http.ListenAndServe(s.address, subRouter)
