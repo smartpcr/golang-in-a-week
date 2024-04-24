@@ -26,16 +26,48 @@ env: ## load .env variables
 build: build-server build-client ## build server and client
 
 .PHONY: build-server
-build-server: env ## build server
+build-server: env ## build server based on ${OS}
+ifeq (${OS},Linux)
+	@$(MAKE) build-server-linux
+else ifeq (${OS},Windows_NT)
+	@$(MAKE) build-server-windows
+else
+	$(error Unknown OS: ${OS})
+endif
+
+.PHONY: build-server-linux
+build-server-linux: env ## build server on linux
 	CGO_ENABLED=0 go build -o ./bin/server -ldflags '-extldflags "-static"' ./cmd/api/main.go
 	cp ${GOBIN}/dlv bin/dlv
 	docker build -t smartpcr/tasks-server:dev -f ./cmd/server/Dockerfile .
 
+.PHONY: build-server-windows
+build-server-windows: env ## build server on windows
+	go build -o ./bin/server.exe ./cmd/api/main.go
+
 .PHONY: build-client
-build-client: env ## build client
+build-client: env ## build client based on ${OS}
+ifeq (${OS},Linux)
+	@$(MAKE) build-client-linux
+else ifeq (${OS},Windows_NT)
+	@$(MAKE) build-client-windows
+else
+	$(error Unknown OS: ${OS})
+endif
+
+.PHONY: build-client-linux
+build-client-linux: env ## build client on linux
 	CGO_ENABLED=0 go build -o ./bin/client -ldflags '-extldflags "-static"' ./cmd/cli/main.go
 	cp ${GOBIN}/dlv bin/dlv
 	docker build -t smartpcr/tasks-client:dev -f ./cmd/client/Dockerfile .
+
+.PHONY: build-client-windows
+build-client-windows: env ## build client on windows
+	go build -o ./bin/client.exe ./cmd/cli/main.go
+
+.PHONY: run-server
+run-server: env build-server start-db ## start server
+	./bin/server
 
 ## --------------------------------------
 ## DB

@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"webapi/pkg/api"
 	"webapi/pkg/config"
 	"webapi/pkg/store"
 )
@@ -25,6 +26,6 @@ func main() {
 	defer dbStore.Close()
 
 	apiConfig := config.GetApiConfig()
-	apiServer := NewAPIServer(fmt.Sprintf(":%d", apiConfig.Port), dbStore)
+	apiServer := api.NewAPIServer(fmt.Sprintf(":%d", apiConfig.Port), dbStore)
 	apiServer.Serve()
 }
