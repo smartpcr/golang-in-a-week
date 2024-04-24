@@ -35,16 +35,14 @@ func CreateRepository[T types.Entity](db *DbStorage) Repository[T] {
 	}
 }
 
-type OrmRepository[T any] struct {
+type OrmRepository[T types.Entity] struct {
 	db *DbStorage
 }
 
-func (o *OrmRepository[T]) getTableName() string {
-	return reflect.TypeOf((*T)(nil)).Elem().Name()
-}
+var _ Repository[types.Entity] = &OrmRepository[types.Entity]{}
 
 func (o *OrmRepository[T]) List() ([]*T, error) {
-	tableName := o.getTableName()
+	tableName := types.GetTableName[T]()
 	if o.db.DB != nil {
 		rows, err := o.db.DB.Table(tableName).Rows()
 		defer func(rows *sql.Rows) {
@@ -86,7 +84,7 @@ func (o *OrmRepository[T]) List() ([]*T, error) {
 }
 
 func (o *OrmRepository[T]) Get(id uint) (*T, error) {
-	tableName := o.getTableName()
+	tableName := types.GetTableName[T]()
 	if o.db.DB != nil {
 		item := new(T)
 		result := o.db.DB.Table(tableName).First(item, id)
@@ -109,7 +107,7 @@ func (o *OrmRepository[T]) Get(id uint) (*T, error) {
 }
 
 func (o *OrmRepository[T]) Create(item *T) (*T, error) {
-	tableName := o.getTableName()
+	tableName := types.GetTableName[T]()
 	if o.db.DB != nil {
 		result := o.db.DB.Create(item)
 		if result.Error != nil {
@@ -130,7 +128,7 @@ func (o *OrmRepository[T]) Create(item *T) (*T, error) {
 }
 
 func (o *OrmRepository[T]) Update(item *T) error {
-	tableName := o.getTableName()
+	tableName := types.GetTableName[T]()
 	if o.db.DB != nil {
 		result := o.db.DB.Save(item)
 		if result.Error != nil {
@@ -148,7 +146,7 @@ func (o *OrmRepository[T]) Update(item *T) error {
 }
 
 func (o *OrmRepository[T]) Delete(id uint) error {
-	tableName := reflect.TypeOf((*T)(nil)).Elem().Name()
+	tableName := types.GetTableName[T]()
 	if o.db.DB != nil {
 		result := o.db.DB.Table(tableName).Delete(nil, id)
 		if result.Error != nil {

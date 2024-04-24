@@ -1,6 +1,8 @@
 package types
 
 import (
+	"reflect"
+
 	"gorm.io/gorm"
 )
 
@@ -58,3 +60,20 @@ func (t Task) GetTableName() string {
 var _ Entity = &User{}
 var _ Entity = &Project{}
 var _ Entity = &Task{}
+
+func GetTableName[T Entity]() string {
+	typeName := reflect.TypeOf((*T)(nil)).Elem().Name()
+	switch typeName {
+	case "User":
+		user := new(User)
+		return user.GetTableName()
+	case "Project":
+		project := new(Project)
+		return project.GetTableName()
+	case "Task":
+		task := new(Task)
+		return task.GetTableName()
+	default:
+		return typeName
+	}
+}
