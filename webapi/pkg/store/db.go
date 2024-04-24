@@ -11,7 +11,7 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"webapi/pkg/config"
-	"webapi/types"
+	"webapi/schema/v1"
 )
 
 type DbStorage struct {
@@ -60,7 +60,7 @@ func NewDbStorage(cfg *config.DbConfig) (*DbStorage, error) {
 
 func (m *DbStorage) Init() error {
 	if m.DB != nil {
-		err := m.DB.AutoMigrate(&types.User{}, &types.Project{}, &types.Task{})
+		err := m.DB.AutoMigrate(&v1.User{}, &v1.Project{}, &v1.Task{})
 		if err != nil {
 			return err
 		}

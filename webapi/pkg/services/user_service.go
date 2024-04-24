@@ -7,11 +7,11 @@ import (
 
 	"github.com/gorilla/mux"
 	"webapi/pkg/store"
-	"webapi/types"
+	"webapi/schema/v1"
 )
 
 type UserService struct {
-	repo store.Repository[types.User]
+	repo store.Repository[v1.User]
 }
 
 func (u *UserService) RegisterRoutes(r *mux.Router) {
@@ -39,7 +39,7 @@ func (u *UserService) HandleList(writer http.ResponseWriter, request *http.Reque
 }
 
 func (u *UserService) HandleCreate(writer http.ResponseWriter, request *http.Request) {
-	var user types.User
+	var user v1.User
 	err := json.NewDecoder(request.Body).Decode(&user)
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusBadRequest)
@@ -92,7 +92,7 @@ func (u *UserService) HandleUpdate(writer http.ResponseWriter, request *http.Req
 		return
 	}
 
-	var user types.User
+	var user v1.User
 	err = json.NewDecoder(request.Body).Decode(&user)
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusBadRequest)

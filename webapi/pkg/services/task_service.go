@@ -7,11 +7,11 @@ import (
 
 	"github.com/gorilla/mux"
 	"webapi/pkg/store"
-	"webapi/types"
+	"webapi/schema/v1"
 )
 
 type TaskService struct {
-	repo store.Repository[types.Task]
+	repo store.Repository[v1.Task]
 }
 
 func (t *TaskService) RegisterRoutes(r *mux.Router) {
@@ -39,7 +39,7 @@ func (t *TaskService) HandleList(writer http.ResponseWriter, request *http.Reque
 }
 
 func (t *TaskService) HandleCreate(writer http.ResponseWriter, request *http.Request) {
-	var task types.Task
+	var task v1.Task
 	err := json.NewDecoder(request.Body).Decode(&task)
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusBadRequest)
@@ -92,7 +92,7 @@ func (t *TaskService) HandleUpdate(writer http.ResponseWriter, request *http.Req
 		return
 	}
 
-	var task types.Task
+	var task v1.Task
 	err = json.NewDecoder(request.Body).Decode(&task)
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusBadRequest)

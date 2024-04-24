@@ -6,7 +6,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"webapi/pkg/store"
-	"webapi/types"
+	"webapi/schema/v1"
 )
 
 type Service interface {
@@ -22,11 +22,11 @@ func CreateService[T any](db *store.DbStorage) Service {
 	typeName := reflect.TypeOf((*T)(nil)).Elem().Name()
 	switch typeName {
 	case "User":
-		return &UserService{repo: store.CreateRepository[types.User](db)}
+		return &UserService{repo: store.CreateRepository[v1.User](db)}
 	case "Project":
-		return &ProjectService{repo: store.CreateRepository[types.Project](db)}
+		return &ProjectService{repo: store.CreateRepository[v1.Project](db)}
 	case "Task":
-		return &TaskService{repo: store.CreateRepository[types.Task](db)}
+		return &TaskService{repo: store.CreateRepository[v1.Task](db)}
 	default:
 		panic("Unknown type")
 	}

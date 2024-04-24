@@ -4,7 +4,7 @@
 
 - [x] use generic repository pattern
 - [ ] use dependency injection
-- [ ] use GORM to sync schema and db schema
+- [x] use GORM to sync schema and db schema
 - [ ] use versioned api and schema conversion
 - [ ] use open-telemetry for logging, tracing, and metrics
 - [ ] use context for request scoped values
@@ -17,4 +17,4 @@
 - [ ] use cache to improve performance, first tier is in-memory and then fallback to file
 - [ ] use swagger for api documentation
 - [ ] cli generated from swagger
-- [ ] support multiple database backends, such as sqlite, mysql, postgresql, mongodb, etc
+- [x] support multiple database backends, such as sqlite, mysql, postgresql, mongodb, etc

@@ -7,10 +7,10 @@ import (
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
-	"webapi/types"
+	"webapi/schema/v1"
 )
 
-type Repository[T types.Entity] interface {
+type Repository[T v1.Entity] interface {
 	List() ([]*T, error)
 	Get(id uint) (*T, error)
 	Create(item *T) (*T, error)
@@ -18,31 +18,31 @@ type Repository[T types.Entity] interface {
 	Delete(id uint) error
 }
 
-func CreateRepository[T types.Entity](db *DbStorage) Repository[T] {
+func CreateRepository[T v1.Entity](db *DbStorage) Repository[T] {
 	typeName := reflect.TypeOf((*T)(nil)).Elem().Name()
 	switch typeName {
 	case "User":
-		repo := &OrmRepository[types.User]{db: db}
+		repo := &OrmRepository[v1.User]{db: db}
 		return any(repo).(Repository[T])
 	case "Project":
-		repo := &OrmRepository[types.Project]{db: db}
+		repo := &OrmRepository[v1.Project]{db: db}
 		return any(repo).(Repository[T])
 	case "Task":
-		repo := &OrmRepository[types.Task]{db: db}
+		repo := &OrmRepository[v1.Task]{db: db}
 		return any(repo).(Repository[T])
 	default:
 		panic("Unknown type")
 	}
 }
 
-type OrmRepository[T types.Entity] struct {
+type OrmRepository[T v1.Entity] struct {
 	db *DbStorage
 }
 
-var _ Repository[types.Entity] = &OrmRepository[types.Entity]{}
+var _ Repository[v1.Entity] = &OrmRepository[v1.Entity]{}
 
 func (o *OrmRepository[T]) List() ([]*T, error) {
-	tableName := types.GetTableName[T]()
+	tableName := v1.GetTableName[T]()
 	if o.db.DB != nil {
 		rows, err := o.db.DB.Table(tableName).Rows()
 		defer func(rows *sql.Rows) {
@@ -84,7 +84,7 @@ func (o *OrmRepository[T]) List() ([]*T, error) {
 }
 
 func (o *OrmRepository[T]) Get(id uint) (*T, error) {
-	tableName := types.GetTableName[T]()
+	tableName := v1.GetTableName[T]()
 	if o.db.DB != nil {
 		item := new(T)
 		result := o.db.DB.Table(tableName).First(item, id)
@@ -107,7 +107,7 @@ func (o *OrmRepository[T]) Get(id uint) (*T, error) {
 }
 
 func (o *OrmRepository[T]) Create(item *T) (*T, error) {
-	tableName := types.GetTableName[T]()
+	tableName := v1.GetTableName[T]()
 	if o.db.DB != nil {
 		result := o.db.DB.Create(item)
 		if result.Error != nil {
@@ -128,7 +128,7 @@ func (o *OrmRepository[T]) Create(item *T) (*T, error) {
 }
 
 func (o *OrmRepository[T]) Update(item *T) error {
-	tableName := types.GetTableName[T]()
+	tableName := v1.GetTableName[T]()
 	if o.db.DB != nil {
 		result := o.db.DB.Save(item)
 		if result.Error != nil {
@@ -137,7 +137,7 @@ func (o *OrmRepository[T]) Update(item *T) error {
 		return nil
 	} else if o.db.MongoClient != nil {
 		collection := o.db.MongoDb.Collection(tableName)
-		_, err := collection.ReplaceOne(context.Background(), bson.M{"_id": any(item).(types.Entity).GetID()}, item)
+		_, err := collection.ReplaceOne(context.Background(), bson.M{"_id": any(item).(v1.Entity).GetID()}, item)
 		return err
 	} else {
 		//TODO implement me
@@ -146,7 +146,7 @@ func (o *OrmRepository[T]) Update(item *T) error {
 }
 
 func (o *OrmRepository[T]) Delete(id uint) error {
-	tableName := types.GetTableName[T]()
+	tableName := v1.GetTableName[T]()
 	if o.db.DB != nil {
 		result := o.db.DB.Table(tableName).Delete(nil, id)
 		if result.Error != nil {

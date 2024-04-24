@@ -7,7 +7,7 @@ import (
 	"github.com/gorilla/mux"
 	"webapi/pkg/services"
 	"webapi/pkg/store"
-	"webapi/types"
+	"webapi/schema/v1"
 )
 
 type APIServer struct {
@@ -27,11 +27,11 @@ func (s *APIServer) Serve() {
 	subRouter := router.PathPrefix("/api/v1").Subrouter()
 
 	// register the handlers
-	userService := services.CreateService[types.User](s.db)
+	userService := services.CreateService[v1.User](s.db)
 	userService.RegisterRoutes(subRouter)
-	projectService := services.CreateService[types.Project](s.db)
+	projectService := services.CreateService[v1.Project](s.db)
 	projectService.RegisterRoutes(subRouter)
-	tasksService := services.CreateService[types.Task](s.db)
+	tasksService := services.CreateService[v1.Task](s.db)
 	tasksService.RegisterRoutes(subRouter)
 
 	err := http.ListenAndServe(s.address, subRouter)
