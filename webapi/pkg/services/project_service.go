@@ -23,7 +23,7 @@ func (p *ProjectService) RegisterRoutes(r *mux.Router) {
 }
 
 func (p *ProjectService) HandleList(writer http.ResponseWriter, request *http.Request) {
-	projects, err := p.repo.List()
+	projects, err := p.repo.List(request.Context())
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -46,7 +46,7 @@ func (p *ProjectService) HandleCreate(writer http.ResponseWriter, request *http.
 		return
 	}
 
-	createdProject, err := p.repo.Create(&project)
+	createdProject, err := p.repo.Create(request.Context(), &project)
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -69,7 +69,7 @@ func (p *ProjectService) HandleGet(writer http.ResponseWriter, request *http.Req
 		return
 	}
 
-	project, err := p.repo.Get(uint(id))
+	project, err := p.repo.Get(request.Context(), uint(id))
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -100,7 +100,7 @@ func (p *ProjectService) HandleUpdate(writer http.ResponseWriter, request *http.
 	}
 
 	project.ID = uint(id)
-	err = p.repo.Update(&project)
+	err = p.repo.Update(request.Context(), &project)
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -117,7 +117,7 @@ func (p *ProjectService) HandleDelete(writer http.ResponseWriter, request *http.
 		return
 	}
 
-	err = p.repo.Delete(uint(id))
+	err = p.repo.Delete(request.Context(), uint(id))
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return

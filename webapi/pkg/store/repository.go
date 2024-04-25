@@ -11,12 +11,12 @@ import (
 )
 
 type Repository[T v1.Entity] interface {
-	Count() (int64, error)
-	List() ([]*T, error)
-	Get(id uint) (*T, error)
-	Create(item *T) (*T, error)
-	Update(item *T) error
-	Delete(id uint) error
+	Count(ctx context.Context) (int64, error)
+	List(ctx context.Context) ([]*T, error)
+	Get(ctx context.Context, id uint) (*T, error)
+	Create(ctx context.Context, item *T) (*T, error)
+	Update(ctx context.Context, item *T) error
+	Delete(ctx context.Context, id uint) error
 }
 
 func CreateRepository[T v1.Entity](db *DbStorage) Repository[T] {
@@ -42,18 +42,18 @@ type OrmRepository[T v1.Entity] struct {
 
 var _ Repository[v1.Entity] = &OrmRepository[v1.Entity]{}
 
-func (o *OrmRepository[T]) Count() (int64, error) {
+func (o *OrmRepository[T]) Count(ctx context.Context) (int64, error) {
 	tableName := v1.GetTableName[T]()
 	if o.db.DB != nil {
 		var count int64
-		result := o.db.DB.Table(tableName).Count(&count)
+		result := o.db.DB.WithContext(ctx).Table(tableName).Count(&count)
 		if result.Error != nil {
 			return 0, result.Error
 		}
 		return count, nil
 	} else if o.db.MongoClient != nil {
 		collection := o.db.MongoDb.Collection(tableName)
-		count, err := collection.CountDocuments(context.Background(), bson.D{})
+		count, err := collection.CountDocuments(ctx, bson.D{})
 		if err != nil {
 			return 0, err
 		}
@@ -64,10 +64,10 @@ func (o *OrmRepository[T]) Count() (int64, error) {
 	}
 }
 
-func (o *OrmRepository[T]) List() ([]*T, error) {
+func (o *OrmRepository[T]) List(ctx context.Context) ([]*T, error) {
 	tableName := v1.GetTableName[T]()
 	if o.db.DB != nil {
-		rows, err := o.db.DB.Table(tableName).Rows()
+		rows, err := o.db.DB.WithContext(ctx).Table(tableName).Rows()
 		defer func(rows *sql.Rows) {
 			_ = rows.Close()
 		}(rows)
@@ -87,7 +87,7 @@ func (o *OrmRepository[T]) List() ([]*T, error) {
 		return items, nil
 	} else if o.db.MongoClient != nil {
 		collection := o.db.MongoDb.Collection(tableName)
-		cursor, err := collection.Find(context.Background(), bson.D{})
+		cursor, err := collection.Find(ctx, bson.D{})
 		if err != nil {
 			return nil, err
 		}
@@ -96,7 +96,7 @@ func (o *OrmRepository[T]) List() ([]*T, error) {
 		}(cursor, context.Background())
 
 		var items []*T
-		if err = cursor.All(context.Background(), &items); err != nil {
+		if err = cursor.All(ctx, &items); err != nil {
 			return nil, err
 		}
 		return items, nil
@@ -106,11 +106,11 @@ func (o *OrmRepository[T]) List() ([]*T, error) {
 	}
 }
 
-func (o *OrmRepository[T]) Get(id uint) (*T, error) {
+func (o *OrmRepository[T]) Get(ctx context.Context, id uint) (*T, error) {
 	tableName := v1.GetTableName[T]()
 	if o.db.DB != nil {
 		item := new(T)
-		result := o.db.DB.Table(tableName).First(item, id)
+		result := o.db.DB.WithContext(ctx).Table(tableName).First(item, id)
 		if result.Error != nil {
 			return nil, result.Error
 		}
@@ -118,7 +118,7 @@ func (o *OrmRepository[T]) Get(id uint) (*T, error) {
 	} else if o.db.MongoClient != nil {
 		var item T
 		collection := o.db.MongoDb.Collection(tableName)
-		err := collection.FindOne(context.Background(), bson.M{"_id": id}).Decode(&item)
+		err := collection.FindOne(ctx, bson.M{"_id": id}).Decode(&item)
 		if err != nil {
 			return nil, err
 		}
@@ -129,17 +129,17 @@ func (o *OrmRepository[T]) Get(id uint) (*T, error) {
 	}
 }
 
-func (o *OrmRepository[T]) Create(item *T) (*T, error) {
+func (o *OrmRepository[T]) Create(ctx context.Context, item *T) (*T, error) {
 	tableName := v1.GetTableName[T]()
 	if o.db.DB != nil {
-		result := o.db.DB.Create(item)
+		result := o.db.DB.WithContext(ctx).Create(item)
 		if result.Error != nil {
 			return nil, result.Error
 		}
 		return item, nil
 	} else if o.db.MongoClient != nil {
 		collection := o.db.MongoDb.Collection(tableName)
-		_, err := collection.InsertOne(context.Background(), item)
+		_, err := collection.InsertOne(ctx, item)
 		if err != nil {
 			return nil, err
 		}
@@ -150,17 +150,17 @@ func (o *OrmRepository[T]) Create(item *T) (*T, error) {
 	}
 }
 
-func (o *OrmRepository[T]) Update(item *T) error {
+func (o *OrmRepository[T]) Update(ctx context.Context, item *T) error {
 	tableName := v1.GetTableName[T]()
 	if o.db.DB != nil {
-		result := o.db.DB.Save(item)
+		result := o.db.DB.WithContext(ctx).Save(item)
 		if result.Error != nil {
 			return result.Error
 		}
 		return nil
 	} else if o.db.MongoClient != nil {
 		collection := o.db.MongoDb.Collection(tableName)
-		_, err := collection.ReplaceOne(context.Background(), bson.M{"_id": any(item).(v1.Entity).GetID()}, item)
+		_, err := collection.ReplaceOne(ctx, bson.M{"_id": any(item).(v1.Entity).GetID()}, item)
 		return err
 	} else {
 		//TODO implement me
@@ -168,17 +168,17 @@ func (o *OrmRepository[T]) Update(item *T) error {
 	}
 }
 
-func (o *OrmRepository[T]) Delete(id uint) error {
+func (o *OrmRepository[T]) Delete(ctx context.Context, id uint) error {
 	tableName := v1.GetTableName[T]()
 	if o.db.DB != nil {
-		result := o.db.DB.Table(tableName).Delete(nil, id)
+		result := o.db.DB.WithContext(ctx).Table(tableName).Delete(nil, id)
 		if result.Error != nil {
 			return result.Error
 		}
 		return nil
 	} else if o.db.MongoClient != nil {
 		collection := o.db.MongoDb.Collection(tableName)
-		_, err := collection.DeleteOne(context.Background(), bson.M{"_id": id})
+		_, err := collection.DeleteOne(ctx, bson.M{"_id": id})
 		return err
 	} else {
 		//TODO implement me
