@@ -18,3 +18,4 @@
 - [ ] use swagger for api documentation
 - [ ] cli generated from swagger
 - [x] support multiple database backends, such as sqlite, mysql, postgresql, mongodb, etc
+- [ ] use lego & autocert for tls and support auto-renewal
