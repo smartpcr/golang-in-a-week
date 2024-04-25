@@ -11,11 +11,32 @@ help: ## Display this help.
 ## --------------------------------------
 ## Environment
 ## --------------------------------------
+##@ Environment:
 include .env
 env: ## load .env variables
 	@pwsh -Command '$$content = Get-Content ".\.env"; $$content | ForEach-Object {$$split = $$_.Split("="); if ($$split.Length -gt 1) { [System.Environment]::SetEnvironmentVariable($$split[0], $$split[1]) } }'
 	@echo "Environment variables loaded"
 	@echo "Db type: ${DB_TYPE}"
+
+
+## --------------------------------------
+## Generator
+## --------------------------------------
+##@ Generator:
+
+.PHONY: install-wire
+install-wire: ## install wire
+ifeq (${OS},Linux)
+	@which wire > /dev/null || go install github.com/google/wire/cmd/wire@latest
+else ifeq (${OS},Windows_NT)
+	@where wire >nul 2>nul || go install github.com/google/wire/cmd/wire@latest
+else
+	$(error Unknown OS: ${OS})
+endif
+
+.PHONE: generate
+wire-gen: env install-wire ## generate wire
+	cd ./pkg/inject && wire
 
 ## --------------------------------------
 ## Build
@@ -26,7 +47,7 @@ env: ## load .env variables
 build: build-server build-client ## build server and client
 
 .PHONY: build-server
-build-server: env ## build server based on ${OS}
+build-server: wire-gen ## build server based on ${OS}
 ifeq (${OS},Linux)
 	@$(MAKE) build-server-linux
 else ifeq (${OS},Windows_NT)
@@ -36,13 +57,13 @@ else
 endif
 
 .PHONY: build-server-linux
-build-server-linux: env ## build server on linux
+build-server-linux: ## build server on linux
 	CGO_ENABLED=0 go build -o ./bin/server -ldflags '-extldflags "-static"' ./cmd/api/main.go
 	cp ${GOBIN}/dlv bin/dlv
 	docker build -t smartpcr/tasks-server:dev -f ./cmd/server/Dockerfile .
 
 .PHONY: build-server-windows
-build-server-windows: env ## build server on windows
+build-server-windows: ## build server on windows
 	go build -o ./bin/server.exe ./cmd/api/main.go
 
 .PHONY: build-client
@@ -99,11 +120,11 @@ endif
 .PHONY: start-postgres
 start-postgres: env ## start postgres database
 	docker run --name tasks-postgres \
-	-e POSTGRES_USER=${PG_DB_USER} \
-	-e POSTGRES_PASSWORD=${PG_DB_PASSWORD} \
-	-e POSTGRES_DB=${PG_DB_NAME} \
-	-p ${PG_DB_PORT}:5432 \
-	-d postgres:13
+    	-e POSTGRES_USER=${PG_DB_USER} \
+    	-e POSTGRES_PASSWORD=${PG_DB_PASSWORD} \
+    	-e POSTGRES_DB=${PG_DB_NAME} \
+    	-p ${PG_DB_PORT}:5432 \
+    	-d postgres:13
 
 .PHONY: stop-postgres
 stop-postgres: env ## stop postgres database
@@ -135,6 +156,37 @@ stop-mysql: env ## stop mysql database
 	docker stop tasks-mysql
 	docker rm tasks-mysql
 
+
+## --------------------------------------
+## run
+## --------------------------------------
+##@ run
+
+.PHONY: run
+run: ## run server and client
+ifeq (${OS},Linux)
+	@$(MAKE) run-server-linux
+else ifeq (${OS},Windows_NT)
+	@$(MAKE) run-server-windows
+else
+	$(error Unknown OS: ${OS})
+endif
+
+.PHONY: run-server-windows
+run-server-windows: env build-server-windows start-db ## run server on windows
+	./bin/server.exe
+
+.PHONY: run-server-linux
+run-server-linux: env build-server-linux start-db ## run server on linux
+	./bin/server
+
+.PHONY: run-client-windows
+run-client-windows: env build-client-windows ## run client on windows
+	./bin/client.exe
+
+.PHONY: run-client-linux
+run-client-linux: env build-client-linux ## run client on linux
+	./bin/client
 
 ## --------------------------------------
 ## management dashboard

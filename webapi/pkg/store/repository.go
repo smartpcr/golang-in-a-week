@@ -11,6 +11,7 @@ import (
 )
 
 type Repository[T v1.Entity] interface {
+	Count() (int64, error)
 	List() ([]*T, error)
 	Get(id uint) (*T, error)
 	Create(item *T) (*T, error)
@@ -40,6 +41,28 @@ type OrmRepository[T v1.Entity] struct {
 }
 
 var _ Repository[v1.Entity] = &OrmRepository[v1.Entity]{}
+
+func (o *OrmRepository[T]) Count() (int64, error) {
+	tableName := v1.GetTableName[T]()
+	if o.db.DB != nil {
+		var count int64
+		result := o.db.DB.Table(tableName).Count(&count)
+		if result.Error != nil {
+			return 0, result.Error
+		}
+		return count, nil
+	} else if o.db.MongoClient != nil {
+		collection := o.db.MongoDb.Collection(tableName)
+		count, err := collection.CountDocuments(context.Background(), bson.D{})
+		if err != nil {
+			return 0, err
+		}
+		return count, nil
+	} else {
+		//TODO implement me
+		panic("implement me")
+	}
+}
 
 func (o *OrmRepository[T]) List() ([]*T, error) {
 	tableName := v1.GetTableName[T]()

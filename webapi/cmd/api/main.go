@@ -5,7 +5,7 @@ import (
 
 	"webapi/pkg/api"
 	"webapi/pkg/config"
-	"webapi/pkg/store"
+	"webapi/pkg/inject"
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	dbStore, err := store.NewDbStorage(dbCfg)
+	dbStore, err := inject.Initialize(dbCfg) //store.NewDbStorage(dbCfg)
 	if err != nil {
 		panic(err)
 	}

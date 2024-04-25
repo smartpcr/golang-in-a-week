@@ -3,7 +3,7 @@
 ## goals
 
 - [x] use generic repository pattern
-- [ ] use dependency injection
+- [x] use wire for dependency injection
 - [x] use GORM to sync schema and db schema
 - [ ] use versioned api and schema conversion
 - [ ] use open-telemetry for logging, tracing, and metrics

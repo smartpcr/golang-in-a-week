@@ -23,7 +23,7 @@ type DbStorage struct {
 func NewDbStorage(cfg *config.DbConfig) (*DbStorage, error) {
 	switch cfg.Type {
 	case config.MySQL:
-		dnsMySql := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local", cfg.DBUser, cfg.DBPassword, cfg.Host, cfg.Port, cfg.DBName)
+		dnsMySql := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local", cfg.DBUser, cfg.DBPassword, cfg.Host, cfg.Port, cfg.DBName)
 		mysqlDialect := mysql.Open(dnsMySql)
 		db, err := gorm.Open(mysqlDialect, &gorm.Config{})
 		if err != nil {
@@ -33,7 +33,7 @@ func NewDbStorage(cfg *config.DbConfig) (*DbStorage, error) {
 			DB: db,
 		}, nil
 	case config.PgSQL:
-		dnsPostgres := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable", cfg.Host, cfg.Port, cfg.DBUser, cfg.DBPassword, cfg.DBName)
+		dnsPostgres := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", cfg.Host, cfg.Port, cfg.DBUser, cfg.DBPassword, cfg.DBName)
 		pgDialect := postgres.Open(dnsPostgres)
 		db, err := gorm.Open(pgDialect, &gorm.Config{})
 		if err != nil {
@@ -43,7 +43,7 @@ func NewDbStorage(cfg *config.DbConfig) (*DbStorage, error) {
 			DB: db,
 		}, nil
 	case config.Mongo:
-		clientOptions := options.Client().ApplyURI(fmt.Sprintf("mongodb://%s:%s", cfg.Host, cfg.Port))
+		clientOptions := options.Client().ApplyURI(fmt.Sprintf("mongodb://%s:%d", cfg.Host, cfg.Port))
 		client, err := mongo.Connect(context.TODO(), clientOptions)
 		if err != nil {
 			return nil, err
@@ -60,28 +60,11 @@ func NewDbStorage(cfg *config.DbConfig) (*DbStorage, error) {
 
 func (m *DbStorage) Init() error {
 	if m.DB != nil {
-		err := m.DB.AutoMigrate(&v1.User{}, &v1.Project{}, &v1.Task{})
-		if err != nil {
-			return err
-		}
+		return createTables(m.DB)
 	}
 
 	if m.MongoClient != nil {
-		collOptions := options.CreateCollectionOptions{}
-		*collOptions.Capped = true
-		*collOptions.SizeInBytes = 1048576
-		err := m.MongoDb.CreateCollection(context.TODO(), "Users", &collOptions)
-		if err != nil {
-			return err
-		}
-		err = m.MongoDb.CreateCollection(context.TODO(), "Projects", &collOptions)
-		if err != nil {
-			return err
-		}
-		err = m.MongoDb.CreateCollection(context.TODO(), "Tasks", &collOptions)
-		if err != nil {
-			return err
-		}
+		return createMongoDbTables(m.MongoDb)
 	}
 	return nil
 }
@@ -105,4 +88,39 @@ func (m *DbStorage) Close() {
 			}
 		}
 	}
+}
+
+func createTables(db *gorm.DB) error {
+	return db.AutoMigrate(&v1.User{}, &v1.Project{}, &v1.Task{})
+}
+
+func seedData[T v1.Entity](repo *OrmRepository[T]) error {
+	count, err := repo.Count()
+	if err != nil {
+		return err
+	}
+
+	if count == 0 {
+	}
+
+	return nil
+}
+
+func createMongoDbTables(db *mongo.Database) error {
+	collOptions := options.CreateCollectionOptions{}
+	*collOptions.Capped = true
+	*collOptions.SizeInBytes = 1048576
+	err := db.CreateCollection(context.TODO(), "Users", &collOptions)
+	if err != nil {
+		return err
+	}
+	err = db.CreateCollection(context.TODO(), "Projects", &collOptions)
+	if err != nil {
+		return err
+	}
+	err = db.CreateCollection(context.TODO(), "Tasks", &collOptions)
+	if err != nil {
+		return err
+	}
+	return nil
 }
