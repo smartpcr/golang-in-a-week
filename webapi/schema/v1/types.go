@@ -2,6 +2,7 @@ package v1
 
 import (
 	"reflect"
+	"strings"
 
 	"github.com/brianvoe/gofakeit/v6"
 	"gorm.io/gorm"
@@ -18,13 +19,15 @@ type User struct {
 	Email string `gorm:"type:varchar(255)"`
 }
 
-func GenerateTestUsers(count int, users []*User) {
+func GenerateTestUsers(count int) []*User {
+	users := make([]*User, 0, count)
 	for i := 0; i < count; i++ {
 		users = append(users, &User{
 			Name:  gofakeit.Name(),
 			Email: gofakeit.Email(),
 		})
 	}
+	return users
 }
 
 func (u User) GetID() uint {
@@ -42,15 +45,17 @@ type Project struct {
 	OwnerId     uint   `gorm:"not null,index"`
 }
 
-func GenerateTestProjects(count int, existingUsers []*User, projects []*Project) {
+func GenerateTestProjects(count int, existingUsers []*User) []*Project {
+	projects := make([]*Project, 0, count)
 	for i := 0; i < count; i++ {
 		owner := existingUsers[gofakeit.Number(0, len(existingUsers)-1)]
 		projects = append(projects, &Project{
 			Name:        gofakeit.Name(),
-			Description: gofakeit.Sentence(200),
+			Description: generateSentence(200, 1022),
 			OwnerId:     owner.ID,
 		})
 	}
+	return projects
 }
 
 func (p Project) GetID() uint {
@@ -79,18 +84,20 @@ type Task struct {
 	Status      TaskStatus `gorm:"type:varchar(50);check:status_check,status in ('new', 'active', 'in_progress', 'done')"`
 }
 
-func GenerateTestTasks(count int, existingUsers []*User, existingProjects []*Project, tasks []*Task) {
+func GenerateTestTasks(count int, existingUsers []*User, existingProjects []*Project) []*Task {
+	tasks := make([]*Task, 0, count)
 	for i := 0; i < count; i++ {
 		assignee := existingUsers[gofakeit.Number(0, len(existingUsers)-1)]
 		project := existingProjects[gofakeit.Number(0, len(existingProjects)-1)]
 		tasks = append(tasks, &Task{
 			Name:        gofakeit.Name(),
-			Description: gofakeit.Sentence(200),
+			Description: generateSentence(200, 1022),
 			ProjectId:   project.ID,
 			AssigneeId:  assignee.ID,
 			Status:      New,
 		})
 	}
+	return tasks
 }
 
 func (t Task) GetID() uint {
@@ -120,4 +127,19 @@ func GetTableName[T Entity]() string {
 	default:
 		return typeName
 	}
+}
+
+func generateSentence(maxWords, maxChars int) string {
+	var result string
+	for {
+		sentence := gofakeit.Sentence(5) // Generate a sentence with 5 words
+		// Check if adding this sentence would exceed word or character limits
+		tempResult := result + " " + sentence
+		tempWords := len(strings.Fields(tempResult))
+		if tempWords > maxWords || len(tempResult) > maxChars {
+			break
+		}
+		result = tempResult
+	}
+	return strings.TrimSpace(result) // Clean up any leading/trailing whitespace
 }

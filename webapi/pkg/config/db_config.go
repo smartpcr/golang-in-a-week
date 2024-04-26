@@ -32,7 +32,7 @@ func init() {
 	}
 }
 
-func GetDatabase() (*DbConfig, error) {
+func GetDatabaseConfig() (*DbConfig, error) {
 	dbType := DbType(getEnv("DB_TYPE", "pgsql"))
 	dbHost := getEnv("DB_HOST", "127.0.0.1")
 	cfg := &DbConfig{

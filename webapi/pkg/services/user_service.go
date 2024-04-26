@@ -11,7 +11,7 @@ import (
 )
 
 type UserService struct {
-	repo store.Repository[v1.User]
+	Repo store.Repository[v1.User]
 }
 
 func (u *UserService) RegisterRoutes(r *mux.Router) {
@@ -23,7 +23,7 @@ func (u *UserService) RegisterRoutes(r *mux.Router) {
 }
 
 func (u *UserService) HandleList(writer http.ResponseWriter, request *http.Request) {
-	users, err := u.repo.List(request.Context())
+	users, err := u.Repo.List(request.Context())
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -46,7 +46,7 @@ func (u *UserService) HandleCreate(writer http.ResponseWriter, request *http.Req
 		return
 	}
 
-	createdUser, err := u.repo.Create(request.Context(), &user)
+	createdUser, err := u.Repo.Create(request.Context(), &user)
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -69,7 +69,7 @@ func (u *UserService) HandleGet(writer http.ResponseWriter, request *http.Reques
 		return
 	}
 
-	user, err := u.repo.Get(request.Context(), uint(id))
+	user, err := u.Repo.Get(request.Context(), uint(id))
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -100,7 +100,7 @@ func (u *UserService) HandleUpdate(writer http.ResponseWriter, request *http.Req
 	}
 
 	user.ID = uint(id)
-	err = u.repo.Update(request.Context(), &user)
+	err = u.Repo.Update(request.Context(), &user)
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -117,7 +117,7 @@ func (u UserService) HandleDelete(writer http.ResponseWriter, request *http.Requ
 		return
 	}
 
-	err = u.repo.Delete(request.Context(), uint(id))
+	err = u.Repo.Delete(request.Context(), uint(id))
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return

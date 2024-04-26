@@ -13,30 +13,12 @@ help: ## Display this help.
 ## --------------------------------------
 ##@ Environment:
 include .env
+
+.PHONY: env
 env: ## load .env variables
 	@pwsh -Command '$$content = Get-Content ".\.env"; $$content | ForEach-Object {$$split = $$_.Split("="); if ($$split.Length -gt 1) { [System.Environment]::SetEnvironmentVariable($$split[0], $$split[1]) } }'
 	@echo "Environment variables loaded"
 	@echo "Db type: ${DB_TYPE}"
-
-
-## --------------------------------------
-## Generator
-## --------------------------------------
-##@ Generator:
-
-.PHONY: install-wire
-install-wire: ## install wire
-ifeq (${OS},Linux)
-	@which wire > /dev/null || go install github.com/google/wire/cmd/wire@latest
-else ifeq (${OS},Windows_NT)
-	@where wire >nul 2>nul || go install github.com/google/wire/cmd/wire@latest
-else
-	$(error Unknown OS: ${OS})
-endif
-
-.PHONE: generate
-wire-gen: env install-wire ## generate wire
-	cd ./pkg/inject && wire
 
 ## --------------------------------------
 ## Build
@@ -47,7 +29,7 @@ wire-gen: env install-wire ## generate wire
 build: build-server build-client ## build server and client
 
 .PHONY: build-server
-build-server: wire-gen ## build server based on ${OS}
+build-server: env ## build server based on ${OS}
 ifeq (${OS},Linux)
 	@$(MAKE) build-server-linux
 else ifeq (${OS},Windows_NT)

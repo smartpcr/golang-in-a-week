@@ -9,9 +9,10 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
+	"go.uber.org/dig"
+	"webapi/pkg/inject"
 	"webapi/pkg/services"
 	"webapi/pkg/store"
-	"webapi/schema/v1"
 )
 
 type APIServer struct {
@@ -26,16 +27,16 @@ func NewAPIServer(address string, db *store.DbStorage) *APIServer {
 	}
 }
 
-func (s *APIServer) Serve() {
+func (s *APIServer) Serve(container *dig.Container) {
 	router := mux.NewRouter()
 	subRouter := router.PathPrefix("/api/v1").Subrouter()
 
 	// register the handlers
-	userService := services.CreateService[v1.User](s.db)
+	userService := inject.Get[*services.UserService](container)
 	userService.RegisterRoutes(subRouter)
-	projectService := services.CreateService[v1.Project](s.db)
+	projectService := inject.Get[*services.ProjectService](container)
 	projectService.RegisterRoutes(subRouter)
-	tasksService := services.CreateService[v1.Task](s.db)
+	tasksService := inject.Get[*services.TaskService](container)
 	tasksService.RegisterRoutes(subRouter)
 
 	server := &http.Server{

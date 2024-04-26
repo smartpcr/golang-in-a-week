@@ -11,7 +11,7 @@ import (
 )
 
 type TaskService struct {
-	repo store.Repository[v1.Task]
+	Repo store.Repository[v1.Task]
 }
 
 func (t *TaskService) RegisterRoutes(r *mux.Router) {
@@ -23,7 +23,7 @@ func (t *TaskService) RegisterRoutes(r *mux.Router) {
 }
 
 func (t *TaskService) HandleList(writer http.ResponseWriter, request *http.Request) {
-	tasks, err := t.repo.List(request.Context())
+	tasks, err := t.Repo.List(request.Context())
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -46,7 +46,7 @@ func (t *TaskService) HandleCreate(writer http.ResponseWriter, request *http.Req
 		return
 	}
 
-	createdTask, err := t.repo.Create(request.Context(), &task)
+	createdTask, err := t.Repo.Create(request.Context(), &task)
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -69,7 +69,7 @@ func (t *TaskService) HandleGet(writer http.ResponseWriter, request *http.Reques
 		return
 	}
 
-	task, err := t.repo.Get(request.Context(), uint(id))
+	task, err := t.Repo.Get(request.Context(), uint(id))
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -100,7 +100,7 @@ func (t *TaskService) HandleUpdate(writer http.ResponseWriter, request *http.Req
 	}
 
 	task.ID = uint(id)
-	err = t.repo.Update(request.Context(), &task)
+	err = t.Repo.Update(request.Context(), &task)
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return
@@ -117,7 +117,7 @@ func (t *TaskService) HandleDelete(writer http.ResponseWriter, request *http.Req
 		return
 	}
 
-	err = t.repo.Delete(request.Context(), uint(id))
+	err = t.Repo.Delete(request.Context(), uint(id))
 	if err != nil {
 		http.Error(writer, err.Error(), http.StatusInternalServerError)
 		return

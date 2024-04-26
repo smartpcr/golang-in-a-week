@@ -58,9 +58,9 @@ func NewDbStorage(cfg *config.DbConfig) (*DbStorage, error) {
 	}
 }
 
-func (m *DbStorage) Init() error {
+func (m *DbStorage) EnsureTablesAndData() error {
 	if m.DB != nil {
-		return createTables(m.DB)
+		return m.DB.AutoMigrate(&v1.User{}, &v1.Project{}, &v1.Task{})
 	}
 
 	if m.MongoClient != nil {
@@ -88,22 +88,6 @@ func (m *DbStorage) Close() {
 			}
 		}
 	}
-}
-
-func createTables(db *gorm.DB) error {
-	return db.AutoMigrate(&v1.User{}, &v1.Project{}, &v1.Task{})
-}
-
-func seedData[T v1.Entity](repo *OrmRepository[T]) error {
-	count, err := repo.Count()
-	if err != nil {
-		return err
-	}
-
-	if count == 0 {
-	}
-
-	return nil
 }
 
 func createMongoDbTables(db *mongo.Database) error {
