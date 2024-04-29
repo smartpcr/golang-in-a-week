@@ -8,7 +8,7 @@
 - [ ] use versioned api and schema conversion
 - [ ] use open-telemetry for logging, tracing, and metrics
 - [ ] use context for request scoped values
-- [x] use gorilla mux for routing
+- [x] use gorilla-mux -> gin -> fiber for routing
 - [ ] use gin-gonic for middleware, such as mTLS/jwt authentication
 - [ ] use viper for configuration
 - [ ] use testify for unit tests

@@ -15,8 +15,8 @@ type Entity interface {
 
 type User struct {
 	gorm.Model
-	Name  string `gorm:"type:varchar(255);unique;not null"`
-	Email string `gorm:"type:varchar(255)"`
+	Name  string `gorm:"type:varchar(255);unique;not null" validate:"required"`
+	Email string `gorm:"type:varchar(255)" validate:"required,email"`
 }
 
 func GenerateTestUsers(count int) []*User {
@@ -40,9 +40,9 @@ func (u User) GetTableName() string {
 
 type Project struct {
 	gorm.Model
-	Name        string `gorm:"type:varchar(255);unique;not null"`
+	Name        string `gorm:"type:varchar(255);unique;not null" validate:"required"`
 	Description string `gorm:"type:varchar(1023)"`
-	OwnerId     uint   `gorm:"not null,index"`
+	OwnerId     uint   `gorm:"not null,index" validate:"required,gte=1"`
 }
 
 func GenerateTestProjects(count int, existingUsers []*User) []*Project {
@@ -77,10 +77,10 @@ const (
 
 type Task struct {
 	gorm.Model
-	Name        string     `gorm:"type:varchar(255);unique;not null"`
+	Name        string     `gorm:"type:varchar(255);unique;not null" validate:"required"`
 	Description string     `gorm:"type:varchar(1023)"`
-	ProjectId   uint       `gorm:"not null,index"`
-	AssigneeId  uint       `gorm:"not null,index"`
+	ProjectId   uint       `gorm:"not null,index" validate:"required,gte=1"`
+	AssigneeId  uint       `gorm:"not null,index" validate:"required,gte=1"`
 	Status      TaskStatus `gorm:"type:varchar(50);check:status_check,status in ('new', 'active', 'in_progress', 'done')"`
 }
 

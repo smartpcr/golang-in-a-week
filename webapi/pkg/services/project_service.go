@@ -1,11 +1,11 @@
 package services
 
 import (
-	"encoding/json"
 	"net/http"
 	"strconv"
 
-	"github.com/gorilla/mux"
+	"github.com/go-playground/validator/v10"
+	"github.com/gofiber/fiber/v3"
 	"webapi/pkg/store"
 	"webapi/schema/v1"
 )
@@ -14,116 +14,96 @@ type ProjectService struct {
 	Repo store.Repository[v1.Project]
 }
 
-func (p *ProjectService) RegisterRoutes(r *mux.Router) {
-	r.HandleFunc("/projects", p.HandleList).Methods(http.MethodGet)
-	r.HandleFunc("/projects", p.HandleCreate).Methods(http.MethodPost)
-	r.HandleFunc("/projects/{id}", p.HandleGet).Methods(http.MethodGet)
-	r.HandleFunc("/projects/{id}", p.HandleUpdate).Methods(http.MethodPut)
-	r.HandleFunc("/projects/{id}", p.HandleDelete).Methods(http.MethodDelete)
+func (p *ProjectService) RegisterRoutes(a *fiber.App) {
+	a.Get("/projects", p.HandleList)
+	a.Post("/projects", p.HandleCreate)
+	a.Get("/projects/:id", p.HandleGet)
+	a.Put("/projects/:id", p.HandleUpdate)
+	a.Delete("/projects/:id", p.HandleDelete)
 }
 
-func (p *ProjectService) HandleList(writer http.ResponseWriter, request *http.Request) {
-	projects, err := p.Repo.List(request.Context())
+func (p *ProjectService) HandleList(c fiber.Ctx) error {
+	projects, err := p.Repo.List(c.Context())
 	if err != nil {
-		http.Error(writer, err.Error(), http.StatusInternalServerError)
-		return
+		return handleError(c, err)
 	}
 
-	err = json.NewEncoder(writer).Encode(projects)
-	if err != nil {
-		http.Error(writer, err.Error(), http.StatusInternalServerError)
-	}
-
-	writer.Header().Set("Content-Type", "application/json")
-	writer.WriteHeader(http.StatusOK)
+	return c.JSON(projects)
 }
 
-func (p *ProjectService) HandleCreate(writer http.ResponseWriter, request *http.Request) {
-	var project v1.Project
-	err := json.NewDecoder(request.Body).Decode(&project)
-	if err != nil {
-		http.Error(writer, err.Error(), http.StatusBadRequest)
-		return
+func (p *ProjectService) HandleCreate(c fiber.Ctx) error {
+	project := new(v1.Project)
+	if err := c.Bind().Body(project); err != nil {
+		return c.Status(http.StatusBadRequest).SendString(err.Error())
 	}
 
-	createdProject, err := p.Repo.Create(request.Context(), &project)
-	if err != nil {
-		http.Error(writer, err.Error(), http.StatusInternalServerError)
-		return
+	var validate = validator.New()
+	if err := validate.Struct(project); err != nil {
+		return c.Status(http.StatusBadRequest).SendString(err.Error())
 	}
 
-	err = json.NewEncoder(writer).Encode(createdProject)
+	createdProject, err := p.Repo.Create(c.Context(), project)
 	if err != nil {
-		http.Error(writer, err.Error(), http.StatusInternalServerError)
+		return handleError(c, err)
 	}
 
-	writer.Header().Set("Content-Type", "application/json")
-	writer.WriteHeader(http.StatusCreated)
+	return c.JSON(createdProject)
 }
 
-func (p *ProjectService) HandleGet(writer http.ResponseWriter, request *http.Request) {
-	params := mux.Vars(request)
-	id, err := strconv.ParseUint(params["id"], 10, 32)
+func (p *ProjectService) HandleGet(c fiber.Ctx) error {
+	paramId := c.Params("id")
+	id, err := strconv.ParseUint(paramId, 10, 32)
 	if err != nil {
-		http.Error(writer, err.Error(), http.StatusBadRequest)
-		return
+		return c.Status(http.StatusBadRequest).SendString(err.Error())
 	}
 
-	project, err := p.Repo.Get(request.Context(), uint(id))
+	project, err := p.Repo.Get(c.Context(), uint(id))
 	if err != nil {
-		http.Error(writer, err.Error(), http.StatusInternalServerError)
-		return
+		return handleError(c, err)
 	}
 
-	err = json.NewEncoder(writer).Encode(project)
-	if err != nil {
-		http.Error(writer, err.Error(), http.StatusInternalServerError)
-	}
-
-	writer.Header().Set("Content-Type", "application/json")
-	writer.WriteHeader(http.StatusOK)
+	return c.JSON(project)
 }
 
-func (p *ProjectService) HandleUpdate(writer http.ResponseWriter, request *http.Request) {
-	params := mux.Vars(request)
-	id, err := strconv.ParseUint(params["id"], 10, 32)
+func (p *ProjectService) HandleUpdate(c fiber.Ctx) error {
+	paramId := c.Params("id")
+	id, err := strconv.ParseUint(paramId, 10, 32)
 	if err != nil {
-		http.Error(writer, err.Error(), http.StatusBadRequest)
-		return
+		return c.Status(http.StatusBadRequest).SendString(err.Error())
 	}
 
-	var project v1.Project
-	err = json.NewDecoder(request.Body).Decode(&project)
-	if err != nil {
-		http.Error(writer, err.Error(), http.StatusBadRequest)
-		return
+	project := new(v1.Project)
+	if err := c.Bind().Body(project); err != nil {
+		return c.Status(http.StatusBadRequest).SendString(err.Error())
 	}
 
 	project.ID = uint(id)
-	err = p.Repo.Update(request.Context(), &project)
-	if err != nil {
-		http.Error(writer, err.Error(), http.StatusInternalServerError)
-		return
+	var validate = validator.New()
+	if err := validate.Struct(project); err != nil {
+		return c.Status(http.StatusBadRequest).SendString(err.Error())
 	}
 
-	writer.WriteHeader(http.StatusNoContent)
+	err = p.Repo.Update(c.Context(), project)
+	if err != nil {
+		return handleError(c, err)
+	}
+
+	return c.SendStatus(http.StatusNoContent)
 }
 
-func (p *ProjectService) HandleDelete(writer http.ResponseWriter, request *http.Request) {
-	params := mux.Vars(request)
-	id, err := strconv.ParseUint(params["id"], 10, 32)
+func (p *ProjectService) HandleDelete(c fiber.Ctx) error {
+	paramId := c.Params("id")
+	id, err := strconv.ParseUint(paramId, 10, 32)
 	if err != nil {
-		http.Error(writer, err.Error(), http.StatusBadRequest)
-		return
+		return c.Status(http.StatusBadRequest).SendString(err.Error())
 	}
 
-	err = p.Repo.Delete(request.Context(), uint(id))
+	err = p.Repo.Delete(c.Context(), uint(id))
 	if err != nil {
-		http.Error(writer, err.Error(), http.StatusInternalServerError)
-		return
+		return handleError(c, err)
 	}
 
-	writer.WriteHeader(http.StatusNoContent)
+	return c.SendStatus(http.StatusNoContent)
 }
 
 var _ Service = &ProjectService{}
